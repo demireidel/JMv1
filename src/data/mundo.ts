@@ -120,7 +120,7 @@ export const tradeAgreements: TradeAgreement[] = [
       { text: "Minerales críticos", color: "green" },
       { text: "Propiedad intelectual", color: "gold" },
     ],
-    image: "https://www.argentina.gob.ar/sites/default/files/mtb1410.jpg",
+    image: "/images/strip/milei-bilateral.jpg",
     imageAlt: "Acuerdo Argentina-EE.UU.",
     badge: "🇺🇸🇦🇷 Firmado Feb 2026",
   },
@@ -134,7 +134,7 @@ export const tradeAgreements: TradeAgreement[] = [
       { text: "30% del PBI mundial", color: "blue" },
       { text: "+122% exportaciones en 10 años", color: "green" },
     ],
-    image: "https://www.argentina.gob.ar/sites/default/files/g20fotofamilia.jpg",
+    image: "/images/strip/g20-familia.jpg",
     imageAlt: "Mercosur-UE",
     badge: "🇪🇺 Firmado Ene 2026",
     reverse: true,
@@ -149,7 +149,7 @@ export const tradeAgreements: TradeAgreement[] = [
       { text: "100% arancel cero industrial", color: "blue" },
       { text: "USD 4,3B PBI combinado", color: "green" },
     ],
-    image: "https://www.argentina.gob.ar/sites/default/files/milei_3-_europa_viva_24.jpeg",
+    image: "/images/vision/europa-viva-24.jpg",
     imageAlt: "Mercosur-EFTA",
     badge: "🇨🇭🇳🇴 Firmado Sep 2025",
   },
@@ -165,7 +165,7 @@ export const financialSupport = {
     { text: "Banda cambiaria flexible", color: "blue" as const },
     { text: "Retorno a mercados de capital", color: "green" as const },
   ],
-  image: "https://www.argentina.gob.ar/sites/default/files/banga01.jpg",
+  image: "/images/strip/acuerdo-intl.jpg",
   imageAlt: "Acuerdo financiero",
 };
 
@@ -181,7 +181,7 @@ export const cooperationGrid: CooperationItem[] = [
 // ── Section metadata ────────────────────────────────────
 
 export const mundoHero = {
-  imgSrc: "https://www.argentina.gob.ar/sites/default/files/mtso1410.jpg",
+  imgSrc: "/images/strip/bilateral-casablanca.jpg",
   imgAlt: "Argentina en el mundo",
   subtitle: "Sección 05 — Inserción Internacional",
   titleLine1: "ARGENTINA",

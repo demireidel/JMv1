@@ -43,7 +43,7 @@ export default function Mundo() {
         <div className="hero-bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://www.argentina.gob.ar/sites/default/files/mtso1410.jpg"
+            src="/images/strip/bilateral-casablanca.jpg"
             alt="Argentina en el mundo"
             style={{ objectPosition: "center 30%", filter: "brightness(0.28) contrast(1.15) saturate(0.85)" }}
           />

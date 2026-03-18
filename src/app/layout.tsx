@@ -39,7 +39,7 @@ export const viewport: Viewport = {
 
 const title = "Javier Milei — Presidente de la Nación Argentina";
 const description = "La libertad avanza. Argentina será el país más libre del mundo.";
-const ogImage = "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/4bc8c6ffb5ee4b1ba05998350f9dc353.jpg";
+const ogImage = "/images/hero/milei-retrato.jpg";
 
 export const metadata: Metadata = {
   title,
