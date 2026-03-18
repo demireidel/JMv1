@@ -1,6 +1,6 @@
 /** Photo strip images — strip 1 (top, after hero) */
 export const stripPhotos1 = [
-  { src: "/images/strip/milei-retrato.jpg", alt: "Retrato oficial Presidente Milei" },
+  { src: "/images/hero/milei-retrato.jpg", alt: "Retrato oficial Presidente Milei" },
   { src: "/images/strip/milei-trump.jpg", alt: "Milei con Trump en la Casa Blanca 2025" },
   { src: "/images/strip/milei-g7.jpg", alt: "Milei en el G7 Italia" },
   { src: "/images/strip/milei-musk.jpg", alt: "Milei con Elon Musk" },
