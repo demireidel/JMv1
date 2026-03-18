@@ -49,7 +49,6 @@ export const etapas: Etapa[] = [
     label: "Etapa Técnica / Académica",
     desc: "pre-2014",
     books: [
-      { year: "2014", title: "Política Económica Contrarreloj", coauthors: "Giacomini, Ferrelli Mazza", publisher: "Grupo Unión" },
       { year: "2014", title: "Lecturas de Economía en Tiempos del Kirchnerismo", publisher: "Grupo Unión" },
     ],
   },
@@ -58,11 +57,7 @@ export const etapas: Etapa[] = [
     desc: "2015–2020",
     books: [
       { year: "2015", title: "El Retorno al Sendero de la Decadencia Argentina", publisher: "Grupo Unión" },
-      { year: "2016", title: "Maquinita, Infleta y Devaluta", coauthors: "Diego Giacomini", publisher: "Grupo Unión" },
-      { year: "2016", title: "Ensayos de Economía Monetaria", coauthors: "Diego Giacomini", publisher: "Grupo Unión" },
-      { year: "2017", title: "Otra Vez Sopa", coauthors: "Diego Giacomini", publisher: "Ediciones B" },
       { year: "2017", title: "Desenmascarando la Mentira Keynesiana", publisher: "Grupo Unión" },
-      { year: "2019", title: "Libertad, Libertad, Libertad", coauthors: "Diego Giacomini", publisher: "Galerna" },
       { year: "2020", title: "Pandenomics", publisher: "—" },
     ],
   },
@@ -82,9 +77,9 @@ export const papers: Paper[] = [
   { topic: "Reservas", title: "Política Fiscal y Nivel Óptimo de Reservas en Dos Modelos para una Economía sin Fricciones y Tipo de Cambio Fijo" },
   { topic: "Tipo de cambio", title: "Real Exchange Rate Targeting: ¿Trilema Monetario o Control de Capitales?" },
   { topic: "Monetarismo", title: "El Rol de las Reservas, Independencia del BCRA, La Visión Monetarista de la Inflación" },
-  { topic: "Competitividad", title: 'El Termómetro de Riqueza: La "q" de Tobin, Competitividad y Crecimiento', coauthors: "Giacomini, Kerst", venue: "UNC (2015)" },
-  { topic: "Reforma monetaria", title: "El Nuevo BCRA y la Reforma Monetaria", coauthors: "Giacomini", venue: "2015" },
-  { topic: "Economía abierta", title: "Ensayos Monetarios para Economías Abiertas: El Caso Argentino", coauthors: "Giacomini", venue: "Revista Actualidad Económica, UNC (2017)" },
+  { topic: "Competitividad", title: 'El Termómetro de Riqueza: La "q" de Tobin, Competitividad y Crecimiento', coauthors: "Kerst", venue: "UNC (2015)" },
+  { topic: "Reforma monetaria", title: "El Nuevo BCRA y la Reforma Monetaria", venue: "2015" },
+  { topic: "Economía abierta", title: "Ensayos Monetarios para Economías Abiertas: El Caso Argentino", venue: "Revista Actualidad Económica, UNC (2017)" },
   { topic: "Política económica", title: "Los Molinos de Viento: Los Falsos Dilemas al Acecho del Crecimiento y el Bienestar" },
 ];
 
