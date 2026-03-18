@@ -2476,3 +2476,301 @@ footer {
   .footer-nav { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; }
 }
 
+/* ═══════════════════════════════════════════════════════════
+   PREMIUM DESIGN SYSTEM V2
+   Glassmorphism · Glow · Micro-interactions · Texture
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Keyframes ─────────────────────────────────────────── */
+
+@keyframes scrollGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(246,180,14,0); }
+  50% { box-shadow: 0 0 20px 4px rgba(246,180,14,0.15); }
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 0 3px var(--sol), 0 0 0 6px rgba(246,180,14,0); }
+  50% { box-shadow: 0 0 0 3px var(--sol), 0 0 0 10px rgba(246,180,14,0.12); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(212,168,67,0.15); }
+  50% { border-color: rgba(212,168,67,0.35); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* ── Hero Enhancement ──────────────────────────────────── */
+
+.hero-name {
+  text-shadow:
+    0 4px 60px rgba(0,0,0,0.5),
+    0 0 80px rgba(246,180,14,0.08),
+    0 0 160px rgba(246,180,14,0.04) !important;
+}
+
+.hero-content {
+  background: rgba(10,10,15,0.12);
+  backdrop-filter: blur(6px);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, transparent 40%, rgba(10,10,15,0.35) 100%);
+  pointer-events: none; z-index: 5;
+}
+
+.scroll-indicator div {
+  animation: scrollGlow 2.5s ease-in-out infinite, bounce 2s ease-in-out infinite !important;
+}
+
+/* ── Glassmorphism Expansion ───────────────────────────── */
+
+.v-pullquote {
+  backdrop-filter: blur(12px) saturate(1.3);
+  background: rgba(246,180,14,0.03) !important;
+  border: 1px solid rgba(246,180,14,0.08);
+}
+
+.v-mantra-wrap {
+  backdrop-filter: blur(8px);
+}
+
+.reform-box {
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+.logro-hero .lh-inner {
+  backdrop-filter: blur(4px);
+}
+
+.agr-card {
+  backdrop-filter: blur(6px);
+}
+
+.arc-collab {
+  backdrop-filter: blur(10px) saturate(1.2);
+}
+
+footer {
+  backdrop-filter: blur(16px);
+  background: rgba(10,10,15,0.92) !important;
+}
+
+/* ── Card Hover Premium ────────────────────────────────── */
+
+.v-thinker:hover,
+.v-pillar:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 0 0 1px rgba(246,180,14,0.1);
+}
+
+.idea-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.2), 0 0 0 1px rgba(246,180,14,0.08);
+}
+
+.coop-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2), 0 0 0 1px rgba(246,180,14,0.08);
+}
+
+.arc-book:hover,
+.arc-paper:hover,
+.arc-speech:hover,
+.arc-interview:hover,
+.arc-award:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15), 0 0 0 1px rgba(246,180,14,0.08);
+}
+
+.arc-influence:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+/* ── Timeline Glow ─────────────────────────────────────── */
+
+.tl-dot {
+  animation: dotPulse 3s ease-in-out infinite;
+}
+
+/* ── Gallery Hover ─────────────────────────────────────── */
+
+.fg-item img {
+  transition: all 0.6s var(--ease-premium);
+}
+.fg-item:hover img {
+  filter: brightness(1.08) saturate(1.15);
+  transform: scale(1.06);
+}
+.fg-item:hover .fg-overlay {
+  background: linear-gradient(180deg, transparent 30%, rgba(10,10,15,0.85) 100%);
+}
+
+/* ── Photo Card Zoom ───────────────────────────────────── */
+
+.pcard img {
+  transition: all 0.7s var(--ease-premium);
+}
+.pcard:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.95) saturate(1.1);
+}
+
+/* ── Pill Shimmer ──────────────────────────────────────── */
+
+.pp-pill:hover .pill-val {
+  background: linear-gradient(90deg, var(--sol) 0%, #f0d078 50%, var(--sol) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* ── Stats Glow ────────────────────────────────────────── */
+
+.pc-item:hover .pc-val,
+.futuro-st:hover .v,
+.ms-item:hover .ms-v {
+  text-shadow: 0 0 30px rgba(246,180,14,0.25);
+}
+
+.ref-counter:hover .ref-counter-num {
+  text-shadow: 0 0 40px rgba(246,180,14,0.3);
+}
+
+/* ── Pobreza Hero Border Animation ─────────────────────── */
+
+.pobreza-hero {
+  animation: borderGlow 4s ease-in-out infinite;
+}
+
+/* ── Typography Polish ─────────────────────────────────── */
+
+.v-prose .lead {
+  font-size: 1.12rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.section-number {
+  text-shadow: 0 0 60px rgba(246,180,14,0.08);
+}
+
+.sec-num {
+  text-shadow: 0 0 80px rgba(246,180,14,0.1);
+}
+
+.v-mantra-text {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.vd-big {
+  text-shadow: 0 0 100px rgba(246,180,14,0.06);
+}
+
+/* ── Blockquote Enhancement ────────────────────────────── */
+
+.v-pullquote::before {
+  content: '\201C';
+  position: absolute; top: -0.5rem; left: 1.2rem;
+  font-family: var(--font-playfair-display), 'Playfair Display', serif;
+  font-size: 4rem; color: var(--sol); opacity: 0.15;
+  line-height: 1; pointer-events: none;
+}
+
+.ref-quote .qmark {
+  animation: subtleFloat 4s ease-in-out infinite;
+}
+
+/* ── Leader Badges Enhancement ─────────────────────────── */
+
+.lb {
+  transition: all 0.3s var(--ease-premium);
+}
+.lb:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  background: rgba(246,180,14,0.06);
+  border-color: rgba(246,180,14,0.15);
+}
+
+/* ── Divider Enhancement ───────────────────────────────── */
+
+.arc-divider-line {
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.35), transparent) !important;
+}
+
+.v-rule {
+  background: linear-gradient(90deg, transparent, rgba(246,180,14,0.15), transparent) !important;
+}
+
+/* ── Section Number Glow ───────────────────────────────── */
+
+.section-number::after {
+  content: attr(data-num);
+  position: absolute; inset: 0;
+  color: var(--sol); opacity: 0.04;
+  filter: blur(20px);
+}
+
+/* ── Scroll Progress Enhancement ───────────────────────── */
+
+.scroll-progress-bar {
+  background: linear-gradient(90deg, var(--celeste), var(--sol)) !important;
+  box-shadow: 0 0 10px rgba(246,180,14,0.3);
+}
+
+/* ── Back To Top Enhancement ───────────────────────────── */
+
+.back-to-top {
+  box-shadow: 0 4px 20px rgba(246,180,14,0.25) !important;
+  transition: all 0.3s var(--ease-premium) !important;
+}
+.back-to-top:hover {
+  transform: translateY(-3px) scale(1.08) !important;
+  box-shadow: 0 8px 30px rgba(246,180,14,0.35) !important;
+}
+
+/* ── Footer Enhancement ────────────────────────────────── */
+
+.footer-wordmark {
+  text-shadow: 0 0 40px rgba(246,180,14,0.06);
+}
+
+.footer-flag div:nth-child(1) { background: linear-gradient(90deg, var(--celeste), #8ac4e8); }
+.footer-flag div:nth-child(2) { background: linear-gradient(90deg, #f5f0e8, white); }
+.footer-flag div:nth-child(3) { background: linear-gradient(90deg, var(--celeste), #8ac4e8); }
+
+.motto {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* ── Responsive Glassmorphism (reduce on mobile) ───────── */
+
+@media (max-width: 768px) {
+  .hero-content {
+    backdrop-filter: blur(4px);
+    padding: 2rem 1.5rem;
+  }
+  .v-pullquote {
+    backdrop-filter: blur(6px);
+  }
+  footer {
+    backdrop-filter: blur(8px);
+  }
+}
+
