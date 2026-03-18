@@ -1690,22 +1690,39 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 .agr-badge { font-size: 0.65rem; }  /* was 0.6rem */
 .kicker { font-size: 0.7rem; }  /* was 0.65rem */
 
-/* P1: Boost low-contrast text — raise alpha minimums */
+/* Contrast fix: all text must be readable */
 :root {
-  --t2: rgba(255,255,255,0.58);  /* was 0.52 */
-  --t3: rgba(255,255,255,0.35);  /* was 0.28 */
+  --t2: rgba(255,255,255,0.82);
+  --t3: rgba(255,255,255,0.6);
 }
-.v-prose { color: rgba(255,255,255,0.62); }  /* was 0.58 */
-.reform-desc p { color: rgba(255,255,255,0.6); }  /* was 0.55 */
-.box-text { color: rgba(255,255,255,0.55); }  /* was 0.5 */
-.idea-card p { color: rgba(255,255,255,0.6); }  /* was 0.55 */
-.v-thinker p { color: rgba(255,255,255,0.48); }  /* was 0.4 */
-.v-pillar p { color: rgba(255,255,255,0.52); }  /* was 0.45 */
-.coop-item p { color: rgba(255,255,255,0.48); }  /* was 0.4 */
-.blk p { color: rgba(255,255,255,0.58); }  /* was 0.52 */
-.fc-desc { color: rgba(255,255,255,0.52); }  /* was 0.45 */
-.pb-narrative p { color: rgba(255,255,255,0.65); }  /* was 0.6 */
-.hero-quote { color: rgba(255,255,255,0.5); }  /* was 0.4 */
+.v-prose { color: rgba(255,255,255,0.85); }
+.v-prose em { color: rgba(255,255,255,0.78); }
+.v-prose strong { color: rgba(255,255,255,0.95); }
+.reform-desc p { color: rgba(255,255,255,0.82); }
+.box-text { color: rgba(255,255,255,0.78); }
+.idea-card p { color: rgba(255,255,255,0.8); }
+.v-thinker p { color: rgba(255,255,255,0.7); }
+.v-pillar p { color: rgba(255,255,255,0.72); }
+.v-pyramid-content p { color: rgba(255,255,255,0.72); }
+.coop-item p { color: rgba(255,255,255,0.72); }
+.blk p { color: rgba(255,255,255,0.82); }
+.fc-desc { color: rgba(255,255,255,0.72); }
+.pb-narrative p { color: rgba(255,255,255,0.85); }
+.hero-quote { color: rgba(255,255,255,0.7); }
+.section-dark .section-intro, .section-darker .section-intro { color: rgba(255,255,255,0.82); }
+.ms-l { color: rgba(255,255,255,0.6); }
+.ms-d { color: rgba(255,255,255,0.72); }
+.pc-label { color: rgba(255,255,255,0.65); }
+.pc-sub { color: rgba(255,255,255,0.5); }
+.pill-lbl { color: rgba(255,255,255,0.65); }
+.reform-divider p { color: rgba(255,255,255,0.6); }
+.ba-desc { color: rgba(255,255,255,0.6); }
+.lh-body p { color: rgba(255,255,255,0.82); }
+.agr-body p { color: rgba(255,255,255,0.78); }
+.tl-d { color: rgba(255,255,255,0.75); }
+.pcard .cap span { color: rgba(255,255,255,0.6); }
+.v-photo-caption { color: rgba(255,255,255,0.6); }
+.qmark { color: rgba(255,255,255,0.15); }
 
 /* P1: Scroll progress bar */
 .scroll-progress {

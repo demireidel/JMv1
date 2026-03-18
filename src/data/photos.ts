@@ -4,7 +4,7 @@ export const stripPhotos1 = [
   { src: "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/27803c407641418b8ef56bf0f207df9c.jpg", alt: "Milei con Trump en la Casa Blanca 2025" },
   { src: "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/fe4f9351c4e246ec9de6cbb90ea7e266.jpg", alt: "Milei en el G7 Italia" },
   { src: "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/e33b53a762ae458ab83a35fcfb27712c.jpg", alt: "Milei con Elon Musk" },
-  { src: "https://assets.weforum.org/article/image/large_dZsGhcIlGWtbH8eUB_vQpnejhUUnQad0Zeqg3UXQMyI.jpg", alt: "Milei en Davos 2025" },
+  { src: "https://www.argentina.gob.ar/sites/default/files/g20fotofamilia.jpg", alt: "Milei en cumbre internacional" },
   { src: "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/5c50c798f91b40939b187ca9e38488b3.jpg", alt: "Milei en la ONU" },
   { src: "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/2a3cb7c9d1c74295b178f3745f02ddbe.jpg", alt: "Asunción presidencial Milei" },
   { src: "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/fd911633a1bf4c0c80cd92b24f1aeaea.jpg", alt: "Milei cumbre G7 líderes" },
@@ -30,9 +30,9 @@ export const visionPhotos = [
     caption: "Asunción presidencial — Casa Rosada, 10 de diciembre de 2023",
   },
   {
-    src: "https://assets.weforum.org/article/image/large_dZsGhcIlGWtbH8eUB_vQpnejhUUnQad0Zeqg3UXQMyI.jpg",
-    alt: "Milei en el Foro Económico Mundial — Davos, enero 2024",
-    caption: "Foro Económico Mundial — Davos, enero 2024",
+    src: "https://www.argentina.gob.ar/sites/default/files/banga01.jpg",
+    alt: "Milei en reunión internacional — 2024",
+    caption: "Reunión internacional — 2024",
   },
   {
     src: "https://www.argentina.gob.ar/sites/default/files/milei_3-_europa_viva_24.jpeg",
