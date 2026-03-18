@@ -1746,3 +1746,265 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
   text-align: left; letter-spacing: 5px; font-size: 0.7rem;
 }
 .mundo-hero-title { text-align: left; }
+
+/* ═══════════════════════════════════════════════════════════
+   VISUAL DESIGN V3 — PRESIDENTIAL BROADSHEET EDITORIAL
+   ═══════════════════════════════════════════════════════════ */
+
+/* ═══ PHOTO STRIP — TALLER, MORE PROMINENT ═══ */
+.photo-strip-wrapper {
+  padding: 1.5rem 0;
+  position: relative;
+}
+.photo-strip-wrapper::before {
+  width: 120px;
+  background: linear-gradient(90deg, var(--dark) 30%, transparent);
+}
+.photo-strip-wrapper::after {
+  width: 120px;
+  background: linear-gradient(-90deg, var(--dark) 30%, transparent);
+}
+.photo-strip img {
+  height: 320px;
+  min-width: 260px;
+  border-radius: 6px;
+  filter: grayscale(15%) brightness(0.9);
+}
+.photo-strip img:hover {
+  filter: grayscale(0%) brightness(1.08);
+  transform: scale(1.05);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 2px rgba(246,180,14,0.15);
+  border-radius: 8px;
+}
+
+/* ═══ VISION — EDITORIAL CHAPTER SYSTEM ═══ */
+
+/* Large decorative chapter number overlay */
+.v-chapter {
+  margin-bottom: 6rem;
+  position: relative;
+}
+.v-chapter-header {
+  position: relative;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+.v-chapter-num {
+  font-size: 5rem;
+  opacity: 0.06;
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+  letter-spacing: 6px;
+  line-height: 1;
+  color: var(--sol);
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+}
+.v-chapter-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  position: relative;
+  z-index: 1;
+}
+
+/* Wider prose measure for breathing room */
+.v-prose {
+  max-width: 720px;
+  font-size: 1.02rem;
+  line-height: 2;
+}
+.v-prose .lead {
+  font-size: 1.2rem;
+  line-height: 1.85;
+  max-width: 680px;
+}
+
+/* Ornamental chapter divider — replaces plain .v-rule */
+.v-rule {
+  position: relative;
+  height: 40px;
+  max-width: 300px;
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+.v-rule::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(246,180,14,0.3), rgba(246,180,14,0.5), rgba(246,180,14,0.3), transparent);
+}
+.v-rule::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--sol);
+  transform: rotate(45deg);
+  position: relative;
+  z-index: 1;
+  opacity: 0.4;
+  box-shadow: 0 0 12px rgba(246,180,14,0.3);
+}
+
+/* Pullquote — more editorial, wider */
+.v-pullquote {
+  margin: 3.5rem 0;
+  padding: 3rem 3.5rem;
+  max-width: 800px;
+}
+.v-pullquote p {
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+}
+
+/* Data strip — more spacious */
+.v-data-strip {
+  margin: 4rem 0;
+}
+.v-data-cell {
+  padding: 2.5rem 2rem;
+}
+
+/* V-aside — more prominent */
+.v-aside {
+  margin: 3rem 0;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(116,172,223,0.1);
+  background: linear-gradient(135deg, rgba(116,172,223,0.05), rgba(116,172,223,0.02));
+}
+
+/* V-declaration — more dramatic spacing */
+.v-declaration {
+  padding: 7rem 2rem;
+  margin-top: 4rem;
+}
+
+/* ═══ REFORMAS — LAYOUT VARIETY ═══ */
+
+/* Every 3rd reform uses a wide horizontal layout */
+.reform-section:nth-child(3n+2) .reform-trio {
+  grid-template-columns: 1.2fr 1.2fr 0.8fr;
+}
+.reform-section:nth-child(3n) .reform-trio {
+  grid-template-columns: 0.8fr 1.2fr 1.2fr;
+}
+
+/* Featured reform style — every 4th reform gets extra prominence */
+.reform-section:nth-child(4n+1) .reform-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.reform-section:nth-child(4n+1) .reform-title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+}
+
+/* Reform divider — more editorial */
+.reform-divider {
+  padding: 5rem 0 4rem;
+}
+.reform-divider h3 {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+}
+.reform-divider-line {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--sol), rgba(246,180,14,0.3));
+  margin: 2rem auto 0;
+  position: relative;
+}
+.reform-divider-line::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--sol);
+  transform: rotate(45deg);
+  position: absolute;
+  right: -8px;
+  top: -2px;
+  opacity: 0.5;
+}
+
+/* Reform quote — wider on featured reforms */
+.reform-section:nth-child(4n+1) .ref-quote {
+  margin-top: 3rem;
+  padding: 2.5rem 3rem;
+}
+
+/* ═══ SECTION TRANSITIONS — GRADIENT MESH BRIDGES ═══ */
+
+/* Light-to-dark bridge */
+.section-light + .section-darker,
+.section-light + [class*="futuro"] {
+  position: relative;
+}
+.section-light + .section-darker::before,
+.section-light + [class*="futuro"]::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  height: 160px;
+  background: linear-gradient(180deg, var(--cream), rgba(245,240,232,0) 30%, rgba(10,10,15,0) 70%, var(--dark));
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Dark-to-light bridge */
+.section-darker + .section-light,
+[class*="futuro"] + .section-light,
+.section-dark + .section-light {
+  position: relative;
+}
+
+/* Futuro section top glow — make the accent line more dramatic */
+.futuro-accent-line {
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 5%,
+    var(--celeste) 20%,
+    var(--sol) 50%,
+    var(--celeste) 80%,
+    transparent 95%
+  );
+  box-shadow: 0 0 20px rgba(246,180,14,0.15), 0 0 40px rgba(116,172,223,0.1);
+}
+
+/* ═══ MEGA STATS — MORE DRAMATIC ═══ */
+.mega-stats {
+  padding: 6rem 2.5rem;
+}
+.mega-inner {
+  gap: 3rem;
+}
+
+/* ═══ CONTAINER — SLIGHTLY WIDER ON LARGE SCREENS ═══ */
+@media (min-width: 1400px) {
+  .container { max-width: 1300px; }
+  .v-prose { max-width: 780px; }
+  .reform-desc { max-width: 960px; }
+}
+
+/* ═══ REFORM TRIO RESPONSIVE FIX ═══ */
+@media (max-width: 1024px) {
+  .reform-section:nth-child(3n+2) .reform-trio,
+  .reform-section:nth-child(3n) .reform-trio {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══ PHOTO STRIP RESPONSIVE ═══ */
+@media (max-width: 968px) {
+  .photo-strip img { height: 240px; min-width: 200px; }
+}
+@media (max-width: 600px) {
+  .photo-strip img { height: 180px; min-width: 160px; }
+  .v-chapter-num { font-size: 3rem; }
+}
