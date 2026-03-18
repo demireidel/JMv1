@@ -8,7 +8,8 @@ const links = [
   { href: "#reformas", label: "Reformas" },
   { href: "#futuro", label: "Futuro" },
   { href: "#mundo", label: "Mundo" },
-];
+  { href: "#archivo", label: "Archivo" },
+] as const;
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,14 +18,10 @@ export default function Nav() {
   const navRef = useRef<HTMLElement>(null);
 
   const updateActive = useCallback(() => {
-    const sections = links.map((l) => l.href.slice(1));
     let current = "";
-    for (const id of sections) {
-      const el = document.getElementById(id);
-      if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= 200) current = id;
-      }
+    for (const { href } of links) {
+      const el = document.getElementById(href.slice(1));
+      if (el && el.getBoundingClientRect().top <= 200) current = href.slice(1);
     }
     setActiveSection(current);
   }, []);
@@ -38,7 +35,6 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [updateActive]);
 
-  // Close mobile menu on Escape
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape" && mobileOpen) setMobileOpen(false);
@@ -47,34 +43,23 @@ export default function Nav() {
     return () => document.removeEventListener("keydown", onKey);
   }, [mobileOpen]);
 
-  // Smooth scroll handler
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileOpen(false);
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <nav
       ref={navRef}
-      className={`site-nav ${scrolled ? "scrolled" : ""}`}
+      className={`site-nav${scrolled ? " scrolled" : ""}`}
       role="navigation"
       aria-label="Navegación principal"
     >
-      <a
-        href="#hero"
-        className="nav-logo"
-        onClick={(e) => handleClick(e, "#hero")}
-      >
+      <a href="#hero" className="nav-logo" onClick={(e) => handleClick(e, "#hero")}>
         JAVIER <span>MILEI</span>
       </a>
-      <ul
-        className={`nav-links ${mobileOpen ? "mobile-open" : ""}`}
-        role="menubar"
-      >
+      <ul className={`nav-links${mobileOpen ? " mobile-open" : ""}`} role="menubar">
         {links.map((l) => (
           <li key={l.href} role="none">
             <a

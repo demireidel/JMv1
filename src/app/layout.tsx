@@ -1,54 +1,67 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Source_Sans_3, Playfair_Display, Bebas_Neue } from "next/font/google";
 import "./globals.css";
+
+/* ── Fonts ─────────────────────────────────────────────── */
 
 const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
+  display: "swap",
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
+  weight: ["400", "700"],
   style: ["normal", "italic"],
+  display: "swap",
 });
 
 const bebas = Bebas_Neue({
   variable: "--font-bebas-neue",
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
 });
 
+/* ── Viewport ──────────────────────────────────────────── */
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0a0a0f",
+  colorScheme: "dark",
+};
+
+/* ── Metadata ──────────────────────────────────────────── */
+
+const title = "Javier Milei — Presidente de la Nación Argentina";
+const description = "La libertad avanza. Argentina será el país más libre del mundo.";
+const ogImage = "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/4bc8c6ffb5ee4b1ba05998350f9dc353.jpg";
+
 export const metadata: Metadata = {
-  title: "Javier Milei — Presidente de la Nación Argentina",
-  description:
-    "La libertad avanza. Argentina será el país más libre del mundo.",
+  title,
+  description,
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Javier Milei — Presidente de la Nación Argentina",
-    description:
-      "La libertad avanza. Visión, logros, reformas y el futuro de Argentina.",
+    title,
+    description: "La libertad avanza. Visión, logros, reformas y el futuro de Argentina.",
     type: "website",
     locale: "es_AR",
-    images: [
-      {
-        url: "https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/4bc8c6ffb5ee4b1ba05998350f9dc353.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Presidente Javier Milei",
-      },
-    ],
+    siteName: title,
+    images: [{ url: ogImage, width: 1200, height: 630, alt: "Presidente Javier Milei" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Javier Milei — Presidente de la Nación Argentina",
-    description: "La libertad avanza. Argentina será el país más libre del mundo.",
+    title,
+    description,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: { icon: "/favicon.ico" },
 };
+
+/* ── Layout ────────────────────────────────────────────── */
 
 export default function RootLayout({
   children,
@@ -58,7 +71,6 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      data-scroll-behavior="smooth"
       className={`${sourceSans.variable} ${playfair.variable} ${bebas.variable}`}
     >
       <body>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useInView } from "@/hooks";
 
 export default function FadeIn({
   children,
@@ -9,25 +9,10 @@ export default function FadeIn({
   children: React.ReactNode;
   className?: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("visible");
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
+  const { ref, inView } = useInView();
 
   return (
-    <div ref={ref} className={`fade-in ${className}`}>
+    <div ref={ref} className={`fade-in${inView ? " visible" : ""} ${className}`}>
       {children}
     </div>
   );
