@@ -21,7 +21,7 @@ export default function PhotoStrip({ photos, reverse = false }: PhotoStripProps)
       <div className={`photo-strip${reverse ? " photo-strip-2" : ""}`}>
         {doubled.map((p, i) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img key={i} src={p.src} alt={p.alt} loading="lazy" />
+          <img key={i} src={p.src} alt={p.alt} loading="eager" />
         ))}
       </div>
     </div>
