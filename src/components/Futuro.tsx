@@ -11,20 +11,10 @@ const galleryPhotos = [
 
 export default function Futuro() {
   return (
-    <section
-      id="futuro"
-      style={{ background: "var(--navy)", position: "relative" }}
-    >
-      <div
-        style={{
-          position: "absolute", top: 0, left: 0, right: 0, height: 3,
-          background: "linear-gradient(90deg, var(--celeste), var(--sol), var(--celeste))", zIndex: 2,
-        }}
-      />
-      {/* Subtle radial glows */}
-      <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: 800, height: 600, background: "radial-gradient(ellipse, rgba(246,180,14,0.03) 0%, transparent 70%)", pointerEvents: "none" }} />
-
-      <div className="container" style={{ position: "relative", zIndex: 1 }}>
+    <section id="futuro" className="futuro-section">
+      <div className="futuro-accent-line" />
+      <div className="futuro-glow-top" />
+      <div className="container futuro-container">
         <FadeIn>
           <div className="sec-head">
             <div className="sec-num">04</div>
@@ -97,7 +87,7 @@ export default function Futuro() {
             </div>
             <div className="pcard" style={{ aspectRatio: "16/9" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/futuro/zuckerberg.jpg" alt="Milei con Mark Zuckerberg" style={{ objectPosition: "center 25%" }} />
+              <img src="/images/futuro/zuckerberg.jpg" alt="Milei con Mark Zuckerberg" loading="lazy" style={{ objectPosition: "center 25%" }} />
               <div className="cap">
                 <strong>Milei con Mark Zuckerberg</strong>
                 <span>Sede de Meta — Silicon Valley, Mayo 2024</span>
@@ -113,7 +103,7 @@ export default function Futuro() {
               <div className="fg-item" key={p.tag + p.who}>
                 <div className="fg-badge">{p.tag}</div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={p.who} style={{ objectPosition: p.pos }} />
+                <img src={p.src} alt={p.who} loading="lazy" style={{ objectPosition: p.pos }} />
                 <div className="fg-overlay">
                   <div className="fg-who">{p.who}</div>
                   <div className="fg-where">{p.where}</div>
@@ -137,7 +127,7 @@ export default function Futuro() {
           <div className="duo flip">
             <div className="pcard" style={{ aspectRatio: "16/9" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/futuro/stargate-casarosada.jpg" alt="Milei y Reidel con delegación de OpenAI en Casa Rosada" style={{ objectPosition: "center 25%" }} />
+              <img src="/images/futuro/stargate-casarosada.jpg" alt="Milei y Reidel con delegación de OpenAI en Casa Rosada" loading="lazy" style={{ objectPosition: "center 25%" }} />
               <div className="cap">
                 <strong>Milei y Demian Reidel reciben a delegación de OpenAI</strong>
                 <span>Casa Rosada — Octubre 2025</span>
@@ -203,7 +193,7 @@ export default function Futuro() {
           <div className="duo">
             <div className="pcard" style={{ aspectRatio: "16/9" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/futuro/plan-nuclear.jpg" alt="Reidel, Milei y Grossi anuncian el Plan Nuclear Argentino" style={{ objectPosition: "center 35%" }} />
+              <img src="/images/futuro/plan-nuclear.jpg" alt="Reidel, Milei y Grossi anuncian el Plan Nuclear Argentino" loading="lazy" style={{ objectPosition: "center 35%" }} />
               <div className="cap">
                 <strong>Reidel, Milei y Grossi anuncian el Plan Nuclear Argentino</strong>
                 <span>Casa Rosada — Diciembre 2024</span>
@@ -274,7 +264,7 @@ export default function Futuro() {
           <div className="duo flip">
             <div className="pcard" style={{ aspectRatio: "16/9" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/futuro/vaca-muerta.jpg" alt="Torre de perforación en Vaca Muerta, Neuquén" style={{ objectPosition: "center 30%" }} />
+              <img src="/images/futuro/vaca-muerta.jpg" alt="Torre de perforación en Vaca Muerta, Neuquén" loading="lazy" style={{ objectPosition: "center 30%" }} />
               <div className="cap">
                 <strong>Vaca Muerta — Neuquén, Patagonia</strong>
                 <span>2° reserva mundial de gas shale · 4° de petróleo shale</span>
@@ -319,17 +309,15 @@ export default function Futuro() {
 
         {/* Closing */}
         <FadeIn>
-          <div style={{ marginTop: "5rem", textAlign: "center", maxWidth: 700, marginLeft: "auto", marginRight: "auto" }}>
-            <div style={{ width: 60, height: 2, background: "linear-gradient(90deg, var(--sol), var(--celeste))", margin: "0 auto 2rem", borderRadius: 1 }} />
-            <p style={{ fontFamily: "var(--font-playfair-display), 'Playfair Display', serif", fontSize: "1.3rem", fontStyle: "italic", color: "var(--t1)", lineHeight: 1.8 }}>
+          <div className="futuro-closing">
+            <div className="futuro-closing-line" />
+            <p className="futuro-closing-text">
               Silicon Valley abrió la puerta. Stargate trae la infraestructura.
               La energía nuclear y Vaca Muerta la alimentan. Argentina no será
               una observadora pasiva — está llamada a ser la arquitecta del
               futuro.
             </p>
-            <p style={{ fontSize: "0.68rem", letterSpacing: 3, textTransform: "uppercase" as const, color: "var(--sol)", marginTop: "1.2rem", fontWeight: 600 }}>
-              Demian Reidel
-            </p>
+            <p className="futuro-closing-attr">Demian Reidel</p>
           </div>
         </FadeIn>
       </div>

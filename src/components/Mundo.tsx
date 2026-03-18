@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import FadeIn from "./FadeIn";
 
 const leaders = [
@@ -33,6 +36,34 @@ const timeline = [
   { date: "MAR 2026", title: "Argentina Week NYC", desc: "300+ empresarios. Inauguración con Jamie Dimon (JP Morgan). Gobernadores promocionando inversión." },
 ];
 
+function AnimatedNumber({ target, prefix = "", suffix = "", formatDot = false }: { target: number; prefix?: string; suffix?: string; formatDot?: boolean }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [value, setValue] = useState(0);
+  const animated = useRef(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !animated.current) {
+        animated.current = true;
+        const duration = 2000;
+        const start = performance.now();
+        const animate = (now: number) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(2, -10 * progress);
+          setValue(Math.round(target * eased));
+          if (progress < 1) requestAnimationFrame(animate);
+        };
+        requestAnimationFrame(animate);
+      }
+    }, { threshold: 0.3 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [target]);
+  const display = formatDot ? value.toLocaleString("es-AR") : value.toLocaleString();
+  return <div ref={ref} className="ms-v">{prefix}{display}{suffix}</div>;
+}
+
 export default function Mundo() {
   return (
     <>
@@ -52,30 +83,42 @@ export default function Mundo() {
           <p className="hero-subtitle" style={{ textAlign: "left", letterSpacing: 5, fontSize: "0.7rem" }}>
             Sección 05 — Inserción Internacional
           </p>
-          <h1 className="hero-name" style={{ textAlign: "left" }}>
+          <h2 className="hero-name" style={{ textAlign: "left" }}>
             ARGENTINA
             <br />
             EN EL MUNDO
-          </h1>
+          </h2>
         </div>
       </section>
 
       {/* Mega Stats */}
       <div className="mega-stats">
         <div className="mega-inner">
-          {[
-            { v: "1er", l: "País sudamericano", d: "en firmar TLC con EE.UU." },
-            { v: "1.675", l: "Productos argentinos", d: "con aranceles eliminados" },
-            { v: "$1.013M", l: "Exportaciones recuperadas", d: "acceso directo a EE.UU." },
-            { v: "100K tn", l: "Carne bovina", d: "cuota sin arancel a EE.UU." },
-            { v: "92%", l: "Aranceles eliminados", d: "por la UE para Mercosur" },
-          ].map((s) => (
-            <div className="ms-item" key={s.l}>
-              <div className="ms-v">{s.v}</div>
-              <div className="ms-l">{s.l}</div>
-              <div className="ms-d">{s.d}</div>
-            </div>
-          ))}
+          <div className="ms-item">
+            <div className="ms-v">1er</div>
+            <div className="ms-l">País sudamericano</div>
+            <div className="ms-d">en firmar TLC con EE.UU.</div>
+          </div>
+          <div className="ms-item">
+            <AnimatedNumber target={1675} formatDot />
+            <div className="ms-l">Productos argentinos</div>
+            <div className="ms-d">con aranceles eliminados</div>
+          </div>
+          <div className="ms-item">
+            <AnimatedNumber target={1013} prefix="$" suffix="M" />
+            <div className="ms-l">Exportaciones recuperadas</div>
+            <div className="ms-d">acceso directo a EE.UU.</div>
+          </div>
+          <div className="ms-item">
+            <AnimatedNumber target={100} suffix="K tn" />
+            <div className="ms-l">Carne bovina</div>
+            <div className="ms-d">cuota sin arancel a EE.UU.</div>
+          </div>
+          <div className="ms-item">
+            <AnimatedNumber target={92} suffix="%" />
+            <div className="ms-l">Aranceles eliminados</div>
+            <div className="ms-d">por la UE para Mercosur</div>
+          </div>
         </div>
       </div>
 

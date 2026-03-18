@@ -57,7 +57,7 @@ interface LogroCardProps {
   num: string;
   badge: string;
   title: string;
-  paragraphs: string[];
+  paragraphs: React.ReactNode[];
   before: { label: string; val: string; desc: string };
   after: { label: string; val: string; desc: string };
   callout: string;
@@ -113,7 +113,7 @@ function LogroCard({
             <div className="lh-num">{num}</div>
             <h3>{title}</h3>
             {paragraphs.map((p, i) => (
-              <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+              <p key={i}>{p}</p>
             ))}
             <div className="ba-compare">
               <div className="ba-box before">
@@ -382,7 +382,7 @@ export default function Logros() {
               </p>
               <span className="pq-attr">— Milei, Congreso 2026</span>
             </div>
-            <div style={{ height: "2.5rem" }} />
+            <div className="pobreza-spacer" />
           </div>
         </FadeIn>
 

@@ -18,7 +18,7 @@ export default function PhotoStrip() {
       <div className="photo-strip" id="photoStrip">
         {allPhotos.map((p, i) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img key={i} src={p.src} alt={p.alt} />
+          <img key={i} src={p.src} alt={p.alt} loading="lazy" />
         ))}
       </div>
     </div>

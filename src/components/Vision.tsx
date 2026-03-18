@@ -161,7 +161,7 @@ export default function Vision() {
               </p>
               <cite>Davos, enero 2024</cite>
             </div>
-            <div className="v-prose" style={{ marginTop: "1.5rem" }}>
+            <div className="v-prose v-prose-continued">
               <p>
                 <strong>&laquo;Maquiavelo ha muerto.&raquo;</strong> Durante
                 años se nos deformó el pensamiento con un falso dilema: que al
@@ -359,7 +359,7 @@ export default function Vision() {
               </p>
               <cite>CPAC Argentina, diciembre 2024</cite>
             </div>
-            <div className="v-prose" style={{ marginTop: "1.5rem" }}>
+            <div className="v-prose v-prose-continued">
               <p>
                 Por eso mi gobierno pelea en{" "}
                 <strong>tres frentes simultáneos</strong>:
@@ -407,7 +407,7 @@ export default function Vision() {
 
         <FadeIn>
           <div className="v-chapter">
-            <div className="v-prose" style={{ marginTop: "1.5rem" }}>
+            <div className="v-prose v-prose-continued">
               <p>
                 <strong>
                   Dar la batalla cultural desde el poder no solo es recomendable
@@ -496,7 +496,7 @@ export default function Vision() {
               </p>
               <cite>Davos, enero 2024</cite>
             </div>
-            <div className="v-prose" style={{ marginTop: "1.5rem" }}>
+            <div className="v-prose v-prose-continued">
               <p>
                 A partir de hoy, la República Argentina abandona la posición de
                 neutralidad histórica y se pone a la vanguardia de la lucha en
@@ -541,7 +541,7 @@ export default function Vision() {
         {/* Closing */}
         <FadeIn>
           <div className="v-declaration">
-            <div className="v-rule" style={{ marginBottom: "2.5rem" }} />
+            <div className="v-rule v-rule-bottom" />
             <div className="vd-big">
               ARGENTINA SERÁ
               <br />
@@ -549,7 +549,7 @@ export default function Vision() {
               <br />
               DEL MUNDO
             </div>
-            <div className="v-rule" style={{ marginTop: "2rem", marginBottom: "1.2rem" }} />
+            <div className="v-rule v-rule-spaced" />
             <div className="vd-source">Viva la libertad, carajo!</div>
           </div>
         </FadeIn>

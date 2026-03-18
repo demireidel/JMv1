@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import { ScrollProgress, BackToTop } from "@/components/ScrollProgress";
 import PhotoStrip from "@/components/PhotoStrip";
 import Vision from "@/components/Vision";
 import Logros from "@/components/Logros";
@@ -11,6 +12,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Nav />
       <Hero />
       <PhotoStrip />
@@ -20,6 +22,7 @@ export default function Home() {
       <Futuro />
       <Mundo />
       <Footer />
+      <BackToTop />
     </>
   );
 }
