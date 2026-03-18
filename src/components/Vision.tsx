@@ -116,6 +116,14 @@ export default function Vision() {
           </div>
         </FadeIn>
 
+        <FadeIn>
+          <div className="v-chapter-photo">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/2a3cb7c9d1c74295b178f3745f02ddbe.jpg" alt="Asunción presidencial — Casa Rosada, diciembre 2023" loading="lazy" />
+            <div className="v-photo-caption">Asunción presidencial — Casa Rosada, 10 de diciembre de 2023</div>
+          </div>
+        </FadeIn>
+
         <div className="v-rule" />
 
         {/* ═══════════ CAPÍTULO II ═══════════ */}
@@ -254,6 +262,14 @@ export default function Vision() {
               Carl Menger, Ludwig von Mises, Friedrich Hayek, Murray Rothbard,
               Israel Kirzner, Jesús Huerta de Soto, Alberto Benegas Lynch (h).
             </strong>
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <div className="v-chapter-photo">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://assets.weforum.org/article/image/large_dZsGhcIlGWtbH8eUB_vQpnejhUUnQad0Zeqg3UXQMyI.jpg" alt="Milei en el Foro Económico Mundial — Davos, enero 2024" loading="lazy" />
+            <div className="v-photo-caption">Foro Económico Mundial — Davos, enero 2024</div>
           </div>
         </FadeIn>
 
@@ -436,6 +452,14 @@ export default function Vision() {
           </div>
         </FadeIn>
 
+        <FadeIn>
+          <div className="v-chapter-photo">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://www.argentina.gob.ar/sites/default/files/milei_3-_europa_viva_24.jpeg" alt="Milei en Europa Viva 24 — La batalla cultural" loading="lazy" />
+            <div className="v-photo-caption">Europa Viva 24 — La batalla cultural internacional</div>
+          </div>
+        </FadeIn>
+
         <div className="v-rule" />
 
         {/* ═══════════ CAPÍTULO V ═══════════ */}
@@ -518,6 +542,14 @@ export default function Vision() {
                 convertirnos en el país más libre del mundo.
               </p>
             </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <div className="v-chapter-photo">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://english.news.cn/20231211/fbb053d019cb4fe892fb746da14e1ed4/fd911633a1bf4c0c80cd92b24f1aeaea.jpg" alt="Milei con líderes del G7 — La defensa de Occidente" loading="lazy" />
+            <div className="v-photo-caption">Cumbre del G7 — La defensa de Occidente, 2024</div>
           </div>
         </FadeIn>
 
