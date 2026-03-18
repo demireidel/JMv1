@@ -990,4 +990,221 @@ footer .motto {
   .section-number { font-size: 3.5rem; }
   .photo-strip img { height: 140px; }
   .mega-inner { grid-template-columns: 1fr; }
+  .futuro-gallery { grid-template-columns: 1fr 1fr; }
+}
+
+/* ═══════════════════════════════════════════
+   PREMIUM UPGRADES
+   ═══════════════════════════════════════════ */
+
+/* Film grain overlay on dark sections */
+body::after {
+  content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat; background-size: 200px;
+}
+
+/* Premium easing */
+:root { --ease-premium: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Enhanced Nav */
+.site-nav { transition: all 0.5s var(--ease-premium); }
+.site-nav.scrolled {
+  background: rgba(10,10,15,0.92); backdrop-filter: blur(30px) saturate(1.8);
+  box-shadow: 0 1px 40px rgba(0,0,0,0.4);
+}
+.nav-links li a { transition: color 0.3s var(--ease-premium); position: relative; }
+.nav-links li a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px;
+  background: var(--sol); transform: scaleX(0); transition: transform 0.3s var(--ease-premium);
+}
+.nav-links li a:hover::after { transform: scaleX(1); }
+
+/* ═══════════ IMAGE SWAP — LOGROS ═══════════ */
+.img-swap {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: opacity 0.7s ease, transform 1s var(--ease-premium);
+}
+.img-swap.img-after { opacity: 0; }
+.lh-img:hover .img-swap.img-before,
+.lh-img.flipped .img-swap.img-before { opacity: 0; transform: scale(1.04); }
+.lh-img:hover .img-swap.img-after,
+.lh-img.flipped .img-swap.img-after { opacity: 1; }
+
+/* State labels */
+.img-label {
+  position: absolute; bottom: 1.2rem; left: 50%; transform: translateX(-50%);
+  padding: 0.35rem 1.2rem; border-radius: 20px;
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-size: 0.8rem; letter-spacing: 3px; z-index: 4;
+  transition: all 0.5s ease; pointer-events: none; backdrop-filter: blur(4px);
+}
+.label-antes { background: rgba(229,57,53,0.85); color: white; }
+.label-despues {
+  background: rgba(46,125,50,0.85); color: white;
+  opacity: 0; transform: translateX(-50%) translateY(6px);
+}
+.lh-img:hover .label-antes,
+.lh-img.flipped .label-antes { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+.lh-img:hover .label-despues,
+.lh-img.flipped .label-despues { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* Hover hint */
+.hover-hint {
+  position: absolute; top: 1.2rem; right: 1.2rem;
+  background: rgba(0,0,0,0.55); color: white;
+  padding: 0.25rem 0.7rem; border-radius: 10px;
+  font-size: 0.65rem; letter-spacing: 1px; z-index: 5;
+  animation: pulse-hint 2.5s ease-in-out infinite;
+  backdrop-filter: blur(4px); font-weight: 600;
+}
+@keyframes pulse-hint { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+.lh-img:hover .hover-hint,
+.lh-img.flipped .hover-hint { opacity: 0; transition: opacity 0.3s; }
+
+/* ═══════════ FUTURO GALLERY ═══════════ */
+.futuro-gallery {
+  display: grid; grid-template-columns: 3fr 2fr 2fr;
+  gap: 5px; border-radius: 14px; overflow: hidden; margin-top: 2rem;
+}
+.fg-item {
+  position: relative; overflow: hidden; background: #090a10;
+  aspect-ratio: 4/3;
+}
+.fg-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(0.84) saturate(0.92);
+  transition: all 0.6s var(--ease-premium);
+}
+.fg-item:hover img { filter: brightness(1) saturate(1.05); transform: scale(1.04); }
+.fg-badge {
+  position: absolute; top: 0.5rem; left: 0.5rem; z-index: 3;
+  font-size: 0.48rem; letter-spacing: 2px; text-transform: uppercase;
+  background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
+  color: white; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 700;
+}
+.fg-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.82) 100%);
+  opacity: 0; transition: opacity 0.4s;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 0.8rem 0.9rem;
+}
+.fg-item:hover .fg-overlay { opacity: 1; }
+.fg-who {
+  font-family: var(--font-playfair-display), 'Playfair Display', serif;
+  font-size: 0.75rem; color: white; font-weight: 700; line-height: 1.3;
+}
+.fg-where { font-size: 0.58rem; color: rgba(255,255,255,0.5); margin-top: 0.12rem; }
+.fg-tag {
+  display: inline-block; font-size: 0.48rem; letter-spacing: 2px; text-transform: uppercase;
+  background: rgba(246,180,14,0.2); color: var(--sol);
+  padding: 0.18rem 0.45rem; border-radius: 3px; margin-top: 0.35rem;
+  font-weight: 700; width: fit-content;
+}
+
+/* ═══════════ PREMIUM CARD ENHANCEMENTS ═══════════ */
+.idea-card, .v-thinker, .v-pillar, .coop-item, .reform-box {
+  transition: all 0.4s var(--ease-premium);
+}
+.logro-hero .lh-inner {
+  transition: all 0.5s var(--ease-premium);
+}
+.logro-hero:hover .lh-inner {
+  box-shadow: 0 20px 70px rgba(0,0,0,0.15);
+}
+
+/* Premium shadow hierarchy */
+.pcard {
+  box-shadow: 0 25px 70px rgba(0,0,0,0.45), 0 0 0 1px var(--border), 0 5px 15px rgba(0,0,0,0.2);
+}
+.pcard:hover {
+  box-shadow: 0 35px 90px rgba(0,0,0,0.55), 0 0 0 1px rgba(246,180,14,0.15), 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Gold glow on accent elements */
+.pp-pill:hover {
+  box-shadow: 0 0 20px rgba(246,180,14,0.1);
+}
+.v-pullquote, .ref-quote, .pobreza-quote {
+  transition: all 0.4s var(--ease-premium);
+}
+.v-pullquote:hover, .ref-quote:hover, .pobreza-quote:hover {
+  border-left-color: var(--sol);
+  box-shadow: -4px 0 20px rgba(246,180,14,0.08);
+}
+
+/* Timeline hover */
+.tl-i { transition: all 0.3s var(--ease-premium); }
+.tl-i:hover { transform: translateX(4px); }
+.tl-i:hover .tl-dot { box-shadow: 0 0 0 3px var(--sol), 0 0 15px rgba(246,180,14,0.3); }
+
+/* Staggered fade-in animations */
+.reform-box.antes { transition-delay: 0s; }
+.reform-box.ahora { transition-delay: 0.1s; }
+.reform-box.impacto { transition-delay: 0.2s; }
+
+/* Leader badges premium hover */
+.lb {
+  transition: all 0.3s var(--ease-premium);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.lb:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1), 0 0 0 1px rgba(212,168,67,0.2);
+}
+
+/* Gradient text on key headings */
+.ref-hero-title {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.85) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.ref-hero-title span {
+  background: linear-gradient(135deg, var(--sol), #f0d078);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+/* Enhanced hero parallax feel */
+.hero-bg img { transition: transform 0.1s linear; }
+
+/* Premium photo strip */
+.photo-strip { animation: scrollStrip 50s linear infinite; }
+.photo-strip img {
+  transition: all 0.5s var(--ease-premium);
+  border-radius: 6px;
+}
+.photo-strip img:hover {
+  filter: grayscale(0%) brightness(1.05); transform: scale(1.06);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* Agr card image overlay gradient */
+.agr-img::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none;
+}
+
+/* Enhanced stat cells hover */
+.v-data-cell { transition: all 0.3s var(--ease-premium); }
+.v-data-cell:hover .vdc-num { color: var(--sol); }
+.futuro-st { transition: all 0.3s var(--ease-premium); cursor: default; }
+.pc-item { transition: all 0.3s var(--ease-premium); }
+
+/* Reforma box hover glow */
+.reform-box:hover {
+  transform: translateY(-2px);
+}
+.reform-box.antes:hover { box-shadow: 0 8px 30px rgba(255,80,80,0.08); }
+.reform-box.ahora:hover { box-shadow: 0 8px 30px rgba(80,200,120,0.08); }
+.reform-box.impacto:hover { box-shadow: 0 8px 30px rgba(212,168,67,0.08); }
+
+/* Responsive gallery */
+@media (max-width: 968px) {
+  .futuro-gallery { grid-template-columns: 1fr 1fr; }
+  .fg-item { aspect-ratio: 3/2; }
+  .hover-hint { display: none; }
+}
+@media (max-width: 768px) {
+  .futuro-gallery { grid-template-columns: 1fr 1fr; }
 }

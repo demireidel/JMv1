@@ -1,26 +1,29 @@
 import FadeIn from "./FadeIn";
 
+const galleryPhotos = [
+  { src: "/images/futuro/altman.jpg", who: "Milei con Sam Altman", where: "CEO de OpenAI — Silicon Valley, Mayo 2024", tag: "OpenAI", pos: "center 20%" },
+  { src: "/images/futuro/meta-delegacion.jpg", who: "La delegación argentina con Mark Zuckerberg", where: "Sede de Meta, Menlo Park", tag: "Meta", pos: "center 18%" },
+  { src: "/images/futuro/cook.jpg", who: "Milei con Tim Cook", where: "Apple Park, Cupertino", tag: "Apple", pos: "center 40%" },
+  { src: "/images/futuro/andreessen.jpg", who: "Reidel y Travizano con Marc Andreessen", where: "Andreessen Horowitz (a16z)", tag: "a16z", pos: "center 12%" },
+  { src: "/images/futuro/pichai.jpg", who: "Milei con Sundar Pichai", where: "Google HQ, Mountain View", tag: "Google", pos: "center 12%" },
+  { src: "/images/futuro/google-delegacion.jpg", who: "Delegación argentina recibida en Google HQ", where: "Mountain View", tag: "Google", pos: "center 22%" },
+];
+
 export default function Futuro() {
   return (
     <section
       id="futuro"
-      style={{
-        background: "var(--navy)",
-        position: "relative",
-      }}
+      style={{ background: "var(--navy)", position: "relative" }}
     >
       <div
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: 3,
-          background:
-            "linear-gradient(90deg, var(--celeste), var(--sol), var(--celeste))",
-          zIndex: 2,
+          position: "absolute", top: 0, left: 0, right: 0, height: 3,
+          background: "linear-gradient(90deg, var(--celeste), var(--sol), var(--celeste))", zIndex: 2,
         }}
       />
+      {/* Subtle radial glows */}
+      <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: 800, height: 600, background: "radial-gradient(ellipse, rgba(246,180,14,0.03) 0%, transparent 70%)", pointerEvents: "none" }} />
+
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <FadeIn>
           <div className="sec-head">
@@ -33,7 +36,8 @@ export default function Futuro() {
                 profundo podemos dar un salto hacia el futuro.»
               </em>{" "}
               — Cuatro pilares transforman a la Argentina en protagonista de la
-              revolución tecnológica global.
+              revolución tecnológica global: Silicon Valley, Stargate, energía
+              nuclear e hidrocarburos.
             </p>
           </div>
         </FadeIn>
@@ -42,129 +46,109 @@ export default function Futuro() {
         <FadeIn>
           <div className="duo">
             <div className="blk">
-              <div className="kicker k-gold">
-                Mayo 2024 · Silicon Valley
-              </div>
-              <h3>
-                ARGENTINA COMO
-                <br />
-                <em>HUB GLOBAL DE IA</em>
-              </h3>
+              <div className="kicker k-gold">Mayo 2024 · Silicon Valley</div>
+              <h3>ARGENTINA COMO<br /><em>HUB GLOBAL DE IA</em></h3>
               <p>
                 En mayo de 2024, el Presidente Milei realizó una gira histórica
-                por Silicon Valley. Reuniones cara a cara con Sam Altman
-                (OpenAI), Sundar Pichai (Google), Tim Cook (Apple), Mark
-                Zuckerberg (Meta) y Marc Andreessen (a16z).
+                por Silicon Valley — la cuarta visita a Estados Unidos en cinco
+                meses de gestión y la primera dedicada exclusivamente a
+                tecnología. Acompañado por Demian Reidel y Matías Travizano, la
+                semana incluyó reuniones cara a cara con Sam Altman (OpenAI),
+                Sundar Pichai (Google), Tim Cook (Apple), Mark Zuckerberg (Meta)
+                y Marc Andreessen (a16z).
               </p>
               <p>
                 El pitch de Milei usó el modelo irlandés: así como Irlanda
                 multiplicó su PBI per cápita atrayendo inversión tech, la
                 Argentina ofrece algo que nadie más tiene — Patagonia con tierras
-                vastas, clima frío, acceso al agua y energía limpia.
+                vastas, clima frío, acceso al agua y energía limpia. Reidel
+                complementó con su tesis geopolítica: Europa reguló, China es
+                impredecible, y EEUU debate restricciones. Argentina, alineada
+                con Washington y sin regulación hostil, es la alternativa
+                creíble.
               </p>
               <div className="futuro-stats">
-                <div className="futuro-st">
-                  <div className="v">5</div>
-                  <div className="l">CEOs reunidos</div>
-                </div>
-                <div className="futuro-st">
-                  <div className="v">4°</div>
-                  <div className="l">Hub IA global</div>
-                </div>
-                <div className="futuro-st">
-                  <div className="v">2024</div>
-                  <div className="l">Mayo · SF</div>
-                </div>
+                <div className="futuro-st"><div className="v">5</div><div className="l">CEOs reunidos</div></div>
+                <div className="futuro-st"><div className="v">4°</div><div className="l">Hub IA global</div></div>
+                <div className="futuro-st"><div className="v">2024</div><div className="l">Mayo · SF</div></div>
               </div>
             </div>
-            <div
-              className="pcard"
-              style={{
-                aspectRatio: "16/9",
-                background: "linear-gradient(135deg, #1a2a4a, var(--navy))",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "var(--sol)",
-                fontSize: "1.5rem",
-                fontFamily: "var(--font-bebas-neue), 'Bebas Neue', sans-serif",
-                letterSpacing: 3,
-              }}
-            >
-              SILICON VALLEY 2024
+            <div className="pcard" style={{ aspectRatio: "16/9" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/futuro/zuckerberg.jpg" alt="Milei con Mark Zuckerberg" style={{ objectPosition: "center 25%" }} />
+              <div className="cap">
+                <strong>Milei con Mark Zuckerberg</strong>
+                <span>Sede de Meta — Silicon Valley, Mayo 2024</span>
+              </div>
             </div>
+          </div>
+        </FadeIn>
+
+        {/* Gallery */}
+        <FadeIn>
+          <div className="futuro-gallery">
+            {galleryPhotos.map((p) => (
+              <div className="fg-item" key={p.tag + p.who}>
+                <div className="fg-badge">{p.tag}</div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.src} alt={p.who} style={{ objectPosition: p.pos }} />
+                <div className="fg-overlay">
+                  <div className="fg-who">{p.who}</div>
+                  <div className="fg-where">{p.where}</div>
+                  <div className="fg-tag">{p.tag}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </FadeIn>
 
         <FadeIn>
           <div className="dv">
-            <div className="ln" />
-            <div className="dt" />
+            <div className="ln" /><div className="dt" />
             <div className="lb">Un año después, la semilla dio fruto</div>
-            <div className="dt" />
-            <div className="ln" />
+            <div className="dt" /><div className="ln" />
           </div>
         </FadeIn>
 
         {/* 2. Stargate */}
         <FadeIn>
           <div className="duo flip">
-            <div
-              className="pcard"
-              style={{
-                aspectRatio: "16/9",
-                background: "linear-gradient(135deg, #0c1a2e, #162d50)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "var(--celeste)",
-                fontSize: "1.5rem",
-                fontFamily: "var(--font-bebas-neue), 'Bebas Neue', sans-serif",
-                letterSpacing: 3,
-              }}
-            >
-              STARGATE ARGENTINA
+            <div className="pcard" style={{ aspectRatio: "16/9" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/futuro/stargate-casarosada.jpg" alt="Milei y Reidel con delegación de OpenAI en Casa Rosada" style={{ objectPosition: "center 25%" }} />
+              <div className="cap">
+                <strong>Milei y Demian Reidel reciben a delegación de OpenAI</strong>
+                <span>Casa Rosada — Octubre 2025</span>
+              </div>
             </div>
             <div className="blk">
-              <div className="kicker k-blue">
-                Octubre 2025 · Buenos Aires
-              </div>
-              <h3>
-                STARGATE
-                <br />
-                ARGENTINA
-              </h3>
+              <div className="kicker k-blue">Octubre 2025 · Buenos Aires</div>
+              <h3>STARGATE<br />ARGENTINA</h3>
               <p>
                 El 10 de octubre de 2025, el Presidente Milei recibió en Casa
-                Rosada a una delegación de OpenAI. Se firmó la carta de
-                intención para el primer proyecto Stargate en América Latina.
+                Rosada a una delegación de OpenAI liderada por Chris Lehane,
+                junto a Demian Reidel. Allí se firmó la carta de intención para
+                el primer proyecto Stargate en América Latina — y el primero del
+                programa «OpenAI for Countries».
               </p>
               <p>
                 El megacentro de datos en la Patagonia tendrá capacidad de hasta
-                500 MW — el mayor de América Latina. Una inversión de hasta USD
-                25.000 millones bajo el régimen RIGI.
+                500 MW — el mayor de América Latina. La primera fase de 100 MW
+                se proyecta para 2027. El proyecto supone una inversión de hasta
+                USD 25.000 millones bajo el régimen RIGI.
               </p>
-              <div className="blk">
-                <div className="bq">
-                  «Cuando conocí al Presidente Milei durante su visita a San
-                  Francisco, su visión sobre cómo la IA puede impulsar el
-                  crecimiento de Argentina era inconfundible.»
-                  <cite>Sam Altman — CEO, OpenAI</cite>
-                </div>
+              <div className="bq">
+                «Cuando conocí al Presidente Milei durante su visita a San
+                Francisco, su visión sobre cómo la IA puede impulsar el
+                crecimiento de Argentina era inconfundible. Stargate Argentina no
+                es solo infraestructura — es poner la inteligencia artificial en
+                las manos de más personas en Argentina.»
+                <cite>Sam Altman — CEO, OpenAI</cite>
               </div>
               <div className="futuro-stats">
-                <div className="futuro-st">
-                  <div className="v">$25B</div>
-                  <div className="l">Inversión USD</div>
-                </div>
-                <div className="futuro-st">
-                  <div className="v">500</div>
-                  <div className="l">MW Capacidad</div>
-                </div>
-                <div className="futuro-st">
-                  <div className="v">2027</div>
-                  <div className="l">Fase 1 · 100 MW</div>
-                </div>
+                <div className="futuro-st"><div className="v">$25B</div><div className="l">Inversión USD</div></div>
+                <div className="futuro-st"><div className="v">500</div><div className="l">MW Capacidad</div></div>
+                <div className="futuro-st"><div className="v">2027</div><div className="l">Fase 1 · 100 MW</div></div>
               </div>
             </div>
           </div>
@@ -172,71 +156,53 @@ export default function Futuro() {
 
         <FadeIn>
           <div className="dv">
-            <div className="ln" />
-            <div className="dt" />
+            <div className="ln" /><div className="dt" />
             <div className="lb">La energía que lo hace posible</div>
-            <div className="dt" />
-            <div className="ln" />
+            <div className="dt" /><div className="ln" />
           </div>
         </FadeIn>
 
         {/* 3. Nuclear */}
         <FadeIn>
           <div className="duo">
-            <div
-              className="pcard"
-              style={{
-                aspectRatio: "16/9",
-                background: "linear-gradient(135deg, #1a1a2e, #2d1b4e)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#f0d078",
-                fontSize: "1.5rem",
-                fontFamily: "var(--font-bebas-neue), 'Bebas Neue', sans-serif",
-                letterSpacing: 3,
-              }}
-            >
-              PLAN NUCLEAR ARGENTINO
+            <div className="pcard" style={{ aspectRatio: "16/9" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/futuro/plan-nuclear.jpg" alt="Reidel, Milei y Grossi anuncian el Plan Nuclear Argentino" style={{ objectPosition: "center 35%" }} />
+              <div className="cap">
+                <strong>Reidel, Milei y Grossi anuncian el Plan Nuclear Argentino</strong>
+                <span>Casa Rosada — Diciembre 2024</span>
+              </div>
             </div>
             <div className="blk">
-              <div className="kicker k-amber">
-                Energía estratégica · Tres fases
-              </div>
-              <h3>
-                EL MOTOR DETRÁS
-                <br />
-                DE LA REVOLUCIÓN
-              </h3>
+              <div className="kicker k-amber">Energía estratégica · Tres fases</div>
+              <h3>EL MOTOR DETRÁS<br />DE LA REVOLUCIÓN</h3>
               <p>
                 <strong>Fase 1 — El reactor.</strong> El ACR-300, un reactor
                 modular de 300 MW diseñado por ingenieros de INVAP y patentado
                 en Estados Unidos. Se construirán cuatro módulos en Atucha
-                duplicando la capacidad nuclear instalada.
+                duplicando la capacidad nuclear instalada del país a 1.200 MW
+                adicionales.
               </p>
               <p>
-                <strong>Fase 2 — El uranio.</strong> YPF Nuclear lidera la
-                explotación de Cerro Solo en Chubut, el mayor reservorio de
-                uranio del país.
+                <strong>Fase 2 — El uranio.</strong> El «modelo Gillette»: vender
+                reactores con compromiso de compra de uranio argentino. YPF Nuclear
+                lidera la explotación de Cerro Solo en Chubut.
               </p>
               <p>
                 <strong>Fase 3 — Nuclear City.</strong> Un hub de data centers
                 100% libre de combustibles fósiles en la Patagonia, alimentado
                 por energía nuclear.
               </p>
+              <div className="bq">
+                «Con el ACR-300, vamos a ofrecerle al mundo una fuente de energía
+                limpia, estable y escalable. Primero construimos. Después,
+                licenciamos la tecnología al resto del mundo.»
+                <cite>Demian Reidel — Presidente, Consejo Nuclear Argentino</cite>
+              </div>
               <div className="futuro-stats">
-                <div className="futuro-st">
-                  <div className="v">4</div>
-                  <div className="l">ACR-300 · Atucha</div>
-                </div>
-                <div className="futuro-st">
-                  <div className="v">1.2</div>
-                  <div className="l">GW Adicionales</div>
-                </div>
-                <div className="futuro-st">
-                  <div className="v">2030</div>
-                  <div className="l">Primer SMR</div>
-                </div>
+                <div className="futuro-st"><div className="v">4</div><div className="l">ACR-300 · Atucha</div></div>
+                <div className="futuro-st"><div className="v">1.2</div><div className="l">GW Adicionales</div></div>
+                <div className="futuro-st"><div className="v">2030</div><div className="l">Primer SMR</div></div>
               </div>
             </div>
           </div>
@@ -244,65 +210,44 @@ export default function Futuro() {
 
         <FadeIn>
           <div className="dv">
-            <div className="ln" />
-            <div className="dt" />
+            <div className="ln" /><div className="dt" />
             <div className="lb">La otra revolución energética</div>
-            <div className="dt" />
-            <div className="ln" />
+            <div className="dt" /><div className="ln" />
           </div>
         </FadeIn>
 
         {/* 4. Vaca Muerta */}
         <FadeIn>
           <div className="duo flip">
-            <div
-              className="pcard"
-              style={{
-                aspectRatio: "16/9",
-                background: "linear-gradient(135deg, #1b3a1b, #2e5a2e)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#7ec87e",
-                fontSize: "1.5rem",
-                fontFamily: "var(--font-bebas-neue), 'Bebas Neue', sans-serif",
-                letterSpacing: 3,
-              }}
-            >
-              VACA MUERTA · NEUQUÉN
+            <div className="pcard" style={{ aspectRatio: "16/9" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/futuro/vaca-muerta.jpg" alt="Torre de perforación en Vaca Muerta, Neuquén" style={{ objectPosition: "center 30%" }} />
+              <div className="cap">
+                <strong>Vaca Muerta — Neuquén, Patagonia</strong>
+                <span>2° reserva mundial de gas shale · 4° de petróleo shale</span>
+              </div>
             </div>
             <div className="blk">
-              <div className="kicker k-green">
-                Récord histórico · 2025
-              </div>
-              <h3>
-                VACA MUERTA:
-                <br />
-                <em>EL GIGANTE DESPIERTA</em>
-              </h3>
+              <div className="kicker k-green">Récord histórico · 2025</div>
+              <h3>VACA MUERTA:<br /><em>EL GIGANTE DESPIERTA</em></h3>
               <p>
                 En 2025, la Argentina superó el récord de producción petrolera
-                de 1998. La producción alcanzó 869.000 barriles diarios con Vaca
-                Muerta aportando el 65% del total nacional.
+                de 1998 — un máximo que llevaba 27 años intacto. La producción
+                alcanzó 869.000 barriles diarios con Vaca Muerta aportando el
+                65% del total nacional. El crecimiento shale fue del 33%
+                interanual.
               </p>
               <p>
                 El superávit de la balanza comercial energética alcanzó USD
-                6.900 millones en 2025. El proyecto Argentina LNG proyecta
-                exportar 12 millones de toneladas anuales de gas licuado.
+                6.900 millones en 2025 — un 22% más que en 2024. El proyecto
+                Argentina LNG proyecta exportar 12 millones de toneladas anuales
+                de gas licuado desde Río Negro — USD 200.000 millones en
+                exportaciones en 20 años.
               </p>
               <div className="futuro-stats">
-                <div className="futuro-st">
-                  <div className="v">869K</div>
-                  <div className="l">Barriles/día · Récord</div>
-                </div>
-                <div className="futuro-st">
-                  <div className="v">$10B</div>
-                  <div className="l">Inversión 2025</div>
-                </div>
-                <div className="futuro-st">
-                  <div className="v">$6.9B</div>
-                  <div className="l">Superávit energético</div>
-                </div>
+                <div className="futuro-st"><div className="v">869K</div><div className="l">Barriles/día · Récord</div></div>
+                <div className="futuro-st"><div className="v">$10B</div><div className="l">Inversión 2025</div></div>
+                <div className="futuro-st"><div className="v">$6.9B</div><div className="l">Superávit energético</div></div>
               </div>
             </div>
           </div>
@@ -310,49 +255,15 @@ export default function Futuro() {
 
         {/* Closing */}
         <FadeIn>
-          <div
-            style={{
-              marginTop: "5rem",
-              textAlign: "center",
-              maxWidth: 700,
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          >
-            <div
-              style={{
-                width: 60,
-                height: 2,
-                background: "linear-gradient(90deg, var(--sol), var(--celeste))",
-                margin: "0 auto 2rem",
-                borderRadius: 1,
-              }}
-            />
-            <p
-              style={{
-                fontFamily:
-                  "var(--font-playfair-display), 'Playfair Display', serif",
-                fontSize: "1.3rem",
-                fontStyle: "italic",
-                color: "var(--t1)",
-                lineHeight: 1.8,
-              }}
-            >
+          <div style={{ marginTop: "5rem", textAlign: "center", maxWidth: 700, marginLeft: "auto", marginRight: "auto" }}>
+            <div style={{ width: 60, height: 2, background: "linear-gradient(90deg, var(--sol), var(--celeste))", margin: "0 auto 2rem", borderRadius: 1 }} />
+            <p style={{ fontFamily: "var(--font-playfair-display), 'Playfair Display', serif", fontSize: "1.3rem", fontStyle: "italic", color: "var(--t1)", lineHeight: 1.8 }}>
               Silicon Valley abrió la puerta. Stargate trae la infraestructura.
               La energía nuclear y Vaca Muerta la alimentan. Argentina no será
               una observadora pasiva — está llamada a ser la arquitecta del
               futuro.
             </p>
-            <p
-              style={{
-                fontSize: "0.68rem",
-                letterSpacing: 3,
-                textTransform: "uppercase" as const,
-                color: "var(--sol)",
-                marginTop: "1.2rem",
-                fontWeight: 600,
-              }}
-            >
+            <p style={{ fontSize: "0.68rem", letterSpacing: 3, textTransform: "uppercase" as const, color: "var(--sol)", marginTop: "1.2rem", fontWeight: 600 }}>
               Demian Reidel
             </p>
           </div>

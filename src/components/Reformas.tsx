@@ -192,6 +192,102 @@ const reformas: ReformaProps[] = [
     impactText:
       "Récord de pasajeros aéreos. Alquileres –30% real con +170% oferta. Una política admirada en el mundo.",
   },
+  {
+    num: "07",
+    title: "REFORMA DEL ESTADO",
+    subtitle: "De 18 ministerios a 8. De 340.000 empleados a 277.000. De déficit a superávit en empresas públicas.",
+    desc: "El Estado argentino era un monstruo que se devoraba a sí mismo. <strong>18 ministerios</strong>, 84 secretarías y más de 340.000 empleados públicos nacionales. Reduje los ministerios a <strong>8</strong>, las secretarías a 51, eliminé <strong>63.234 cargos</strong> innecesarios.",
+    antes: "<strong>18 ministerios</strong> y 84 secretarías. ~340.000 empleados públicos nacionales, muchos sin función alguna. 32 empresas públicas con déficit conjunto masivo. TELAM, INADI y decenas de organismos inútiles.",
+    ahora: "<strong>8 ministerios</strong>, 51 secretarías. 277.000 empleados — 63.234 cargos eliminados. TELAM, INADI y decenas de organismos disueltos. Empresas públicas con <strong>superávit de $109.200M</strong>.",
+    impactStats: [
+      { val: "–56%", label: "menos ministerios" },
+      { val: "63.234", label: "cargos eliminados" },
+      { val: "–18%", label: "planta estatal" },
+    ],
+    impactText: "Empresas públicas de déficit masivo a superávit histórico en un semestre. Aerolíneas autofinanciada por primera vez en 20 años. Estado más chico, más eficiente y más barato.",
+  },
+  {
+    num: "08",
+    title: "REFORMA LABORAL",
+    subtitle: "La primera reforma laboral en más de 50 años. 218 artículos que modifican 28 leyes y derogan 11.",
+    desc: "Los campeones de los derechos de los trabajadores dejaron sin ningún tipo de derechos a la mitad de los trabajadores. Una ley de <strong>más de 50 años</strong> había dejado a <em class='hl'>la mitad de los trabajadores argentinos en la informalidad</em>.",
+    antes: "Ley laboral de <strong>más de 50 años</strong> sin actualizar. La mitad de los trabajadores argentinos en la informalidad total. Indemnizaciones calculadas sobre todos los conceptos salariales.",
+    ahora: "<strong>Fondo de Asistencia Laboral (FAL)</strong> como alternativa moderna a las indemnizaciones. Período de prueba de 6 meses (hasta 1 año para PyMEs). Servicios esenciales con 75% de funcionamiento.",
+    impactStats: [
+      { val: "218", label: "artículos" },
+      { val: "28", label: "leyes modificadas" },
+      { val: "11", label: "leyes derogadas" },
+    ],
+    impactText: "La primera reforma laboral en medio siglo. Señal fuerte a los mercados internacionales. El fin de la industria del juicio laboral y de la ultraactividad sindical.",
+    quote: {
+      text: "No hay nada mejor para un trabajador que una empresa, y no hay nada mejor para una empresa que un trabajador. Los que se oponen a esta reforma defienden sus privilegios, no los derechos de los trabajadores.",
+      cite: "— Sobre la reforma laboral, febrero 2026",
+    },
+  },
+  {
+    num: "09",
+    title: "APERTURA COMERCIAL",
+    subtitle: "138 medidas de apertura. Mercosur-UE tras 26 años. Primer acuerdo bilateral con EE.UU. en la historia.",
+    desc: "Argentina era una de las economías más cerradas de la región. El sistema SIRA de permisos previos obligatorios era un mecanismo de extorsión burocrática. El <strong>impuesto PAIS</strong> encarecía toda importación. <em class='hl'>138 medidas de apertura</em> cambiaron todo.",
+    antes: "Sistema SIRA de <strong>permisos previos obligatorios</strong> para importar — mecanismo de extorsión burocrática. Impuesto PAIS sobre importaciones y operaciones en dólares. Aranceles del 35% en múltiples productos.",
+    ahora: "SIRA eliminado. Impuesto PAIS eliminado. <strong>138 medidas de apertura</strong> implementadas. Acuerdo <strong>Mercosur-UE ratificado</strong> por el Senado. TLC con EE.UU. y EFTA firmados.",
+    impactStats: [
+      { val: "$19.000M", label: "superávit comercial" },
+      { val: "1.675", label: "productos sin arancel" },
+      { val: "26", label: "años de negociación UE" },
+    ],
+    impactText: "Récord de superávit comercial. Exportaciones a la UE proyectadas a crecer 76% en 5 años. Argentina volvió al mundo después de dos décadas de aislamiento.",
+    quote: {
+      text: "Hace 21 años Chávez gritó «ALCA, al carajo» y el kirchnerismo festejó. Nosotros firmamos con Estados Unidos, con la Unión Europea, y vamos a seguir firmando con el mundo entero.",
+      cite: "— Tras la ratificación del acuerdo Mercosur-UE, febrero 2026",
+    },
+  },
+  {
+    num: "10",
+    title: "LEY DE INOCENCIA FISCAL",
+    subtitle: "Restaurar la presunción de inocencia en materia tributaria — un principio constitucional básico que la política había vulnerado.",
+    desc: "En materia tributaria éramos todos culpables. La política había vulnerado una cuestión constitucional básica: <strong>la presunción de inocencia</strong>. El Estado podía perseguir, embargar y destruir a cualquier contribuyente sin necesidad de probar nada.",
+    antes: "Presunción de <strong>culpabilidad tributaria</strong> de facto. El Estado podía embargar sin necesidad de probar la existencia de una deuda. AFIP con poderes discrecionales para perseguir contribuyentes.",
+    ahora: "<strong>Presunción de inocencia restaurada</strong> en materia tributaria. El Estado debe probar antes de perseguir, no al revés. Protección contra embargos arbitrarios.",
+    impactStats: [
+      { val: "43", label: "votos a favor" },
+      { val: "100+", label: "años de deuda const." },
+      { val: "∞", label: "seguridad jurídica" },
+    ],
+    impactText: "Clave para la formalización del empleo y la economía. Sin inocencia fiscal no hay incentivo para salir de la informalidad. El ahorro y la inversión necesitan un Estado que respete al contribuyente.",
+  },
+  {
+    num: "11",
+    title: "SEGURIDAD Y JUSTICIA",
+    subtitle: "De calles tomadas y Rosario narco al país más seguro de Sudamérica por segundo año consecutivo",
+    desc: "Cuando asumí, las calles eran tierra de nadie. <strong>Más de 9.000 piquetes al año</strong>. Rosario era la capital narco del país con <strong>261 homicidios</strong>. El protocolo antipiquetes de Patricia Bullrich terminó de raíz con los cortes.",
+    antes: "<strong>9.000+ piquetes al año</strong> con impunidad total. Rosario: 261 homicidios, capital narco del país. Puerta giratoria judicial que devolvía delincuentes a la calle en horas.",
+    ahora: "<strong>Cero piquetes</strong>. Homicidios –17% a nivel nacional y –65% en Rosario (de 261 a 91). Robos –20% — mínimo histórico. Ley Antimafia aprobada 38 a 0. Más de 600 detenidos narco.",
+    impactStats: [
+      { val: "–65%", label: "homicidios Rosario" },
+      { val: "–20%", label: "robos nacional" },
+      { val: "0", label: "piquetes" },
+    ],
+    impactText: "De 261 a 91 homicidios en Rosario. +500% en incautación de cocaína. De 9.000 piquetes al año a cero. El país más seguro de toda Sudamérica por segundo año consecutivo.",
+  },
+  {
+    num: "12",
+    title: "REFORMA PENAL JUVENIL",
+    subtitle: "Un régimen obsoleto de 45 años de antigüedad, reformado: el que las hace, las paga",
+    desc: "El Régimen Penal Juvenil vigente tenía <strong>45 años de antigüedad</strong> — una norma obsoleta de la dictadura militar de 1980. Menores de edad eran utilizados por organizaciones narco como soldados descartables, porque sabían que <em class='hl'>no iban a tener consecuencias penales</em>.",
+    antes: "Régimen penal juvenil de <strong>1980 — dictadura militar</strong>. 45 años sin una sola reforma. Menores de 16 años absolutamente inimputables sin importar el delito cometido. Organizaciones narco usando menores como soldados.",
+    ahora: "<strong>Imputabilidad desde los 14 años</strong> para delitos graves. Nuevo régimen penal juvenil completo con medidas socioeducativas graduales. Proporcionalidad de penas adaptada a la edad.",
+    impactStats: [
+      { val: "45", label: "años sin reforma" },
+      { val: "14", label: "edad imputabilidad" },
+      { val: "Feb 26", label: "sesión histórica" },
+    ],
+    impactText: "Tres reformas históricas en una sola sesión del Congreso: laboral, comercial y penal juvenil. El Congreso más reformista en décadas.",
+    quote: {
+      text: "Reformamos la Ley Penal Juvenil, modificando un régimen penal obsoleto que tenía ya 45 años de antigüedad. Porque, como lo dijimos antes de ser gobierno, el que las hace, las paga.",
+      cite: "— Apertura de sesiones ordinarias, 1 de marzo de 2026",
+    },
+  },
 ];
 
 export default function Reformas() {
@@ -246,14 +342,36 @@ export default function Reformas() {
         <FadeIn>
           <div className="reform-divider">
             <h3>BLOQUE II — DESREGULACIÓN Y REFORMA DEL ESTADO</h3>
-            <p>
-              DNU 70/23, Ley Bases, y 14.500 desregulaciones
-            </p>
+            <p>DNU 70/23, Ley Bases, y 14.500 desregulaciones: de la economía más regulada a la más libre</p>
             <div className="reform-divider-line" />
           </div>
         </FadeIn>
 
-        {reformas.slice(3).map((r) => (
+        {reformas.slice(3, 7).map((r) => (
+          <ReformaSection key={r.num} {...r} />
+        ))}
+
+        <FadeIn>
+          <div className="reform-divider">
+            <h3>BLOQUE III — REFORMAS LEGISLATIVAS</h3>
+            <p>Con el Congreso más reformista de la historia: laboral, comercial, fiscal y penal</p>
+            <div className="reform-divider-line" />
+          </div>
+        </FadeIn>
+
+        {reformas.slice(7, 10).map((r) => (
+          <ReformaSection key={r.num} {...r} />
+        ))}
+
+        <FadeIn>
+          <div className="reform-divider">
+            <h3>BLOQUE IV — SEGURIDAD Y JUSTICIA</h3>
+            <p>Sin orden y sin justicia no hay futuro posible. Nadie puede edificar su futuro si no se respeta la ley.</p>
+            <div className="reform-divider-line" />
+          </div>
+        </FadeIn>
+
+        {reformas.slice(10).map((r) => (
           <ReformaSection key={r.num} {...r} />
         ))}
       </div>
