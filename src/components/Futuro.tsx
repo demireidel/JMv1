@@ -67,6 +67,28 @@ export default function Futuro() {
                 con Washington y sin regulación hostil, es la alternativa
                 creíble.
               </p>
+              <p>
+                La agenda fue implacable. El martes, reunión de una hora con Sam
+                Altman donde OpenAI preparó una demostración exclusiva de
+                inteligencia artificial. El miércoles, disertación en la Hoover
+                Institution de Stanford junto a Condoleezza Rice y el rector
+                Richard Saller, seguida de reuniones con Tim Cook en Apple Park
+                y con Sundar Pichai en Google — donde un cartel decía
+                «Bienvenido Javier Milei, Presidente de la República
+                Argentina». El jueves, reunión con Zuckerberg en Meta,
+                presentación ante inversores en el Pacific Summit del Bay Area
+                Council, y encuentros con empresas emergentes de IA.
+              </p>
+              <p>
+                Meses después, Reidel lo resumió en la SAIAConf: «Para el
+                sector tecnológico mundial, Milei es como un héroe. Estos tipos
+                no se juntan a sacarse fotos — se juntan porque piensan que hay
+                algo importante para discutir.» Y añadió una anécdota
+                reveladora: al terminar la reunión con Jeff Bezos de Amazon, fue
+                Bezos quien le pidió una selfie al Presidente. La visita sembró
+                la semilla de lo que un año después se convertiría en Stargate
+                Argentina.
+              </p>
               <div className="futuro-stats">
                 <div className="futuro-st"><div className="v">5</div><div className="l">CEOs reunidos</div></div>
                 <div className="futuro-st"><div className="v">4°</div><div className="l">Hub IA global</div></div>
@@ -133,9 +155,13 @@ export default function Futuro() {
               </p>
               <p>
                 El megacentro de datos en la Patagonia tendrá capacidad de hasta
-                500 MW — el mayor de América Latina. La primera fase de 100 MW
-                se proyecta para 2027. El proyecto supone una inversión de hasta
-                USD 25.000 millones bajo el régimen RIGI.
+                500 MW — el mayor de América Latina.
+              </p>
+              <p>
+                La primera fase de 100 MW se proyecta para 2027. Más allá de la
+                infraestructura, OpenAI se comprometió a desplegar ChatGPT
+                personalizado para ciudadanos argentinos y a impulsar la
+                adopción de IA en gobierno, educación y servicios públicos.
               </p>
               <div className="bq">
                 «Cuando conocí al Presidente Milei durante su visita a San
@@ -145,6 +171,16 @@ export default function Futuro() {
                 las manos de más personas en Argentina.»
                 <cite>Sam Altman — CEO, OpenAI</cite>
               </div>
+              <p>
+                El proyecto supone una inversión de hasta USD 25.000 millones
+                bajo el régimen RIGI — la mayor iniciativa de tecnología e
+                infraestructura energética en la historia de Argentina. Integra
+                Stargate, la joint venture global de OpenAI, SoftBank, Oracle y
+                MGX que planea invertir USD 500.000 millones en infraestructura
+                de IA a nivel mundial. La primera fase, de USD 7.000 a 10.000
+                millones, contempla inicio de obras en 2026 y puesta en
+                funcionamiento hacia fines de 2027.
+              </p>
               <div className="futuro-stats">
                 <div className="futuro-st"><div className="v">$25B</div><div className="l">Inversión USD</div></div>
                 <div className="futuro-st"><div className="v">500</div><div className="l">MW Capacidad</div></div>
@@ -181,17 +217,26 @@ export default function Futuro() {
                 modular de 300 MW diseñado por ingenieros de INVAP y patentado
                 en Estados Unidos. Se construirán cuatro módulos en Atucha
                 duplicando la capacidad nuclear instalada del país a 1.200 MW
-                adicionales.
+                adicionales. Argentina apunta a ser el primer país en vender
+                SMRs comercialmente — y en noviembre de 2025 se convirtió en el
+                primer país latinoamericano en adherirse al programa FIRST de
+                Estados Unidos para desarrollo de reactores modulares.
               </p>
               <p>
                 <strong>Fase 2 — El uranio.</strong> El «modelo Gillette»: vender
-                reactores con compromiso de compra de uranio argentino. YPF Nuclear
-                lidera la explotación de Cerro Solo en Chubut.
+                reactores con compromiso de compra de uranio argentino. YPF creó
+                la subsidiaria YPF Nuclear para liderar la explotación de Cerro
+                Solo en Chubut, el mayor reservorio de uranio del país, junto a
+                18 iniciativas privadas adicionales. El objetivo: nunca más
+                importar uranio para nuestros propios reactores.
               </p>
               <p>
                 <strong>Fase 3 — Nuclear City.</strong> Un hub de data centers
                 100% libre de combustibles fósiles en la Patagonia, alimentado
-                por energía nuclear.
+                por energía nuclear. Según Goldman Sachs, los data centers
+                requerirán entre 85 y 90 GW de nueva capacidad nuclear global —
+                y Argentina, con tierras vastas, clima frío y acceso al agua,
+                ofrece la combinación que ningún otro país tiene.
               </p>
               <div className="bq">
                 «Con el ACR-300, vamos a ofrecerle al mundo una fuente de energía
@@ -199,6 +244,14 @@ export default function Futuro() {
                 licenciamos la tecnología al resto del mundo.»
                 <cite>Demian Reidel — Presidente, Consejo Nuclear Argentino</cite>
               </div>
+              <p>
+                Milei lo anunció en cadena nacional: «Tenemos energía de sobra,
+                tierras frías e inhóspitas de sobra, y recurso humano de
+                calidad. Cuando en Argentina imperaron las ideas de la libertad,
+                fuimos punta de lanza en tecnología — en 1900, teníamos la mayor
+                red ferroviaria de América Latina. Que nadie se sorprenda si la
+                Argentina se convierte en el próximo hub del mundo.»
+              </p>
               <div className="futuro-stats">
                 <div className="futuro-st"><div className="v">4</div><div className="l">ACR-300 · Atucha</div></div>
                 <div className="futuro-st"><div className="v">1.2</div><div className="l">GW Adicionales</div></div>
@@ -238,11 +291,22 @@ export default function Futuro() {
                 interanual.
               </p>
               <p>
-                El superávit de la balanza comercial energética alcanzó USD
-                6.900 millones en 2025 — un 22% más que en 2024. El proyecto
-                Argentina LNG proyecta exportar 12 millones de toneladas anuales
-                de gas licuado desde Río Negro — USD 200.000 millones en
-                exportaciones en 20 años.
+                Las cifras son contundentes. La Cuenca Neuquina concentró USD
+                10.000 millones en inversiones en 2025, con el 76% destinado a
+                Vaca Muerta. YPF superó los 200.000 barriles diarios de shale
+                oil propio — un crecimiento del 82% en dos años. Loma Campana se
+                convirtió en el primer yacimiento argentino en romper la barrera
+                de los 100.000 barriles diarios, con más de USD 10.000 millones
+                invertidos y 750 pozos activos.
+              </p>
+              <p>
+                Las exportaciones de crudo superaron los USD 6.000 millones. El
+                superávit de la balanza comercial energética alcanzó USD 6.900
+                millones en 2025 — un 22% más que en 2024. El proyecto Argentina
+                LNG proyecta exportar 12 millones de toneladas anuales de gas
+                licuado desde Río Negro — USD 200.000 millones en exportaciones
+                en 20 años. Es la segunda reserva mundial de gas shale y la
+                cuarta de petróleo shale: el gigante despertó.
               </p>
               <div className="futuro-stats">
                 <div className="futuro-st"><div className="v">869K</div><div className="l">Barriles/día · Récord</div></div>

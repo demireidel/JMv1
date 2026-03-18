@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const links = [
   { href: "#ideas", label: "Visión" },
@@ -13,12 +13,29 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const updateActive = useCallback(() => {
+    const sections = links.map((l) => l.href.slice(1));
+    let current = "";
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= 200) current = id;
+      }
+    }
+    setActiveSection(current);
+  }, []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 60);
+      updateActive();
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [updateActive]);
 
   return (
     <nav className={`site-nav ${scrolled ? "scrolled" : ""}`}>
@@ -28,7 +45,11 @@ export default function Nav() {
       <ul className={`nav-links ${mobileOpen ? "mobile-open" : ""}`}>
         {links.map((l) => (
           <li key={l.href}>
-            <a href={l.href} onClick={() => setMobileOpen(false)}>
+            <a
+              href={l.href}
+              className={activeSection === l.href.slice(1) ? "active" : ""}
+              onClick={() => setMobileOpen(false)}
+            >
               {l.label}
             </a>
           </li>

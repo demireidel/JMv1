@@ -86,11 +86,11 @@ const reformas: ReformaProps[] = [
     title: "EQUILIBRIO FISCAL",
     subtitle:
       "De décadas de déficit crónico al primer superávit financiero en 16 años",
-    desc: "Argentina había logrado solo <strong>8 superávits fiscales en 100 años</strong>. Cuando asumí, el déficit consolidado era de 15 puntos del PIB. <em class='hl'>Recorté el 30% del gasto público real en un solo año</em>, eliminé las transferencias discrecionales y terminé con la obra pública como herramienta de corrupción.",
+    desc: "Argentina había logrado solo <strong>8 superávits fiscales en 100 años</strong>. Cuando asumí, el déficit consolidado era de 15 puntos del PIB y la maquinita de imprimir billetes funcionaba las 24 horas para financiar la fiesta de la casta. Lo primero que hice fue dar vuelta la ecuación: <em class='hl'>recorté el 30% del gasto público real en un solo año</em>, eliminé las transferencias discrecionales a provincias, reduje subsidios y terminé con la obra pública como herramienta de corrupción. En 2024 logramos el <strong>primer superávit financiero en 16 años</strong>. En 2025 lo repetimos. Y aprobamos el <strong>primer presupuesto sin déficit ni default en más de 100 años</strong>. Hoy somos uno de los cinco países del mundo que solo gastan lo que recaudan y ni un peso más.",
     antes:
-      "Déficit consolidado de <strong>15 puntos del PIB</strong>. Solo 8 superávits fiscales en un siglo. Emisión descontrolada. Transferencias discrecionales a gobernadores amigos.",
+      "Déficit consolidado de <strong>15 puntos del PIB</strong>. Solo 8 superávits fiscales en un siglo de historia. Emisión monetaria descontrolada para financiar gasto corriente. Transferencias discrecionales a gobernadores amigos. Obra pública como herramienta de saqueo sistemático. La cuenta se la pasaban a las generaciones futuras a través de deuda e inflación.",
     ahora:
-      "<strong>Superávit primario de 1,8% del PIB</strong> en 2024 y 1,4% en 2025. Dos años consecutivos de superávit financiero. Cero emisión para financiar déficit. Baja impositiva de <strong>2,5 puntos del PIB</strong>.",
+      "<strong>Superávit primario de 1,8% del PIB</strong> en 2024 y 1,4% en 2025. Dos años consecutivos de superávit financiero — el primero desde 2008. Cero emisión para financiar déficit. Presupuesto 2026 equilibrado. Baja impositiva de <strong>2,5 puntos del PIB</strong> devueltos a los argentinos de bien. A diferencia de otros gobiernos que lograron superávit subiendo impuestos, nosotros lo hicimos bajándolos.",
     impactStats: [
       { val: "15 pts", label: "de ajuste fiscal" },
       { val: "30%", label: "menos gasto real" },
@@ -103,11 +103,11 @@ const reformas: ReformaProps[] = [
     num: "02",
     title: "DERROTA DE LA INFLACIÓN",
     subtitle: "De 211% anual — la más alta del mundo tras Venezuela — al nivel más bajo en ocho años",
-    desc: "Heredé una inflación del <strong>211,4% anual</strong> que anualizada viajaba a 17.000%. <em class='hl'>Eliminé la causa: dejé de imprimir para financiar al Estado.</em> El ancla fue fiscal, no cambiaria.",
+    desc: "Heredé una inflación del <strong>211,4% anual</strong> que anualizada viajaba a la velocidad de 17.000%. En diciembre de 2023, el mes que asumí, la inflación mensual tocó el <strong>25,5%</strong> tras la devaluación necesaria para sincerar los precios que el gobierno anterior había reprimido. Los economistas del establishment decían que era imposible bajarla sin hiperinflación previa. <em class='hl'>Eliminé la causa: dejé de imprimir para financiar al Estado.</em> El ancla fue fiscal, no cambiaria. No hubo magia ni trucos: simplemente dejamos de robarle a los argentinos a través de la inflación. En 2025 cerramos con <strong>~30% anual</strong>, la cifra más baja desde 2017. Los precios mayoristas ya están casi en un dígito. La inflación tiene fecha de defunción.",
     antes:
-      "Inflación del <strong>211,4% anual</strong> en 2023 — anualizada al 17.000%. Pico mensual del 25,5%. Argentina era el segundo país más inflacionario del mundo.",
+      "Inflación del <strong>211,4% anual</strong> en 2023 — anualizada al 17.000%. Pico mensual del 25,5% en diciembre 2023. Destruimos cinco signos monetarios en nuestra historia. Los salarios se licuaban en días. Argentina era el segundo país más inflacionario del mundo, solo detrás de Venezuela. Precios reprimidos artificialmente que generaban desabastecimiento.",
     ahora:
-      "<strong>~30% anual en 2025</strong> — la más baja en ocho años. Inflación mensual entre 1,5% y 2,2%. Tendencia descendente sostenida durante 24 meses.",
+      "<strong>~30% anual en 2025</strong> — la más baja en ocho años. Inflación mensual estabilizada entre 1,5% y 2,2%. Tendencia descendente sostenida durante 24 meses consecutivos. Precios mayoristas casi en un dígito. El peso se apreció sin precedentes. Proyección 2026: por debajo del 20%. Meta de un dígito para 2027.",
     impactStats: [
       { val: "–85%", label: "reducción inflación" },
       { val: "211→30", label: "% anual" },
@@ -179,11 +179,11 @@ const reformas: ReformaProps[] = [
     title: "DESREGULACIÓN MASIVA",
     subtitle:
       "14.500 desregulaciones: detrás de cada regulación había un privilegio — o mejor dicho, un curro",
-    desc: "Sturzenegger llevó adelante una tarea titánica: <strong>más de 14.500 desregulaciones</strong>. <em class='hl'>Detrás de cada regulación había un privilegio — o mejor dicho, un curro, un tongo</em>.",
+    desc: "Sturzenegger, desde el Ministerio de Desregulación y Transformación del Estado, llevó adelante una tarea titánica y admirable: <strong>más de 14.500 desregulaciones</strong> en un sinfín de áreas que dan cuenta del grado de cooptación corporativa que tenía el Estado. Porque <em class='hl'>detrás de cada regulación había un privilegio — o mejor dicho, un curro, un tongo</em>. Estas desregulaciones nos permitieron marcar récords en el mercado aerocomercial de pasajeros, le permitieron a los productores argentinos acceder a mejor maquinaria productiva que la disponible localmente y normalizaron y potenciaron el mercado de los alquileres. La zona más regulada del mundo, Europa, está estancada, no crece. Un eje central de nuestra política es la desregulación, porque en la medida que desregulamos liberamos rendimientos crecientes.",
     antes:
-      "Miles de normas acumuladas. <strong>Cada regulación protegía un privilegio</strong>. Argentina era la economía más regulada de toda la región.",
+      "Miles de normas acumuladas durante décadas por capas geológicas de burocracia. <strong>Cada regulación protegía un privilegio</strong> de algún sector concentrado. Licencias, permisos, habilitaciones discrecionales en cada actividad económica. Argentina era la economía más regulada de toda la región. Costos inflados artificialmente. Competencia bloqueada en sector tras sector.",
     ahora:
-      "<strong>14.500+ desregulaciones</strong> ejecutadas. 494 normas eliminaron <strong>14.392 artículos</strong>. Mercados abiertos. Competencia real.",
+      "<strong>14.500+ desregulaciones</strong> ejecutadas. 494 normas específicas que eliminaron <strong>14.392 artículos</strong> regulatorios. Mercados completamente abiertos. Competencia real por primera vez en décadas. Trámites simplificados radicalmente. La política de exterminar regulaciones libera rendimientos crecientes, que son las bases del crecimiento económico sostenido.",
     impactStats: [
       { val: "14.500+", label: "desregulaciones" },
       { val: "50,6M", label: "pasajeros aéreos" },

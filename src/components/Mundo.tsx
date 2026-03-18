@@ -20,17 +20,17 @@ const leaders = [
 
 const timeline = [
   { date: "ENE 2024", title: "Davos I", desc: "Primer discurso ante el WEF. Argentina vuelve a la mesa global." },
-  { date: "ABR 2025", title: "Acuerdo FMI — USD 20.000M", desc: "Programa de 48 meses. Primer desembolso de USD 12.000M." },
-  { date: "JUL 2025", title: "1ª Revisión FMI aprobada", desc: "Desembolso adicional de USD 2.000M." },
+  { date: "ABR 2025", title: "Acuerdo FMI — USD 20.000M", desc: "Programa de 48 meses. Primer desembolso de USD 12.000M. Nuevo régimen cambiario." },
+  { date: "JUL 2025", title: "1ª Revisión FMI aprobada", desc: "Desembolso adicional de USD 2.000M. Retorno a mercados de capital." },
   { date: "SEP 2025", title: "TLC Mercosur — EFTA firmado", desc: "Zona de 300M de personas. 100% arancel cero industrial." },
-  { date: "OCT 2025", title: "Swap USD 20.000M con EE.UU.", desc: "Bessent activa Fondo de Estabilización." },
-  { date: "OCT 2025", title: "Casa Blanca — Bilateral formal", desc: "Primer líder sudamericano recibido por Trump." },
-  { date: "NOV 2025", title: "Marco del Acuerdo Comercial con EE.UU.", desc: "Casa Blanca anuncia el framework bilateral." },
-  { date: "ENE 2026", title: "Firma Mercosur — UE en Asunción", desc: "700M de personas. 30% PBI global." },
-  { date: "ENE 2026", title: "Davos III + Board of Peace", desc: "Tercer Special Address consecutivo." },
-  { date: "FEB 2026", title: "Firma TLC Argentina — EE.UU.", desc: "Primer TLC entre EE.UU. y país sudamericano." },
-  { date: "MAR 2026", title: "Shield of the Americas", desc: "Coalición de 12 naciones. Seguridad hemisférica." },
-  { date: "MAR 2026", title: "Argentina Week NYC", desc: "300+ empresarios. Inauguración con Jamie Dimon." },
+  { date: "OCT 2025", title: "Swap USD 20.000M con EE.UU.", desc: "Bessent activa Fondo de Estabilización. Compra de bonos soberanos argentinos." },
+  { date: "OCT 2025", title: "Casa Blanca — Bilateral formal", desc: "Primer líder sudamericano recibido por Trump. Almuerzo con delegaciones. Salón Oval." },
+  { date: "NOV 2025", title: "Marco del Acuerdo Comercial con EE.UU.", desc: "Casa Blanca anuncia el framework bilateral. Inicio de negociación de detalles." },
+  { date: "ENE 2026", title: "Firma Mercosur — UE en Asunción", desc: "Acuerdo de Asociación + Acuerdo Comercial Interino. 700M de personas. 30% PBI global." },
+  { date: "ENE 2026", title: "Davos III + Board of Peace", desc: "Tercer Special Address consecutivo. Firma del Board of Peace junto a Trump." },
+  { date: "FEB 2026", title: "Firma TLC Argentina — EE.UU.", desc: "Primer TLC entre EE.UU. y país sudamericano. 1.675 productos sin arancel. Acuerdo de minerales críticos." },
+  { date: "MAR 2026", title: "Shield of the Americas", desc: "Coalición de 12 naciones en Miami. Seguridad hemisférica contra el narcoterrorismo." },
+  { date: "MAR 2026", title: "Argentina Week NYC", desc: "300+ empresarios. Inauguración con Jamie Dimon (JP Morgan). Gobernadores promocionando inversión." },
 ];
 
 export default function Mundo() {
@@ -109,12 +109,16 @@ export default function Mundo() {
                   <p>
                     Primer acuerdo de libre comercio entre EE.UU. y un país
                     sudamericano. Eliminación de aranceles recíprocos para 1.675
-                    productos argentinos.
+                    productos argentinos y 221 posiciones norteamericanas. Cuota
+                    de 100.000 toneladas de carne bovina sin arancel. Compromiso
+                    de revisión de aranceles al acero y aluminio. Financiamiento
+                    vía EXIM Bank y DFC para inversiones en sectores críticos.
                   </p>
                   <div className="key-facts">
                     <span className="kf kf-gold">USD 1.013M en exportaciones</span>
                     <span className="kf kf-blue">1.675 productos sin arancel</span>
                     <span className="kf kf-green">Minerales críticos</span>
+                    <span className="kf kf-gold">Propiedad intelectual</span>
                   </div>
                 </div>
               </div>
@@ -127,9 +131,12 @@ export default function Mundo() {
                   <div className="agr-tag">Acuerdo de Asociación</div>
                   <h3>Mercosur — Unión Europea: mercado de 700 millones de personas</h3>
                   <p>
-                    Tras 25 años de negociación. La UE eliminará aranceles para
-                    el 92% de las exportaciones del Mercosur. Exportaciones
-                    argentinas podrían crecer 122% en 10 años.
+                    Tras 25 años de negociación, se firmó en enero 2026 en
+                    Asunción. La UE eliminará aranceles para el 92% de las
+                    exportaciones del Mercosur. Las exportaciones argentinas a la
+                    UE podrían crecer 76% en 5 años y 122% en 10, pasando de USD
+                    8.641M a USD 19.165M. Incluye pilares comercial, político y
+                    de cooperación en ciencia, tecnología y medio ambiente.
                   </p>
                   <div className="key-facts">
                     <span className="kf kf-gold">700 millones de consumidores</span>
@@ -157,9 +164,12 @@ export default function Mundo() {
                   <div className="agr-tag">Tratado de Libre Comercio</div>
                   <h3>Mercosur — EFTA: Suiza, Noruega, Islandia y Liechtenstein</h3>
                   <p>
-                    EFTA eliminará 100% de aranceles industriales y pesqueros.
-                    Zona de 300 millones de personas con PBI combinado de USD
-                    4,3 billones.
+                    Firmado en Río de Janeiro tras 8 años de negociación. EFTA
+                    eliminará 100% de aranceles industriales y pesqueros.
+                    Preferencias inmediatas para carne, café, etanol y vino. Zona
+                    de 300 millones de personas con PBI combinado de USD 4,3
+                    billones. Argentina fue sede de las tres últimas rondas de
+                    negociación en Buenos Aires.
                   </p>
                   <div className="key-facts">
                     <span className="kf kf-gold">300M de consumidores</span>
@@ -195,8 +205,12 @@ export default function Mundo() {
                 <h3>Acuerdo FMI por USD 20.000M + Swap del Tesoro de EE.UU. por USD 20.000M</h3>
                 <p>
                   En abril 2025, el FMI aprobó un programa de 48 meses por USD
-                  20.000M. En paralelo, el Tesoro de EE.UU. activó un swap de
-                  divisas por USD 20.000M.
+                  20.000M bajo el Servicio Ampliado, con un primer desembolso de
+                  USD 12.000M. En paralelo, el Tesoro de EE.UU. activó un swap
+                  de divisas por USD 20.000M, compra de bonos soberanos y crédito
+                  stand-by. Primera revisión aprobada en julio 2025 con
+                  desembolso adicional de USD 2.000M. Argentina volvió a los
+                  mercados internacionales de capital antes de lo previsto.
                 </p>
                 <div className="key-facts">
                   <span className="kf kf-gold">USD 40.000M en respaldo total</span>
@@ -214,12 +228,12 @@ export default function Mundo() {
           <FadeIn>
             <div className="coop-grid">
               {[
-                { icon: "🛡️", title: "Escudo de las Américas", desc: "Coalición hemisférica de 12 naciones contra el narcoterrorismo." },
-                { icon: "⚡", title: "RIGI — Grandes Inversiones", desc: "Régimen de incentivos para inversiones estratégicas en energía, minería, tecnología." },
-                { icon: "🤖", title: "Hub de Inteligencia Artificial", desc: "Primera Semana de IA en Argentina. Reuniones con CEOs de Apple, Meta, Tesla, OpenAI." },
-                { icon: "⚛️", title: "Plan Nuclear + SMR", desc: "Reactivación de Nucleoeléctrica Argentina. Plan de reactores modulares pequeños." },
-                { icon: "🔗", title: "Minerales Críticos", desc: "Acuerdo bilateral con EE.UU. sobre litio, tierras raras y cadenas de suministro." },
-                { icon: "🌍", title: "Seguridad Económica", desc: "Alineamiento con EE.UU. en controles de exportación y seguridad de inversiones." },
+                { icon: "🛡️", title: "Escudo de las Américas", desc: "Coalición hemisférica de 12 naciones contra el narcoterrorismo e interferencia extranjera. Co-liderada con EE.UU. Firmada en Miami, marzo 2026." },
+                { icon: "⚡", title: "RIGI — Grandes Inversiones", desc: "Régimen de incentivos para inversiones estratégicas en energía, minería, tecnología e infraestructura. Vaca Muerta, GNL, litio y data centers de IA." },
+                { icon: "🤖", title: "Hub de Inteligencia Artificial", desc: "Primera Semana de IA en Argentina. Reuniones con CEOs de Apple, Meta, Tesla, OpenAI y Google. Posicionamiento como polo de IA en América Latina." },
+                { icon: "⚛️", title: "Plan Nuclear + SMR", desc: "Reactivación de Nucleoeléctrica Argentina. Plan de reactores modulares pequeños (SMR) para data centers y energía limpia. Cooperación con EE.UU." },
+                { icon: "🔗", title: "Minerales Críticos", desc: "Acuerdo bilateral con EE.UU. sobre litio, tierras raras y cadenas de suministro. Reciclaje de baterías y seguridad de inversiones conjuntas." },
+                { icon: "🌍", title: "Seguridad Económica", desc: "Alineamiento con EE.UU. en controles de exportación, seguridad de inversiones y protección frente a prácticas no mercantiles de terceros estados." },
               ].map((c) => (
                 <div className="coop-item" key={c.title}>
                   <div className="ci-icon">{c.icon}</div>

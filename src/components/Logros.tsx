@@ -1,6 +1,57 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import FadeIn from "./FadeIn";
+
+function AnimatedCounter({
+  target,
+  suffix = "",
+  decimals = 0,
+}: {
+  target: number;
+  suffix?: string;
+  decimals?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [value, setValue] = useState("0" + suffix);
+  const animated = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !animated.current) {
+          animated.current = true;
+          const duration = 1800;
+          const start = performance.now();
+          const animate = (now: number) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            const current = target * eased;
+            setValue(
+              (decimals > 0
+                ? current.toFixed(decimals)
+                : Math.round(current).toString()) + suffix
+            );
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.3 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [target, suffix, decimals]);
+
+  return (
+    <div ref={ref} className="pc-val">
+      {value}
+    </div>
+  );
+}
 
 interface LogroCardProps {
   num: string;
@@ -93,7 +144,8 @@ const logros: LogroCardProps[] = [
     badge: "02 — ESTABILIZACIÓN",
     title: "Se evitó la hiperinflación: se desactivó la bomba del Plan Platita",
     paragraphs: [
-      "Sergio Massa lanzó el «Plan Platita» tras quedar tercero en las PASO de agosto 2023: inyectó 1,3 % del PBI en bonos. En un año emitió trece bases monetarias. La inflación mayorista viajaba al 17.000 % anualizado.",
+      "Sergio Massa lanzó el «Plan Platita» tras quedar tercero en las PASO de agosto 2023: inyectó 1,3 % del PBI en bonos, devolución de IVA y beneficios impositivos — todo financiado con emisión pura. En un año emitió trece bases monetarias. La inflación mayorista viajaba al 17.000 % anualizado. El déficit consolidado llegaba al 15 % del PBI. Las reservas netas eran negativas en USD 13.000 M.",
+      "La herencia combinaba las tres peores crisis de la historia argentina: el desequilibrio monetario duplicaba al del Rodrigazo de 1975, el Banco Central estaba peor que antes de la hiper del '89, y los indicadores sociales superaban en gravedad a los de 2001. Un combo que hubiera convertido a la Argentina en Venezuela.",
       "Se resolvió de forma opuesta a cualquier antecedente: sin expropiaciones, sin Plan Bonex, sin controles de precios — todo a libre mercado. La hiper se evitó.",
     ],
     before: { label: "Herencia del Plan Platita", val: "17.000%", desc: "Inflación mayorista anualizada. 13 bases monetarias emitidas. Déficit consolidado 15 % PBI." },
@@ -110,8 +162,8 @@ const logros: LogroCardProps[] = [
     badge: "03 — ORDEN",
     title: "No más piquetes: la calle es de todos",
     paragraphs: [
-      "Había 9.000 piquetes por año. Organizaciones sociales con financiamiento estatal cortaban rutas con total impunidad.",
-      "Ahora: cero. Se implementó el protocolo antipiquetes y se eliminaron las transferencias discrecionales a intermediarios.",
+      "Había 9.000 piquetes por año. Organizaciones sociales con financiamiento estatal cortaban rutas con total impunidad. Millones de argentinos no podían ir a trabajar ni llevar a sus hijos al colegio. Los piquetes se financiaban con plata de la ayuda social — dinero que debía llegar a los más necesitados terminaba pagando el aparato de presión callejera.",
+      "Ahora: cero. Se implementó el protocolo antipiquetes y se eliminaron las transferencias discrecionales a intermediarios. La plata va directo a quien la necesita. Las calles se liberaron.",
     ],
     before: { label: "Antes", val: "9.000", desc: "Piquetes por año. Financiados con plata de la ayuda social." },
     after: { label: "Ahora", val: "0", desc: "Cero cortes. Protocolo antipiquetes. Transferencias directas." },
@@ -223,7 +275,7 @@ export default function Logros() {
             <p className="section-intro">
               Hace dos años, Argentina estaba en crisis terminal. La inflación
               corría al 1 % diario, el Banco Central estaba quebrado, y los
-              indicadores sociales eran peores que en 2001. Este es el antes y
+              indicadores sociales eran peores que en 2001. La continuidad misma del país estaba en juego. Este es el antes y
               el después.
             </p>
           </div>
@@ -248,22 +300,22 @@ export default function Logros() {
             </div>
             <div className="pobreza-counters">
               <div className="pc-item">
-                <div className="pc-val">57%</div>
+                <AnimatedCounter target={57} suffix="%" />
                 <div className="pc-label">Pobreza heredada</div>
                 <div className="pc-sub">Q1 2024 — INDEC</div>
               </div>
               <div className="pc-item">
-                <div className="pc-val">27%</div>
+                <AnimatedCounter target={27} suffix="%" />
                 <div className="pc-label">Pobreza actual</div>
                 <div className="pc-sub">Q3 2025 — mínima desde 2018</div>
               </div>
               <div className="pc-item">
-                <div className="pc-val">10M+</div>
+                <AnimatedCounter target={10} suffix="M+" />
                 <div className="pc-label">Salieron de la pobreza</div>
                 <div className="pc-sub">En menos de dos años</div>
               </div>
               <div className="pc-item">
-                <div className="pc-val">5.3M</div>
+                <AnimatedCounter target={5.3} suffix="M" decimals={1} />
                 <div className="pc-label">Salieron de la indigencia</div>
                 <div className="pc-sub">Del 20,3 % al 4,6 %</div>
               </div>
@@ -274,15 +326,18 @@ export default function Logros() {
                   La pobreza estaba en <strong>57 %</strong>, camuflada con
                   controles de precios y maquillaje estadístico. Siete de cada
                   diez chicos eran pobres. Casi 20 millones de personas vivían
-                  bajo la línea de pobreza.
+                  bajo la línea de pobreza, con una indigencia del 20,3 % — la peor crisis social desde 2001.
+                </p>
+                <p>
+                  La plata de la ayuda social no llegaba a quienes la necesitaban. Las organizaciones sociales operaban como intermediarias: se quedaban con parte de los recursos, administraban la miseria y usaban a los más vulnerables como rehenes para presionar al Estado.
                 </p>
                 <p>
                   Se eliminaron las transferencias discrecionales. La plata dejó
                   de pasar por la política y empezó a llegar{" "}
                   <strong>directo</strong>. La AUH aumentó un{" "}
                   <strong>492,9 %</strong>. Se incorporaron{" "}
-                  <strong>600.000 chicos</strong>. Para el tercer trimestre de
-                  2025, la pobreza cayó al <strong>26,9 %</strong>.
+                  <strong>600.000 chicos</strong>. La prestación Alimentar creció 137,5 %. Las becas Primera Infancia más de 500 % y Primeros Mil Días más de 1.100 %. Para el tercer trimestre de
+                  2025, la pobreza cayó al <strong>26,9 %</strong> — el valor más bajo desde 2018.
                 </p>
               </div>
               <div className="pb-flow">
