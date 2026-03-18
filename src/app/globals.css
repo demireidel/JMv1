@@ -167,11 +167,11 @@ body {
 .photo-strip img {
   height: 280px; width: auto; min-width: 220px; object-fit: cover;
   flex-shrink: 0; border-radius: 3px;
-  filter: grayscale(30%) brightness(0.75) contrast(1.1); transition: all 0.7s var(--ease-out-expo);
+  filter: grayscale(20%) brightness(0.88); transition: all 0.7s var(--ease-out-expo);
 }
 .photo-strip img:hover {
-  filter: grayscale(0%) brightness(1) contrast(1.05);
-  transform: scale(1.08); z-index: 1;
+  filter: grayscale(0%) brightness(1.05);
+  transform: scale(1.06); z-index: 1;
   box-shadow: 0 15px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(246,180,14,0.1);
 }
 .photo-strip-wrapper:hover .photo-strip { animation-play-state: paused; }
