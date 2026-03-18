@@ -1639,3 +1639,110 @@ img[loading="lazy"] {
 img[loading="lazy"].loaded, img[loading="lazy"][complete] {
   opacity: 1;
 }
+
+/* ═══════════════════════════════════════════════
+   P0-P2 FIXES: TEXT SIZE, CONTRAST, MOBILE, UX
+   ═══════════════════════════════════════════════ */
+
+/* P0: Minimum text sizes — desktop 11px, mobile 12px */
+.v-pyramid-rank small { font-size: 0.6rem; }  /* was 0.5rem = 8px */
+.v-pullquote cite, .ref-quote cite { font-size: 0.7rem; }  /* was 0.65rem */
+.vdc-lbl { font-size: 0.72rem; }  /* was 0.68rem */
+.pc-label { font-size: 0.7rem; }  /* was 0.65rem */
+.pc-sub { font-size: 0.75rem; }  /* was 0.72rem */
+.fg-who { font-size: 0.8rem; }  /* was 0.75rem */
+.fg-where { font-size: 0.65rem; }  /* was 0.58rem */
+.fg-tag { font-size: 0.55rem; }  /* was 0.48rem */
+.fg-badge { font-size: 0.55rem; }  /* was 0.48rem */
+.tl-d { font-size: 0.8rem; }  /* was 0.75rem */
+.tl-c p { font-size: 0.85rem; }  /* was 0.82rem */
+.lb .r { font-size: 0.65rem; }  /* was 0.6rem */
+.ms-l { font-size: 0.75rem; }  /* was 0.7rem */
+.ms-d { font-size: 0.85rem; }  /* was 0.82rem */
+.impact-stat .il { font-size: 0.65rem; }  /* was 0.6rem */
+.reform-number { font-size: 0.75rem; }  /* was 0.7rem */
+.futuro-st .l { font-size: 0.65rem; }  /* was 0.58rem */
+.pill-lbl { font-size: 0.75rem; }  /* was 0.7rem */
+.pq-attr { font-size: 0.75rem; }  /* was 0.7rem */
+.kf { font-size: 0.75rem; }  /* was 0.72rem */
+.agr-tag { font-size: 0.65rem; }  /* was 0.6rem */
+.agr-badge { font-size: 0.65rem; }  /* was 0.6rem */
+.kicker { font-size: 0.7rem; }  /* was 0.65rem */
+
+/* P1: Boost low-contrast text — raise alpha minimums */
+:root {
+  --t2: rgba(255,255,255,0.58);  /* was 0.52 */
+  --t3: rgba(255,255,255,0.35);  /* was 0.28 */
+}
+.v-prose { color: rgba(255,255,255,0.62); }  /* was 0.58 */
+.reform-desc p { color: rgba(255,255,255,0.6); }  /* was 0.55 */
+.box-text { color: rgba(255,255,255,0.55); }  /* was 0.5 */
+.idea-card p { color: rgba(255,255,255,0.6); }  /* was 0.55 */
+.v-thinker p { color: rgba(255,255,255,0.48); }  /* was 0.4 */
+.v-pillar p { color: rgba(255,255,255,0.52); }  /* was 0.45 */
+.coop-item p { color: rgba(255,255,255,0.48); }  /* was 0.4 */
+.blk p { color: rgba(255,255,255,0.58); }  /* was 0.52 */
+.fc-desc { color: rgba(255,255,255,0.52); }  /* was 0.45 */
+.pb-narrative p { color: rgba(255,255,255,0.65); }  /* was 0.6 */
+.hero-quote { color: rgba(255,255,255,0.5); }  /* was 0.4 */
+
+/* P1: Scroll progress bar */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; z-index: 10001;
+  background: linear-gradient(90deg, var(--celeste), var(--sol));
+  transform-origin: left; transition: none;
+  pointer-events: none;
+}
+
+/* P1: Back to top button */
+.back-to-top {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 100;
+  width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(246,180,14,0.9); color: var(--dark);
+  font-size: 1.2rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(246,180,14,0.3), 0 2px 8px rgba(0,0,0,0.3);
+  opacity: 0; transform: translateY(20px); pointer-events: none;
+  transition: all 0.4s var(--ease-out-expo);
+}
+.back-to-top.visible {
+  opacity: 1; transform: translateY(0); pointer-events: auto;
+}
+.back-to-top:hover {
+  background: var(--sol); transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(246,180,14,0.4), 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* P2: Mobile minimum text sizes */
+@media (max-width: 768px) {
+  .v-kicker, .v-mantra-label, .v-mantra-cite,
+  .v-pullquote cite, .ref-quote cite,
+  .vdc-lbl, .pc-label, .pc-sub,
+  .tl-d, .tl-c p, .lb .r, .ms-l, .ms-d,
+  .reform-number, .reform-subtitle,
+  .impact-stat .il, .futuro-st .l,
+  .kf, .agr-tag, .agr-badge, .kicker,
+  .pill-lbl, .pq-attr, .fg-badge, .fg-tag, .fg-where {
+    font-size: max(0.75rem, 12px);
+  }
+  /* Touch target minimums */
+  .nav-logo { min-height: 44px; display: flex; align-items: center; }
+  .menu-toggle { min-width: 44px; min-height: 44px; }
+  .pp-pill { min-height: 40px; }
+  .lb { min-height: 44px; }
+}
+
+/* P2: Vision section inline style replacements */
+.v-prose-continued { margin-top: 1.5rem; }
+.v-rule-bottom { margin-bottom: 2.5rem; }
+.v-rule-spaced { margin-top: 2rem; margin-bottom: 1.2rem; }
+.pobreza-spacer { height: 2.5rem; }
+
+/* P2: Mundo hero variant */
+.mundo-hero-content {
+  position: relative; z-index: 10; padding: 0 5vw 7vh; max-width: 900px;
+}
+.mundo-hero-subtitle {
+  text-align: left; letter-spacing: 5px; font-size: 0.7rem;
+}
+.mundo-hero-title { text-align: left; }
