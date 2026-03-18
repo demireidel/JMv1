@@ -2774,3 +2774,366 @@ footer {
   }
 }
 
+/* ═══════════════════════════════════════════════════════════
+   ULTRA-PREMIUM V3
+   Cinematic · Animated Gradients · Glass Borders · Stagger
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Animated Gradient Hero Name ───────────────────────── */
+
+@keyframes goldShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-name {
+  background: linear-gradient(
+    135deg,
+    #fff 0%, #f0d078 20%, #fff 40%,
+    #d4a843 60%, #fff 80%, #f0d078 100%
+  ) !important;
+  background-size: 300% 300% !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: goldShift 8s ease-in-out infinite !important;
+}
+
+/* ── Cinematic Section Transitions ─────────────────────── */
+
+.section-dark::before,
+.section-darker::before {
+  content: '';
+  position: absolute; top: -80px; left: 0; right: 0; height: 80px;
+  background: linear-gradient(180deg, transparent, var(--dark));
+  pointer-events: none; z-index: 2;
+}
+
+.section-light::before {
+  content: '';
+  position: absolute; top: -80px; left: 0; right: 0; height: 80px;
+  background: linear-gradient(180deg, transparent, var(--cream));
+  pointer-events: none; z-index: 2;
+}
+
+.section-dark,
+.section-darker,
+.section-light {
+  position: relative;
+}
+
+/* ── Animated Glass Border Cards ───────────────────────── */
+
+@keyframes borderRotate {
+  0% { --border-angle: 0deg; }
+  100% { --border-angle: 360deg; }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.pobreza-hero,
+.arc-collab {
+  position: relative;
+  overflow: hidden;
+}
+
+.pobreza-hero::before,
+.arc-collab::before {
+  content: '';
+  position: absolute; inset: -1px;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 60%,
+    rgba(246,180,14,0.4) 75%,
+    rgba(116,172,223,0.3) 85%,
+    transparent 100%
+  );
+  border-radius: inherit;
+  z-index: -1;
+  animation: borderRotate 6s linear infinite;
+}
+
+.pobreza-hero::after,
+.arc-collab::after {
+  content: '';
+  position: absolute; inset: 1px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* ── Noise Texture Overlay ─────────────────────────────── */
+
+.section-dark > .container::before,
+.section-darker > .container::before,
+.futuro-section > .container::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* ── Staggered Fade-In Animations ──────────────────────── */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children inside grids and lists */
+.v-thinkers .fade-in:nth-child(2) { transition-delay: 0.1s; }
+.v-thinkers .fade-in:nth-child(3) { transition-delay: 0.2s; }
+.v-thinkers .fade-in:nth-child(4) { transition-delay: 0.3s; }
+
+.v-pillars .v-pillar:nth-child(2) { transition-delay: 0.15s; }
+.v-pillars .v-pillar:nth-child(3) { transition-delay: 0.3s; }
+
+.arc-awards .arc-award:nth-child(2) { transition-delay: 0.05s; }
+.arc-awards .arc-award:nth-child(3) { transition-delay: 0.1s; }
+.arc-awards .arc-award:nth-child(4) { transition-delay: 0.15s; }
+.arc-awards .arc-award:nth-child(5) { transition-delay: 0.2s; }
+.arc-awards .arc-award:nth-child(6) { transition-delay: 0.25s; }
+.arc-awards .arc-award:nth-child(7) { transition-delay: 0.3s; }
+
+/* ── Counter Glow Pulse on Completion ──────────────────── */
+
+@keyframes counterGlow {
+  0% { text-shadow: 0 0 0 rgba(246,180,14,0); }
+  30% { text-shadow: 0 0 40px rgba(246,180,14,0.4); }
+  100% { text-shadow: 0 0 0 rgba(246,180,14,0); }
+}
+
+.pc-val, .ms-v {
+  animation: counterGlow 2.5s ease-out 2s 1 both;
+  animation-play-state: paused;
+}
+
+.visible .pc-val,
+.visible .ms-v {
+  animation-play-state: running;
+}
+
+/* ── Premium Pullquote Entrance ────────────────────────── */
+
+.v-pullquote {
+  position: relative;
+  overflow: hidden;
+}
+
+.v-pullquote::after {
+  content: '';
+  position: absolute; top: 0; left: 0; width: 3px; height: 100%;
+  background: linear-gradient(180deg, var(--sol), var(--celeste), var(--sol));
+  opacity: 0.6;
+}
+
+/* ── Kicker Animated Dash ──────────────────────────────── */
+
+.kicker::before {
+  transition: width 0.8s var(--ease-out-expo) !important;
+  width: 0 !important;
+}
+
+.visible .kicker::before,
+.fade-in.visible .kicker::before {
+  width: 28px !important;
+}
+
+/* ── Reform Number Glow ────────────────────────────────── */
+
+.reform-number {
+  text-shadow: 0 0 40px rgba(246,180,14,0.12);
+}
+
+/* ── Hero Subtitle Tracking Animation ──────────────────── */
+
+@keyframes trackingExpand {
+  from { letter-spacing: 4px; opacity: 0; }
+  to { letter-spacing: 10px; opacity: 1; }
+}
+
+.hero-subtitle {
+  animation: trackingExpand 1.5s var(--ease-out-expo) 0.3s both !important;
+}
+
+/* ── Premium Scroll Progress Glow ──────────────────────── */
+
+.scroll-progress-bar::after {
+  content: '';
+  position: absolute; right: 0; top: -3px; bottom: -3px; width: 80px;
+  background: radial-gradient(circle at right, rgba(246,180,14,0.5), transparent);
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  position: relative;
+}
+
+/* ── Photo Card Cinematic Overlay ──────────────────────── */
+
+.pcard::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(10,10,15,0.3) 70%,
+    rgba(10,10,15,0.7) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease-premium);
+}
+
+.pcard:hover::after {
+  opacity: 0.5;
+}
+
+.pcard {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Vision Chapter Photo Frames ───────────────────────── */
+
+.v-chapter-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.v-chapter-photo::before {
+  content: '';
+  position: absolute; inset: 0;
+  border: 1px solid rgba(246,180,14,0.08);
+  border-radius: inherit;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.v-chapter-photo img {
+  transition: transform 0.8s var(--ease-premium), filter 0.8s var(--ease-premium);
+}
+
+.v-chapter-photo:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.05) saturate(1.1);
+}
+
+/* ── Mega Stats Dramatic Entry ─────────────────────────── */
+
+@keyframes statReveal {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.mega-stats .ms-item {
+  animation: statReveal 0.8s var(--ease-out-expo) both;
+}
+.mega-stats .ms-item:nth-child(2) { animation-delay: 0.1s; }
+.mega-stats .ms-item:nth-child(3) { animation-delay: 0.2s; }
+.mega-stats .ms-item:nth-child(4) { animation-delay: 0.3s; }
+.mega-stats .ms-item:nth-child(5) { animation-delay: 0.4s; }
+
+/* ── Declaration Glow ──────────────────────────────────── */
+
+.vd-big {
+  background: linear-gradient(135deg, #fff, #f0d078, #fff) !important;
+  background-size: 200% 200% !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: goldShift 6s ease-in-out infinite;
+}
+
+.vd-big em {
+  -webkit-text-fill-color: var(--sol);
+}
+
+/* ── Focus-Visible Accessibility ───────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--sol);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--sol);
+  outline-offset: 3px;
+}
+
+/* Remove default outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Prefers Reduced Motion ────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-name {
+    -webkit-text-fill-color: white !important;
+    background: none !important;
+  }
+
+  .vd-big {
+    -webkit-text-fill-color: white !important;
+    background: none !important;
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .photo-strip {
+    animation: none !important;
+  }
+}
+
+/* ── Premium Responsive Refinements ────────────────────── */
+
+@media (max-width: 768px) {
+  .hero-name {
+    background-size: 200% 200% !important;
+  }
+
+  .section-dark::before,
+  .section-darker::before,
+  .section-light::before {
+    height: 40px;
+    top: -40px;
+  }
+
+  .scroll-progress-bar::after {
+    width: 40px;
+  }
+
+  .pobreza-hero::before,
+  .arc-collab::before {
+    animation: none;
+    background: rgba(246,180,14,0.15);
+  }
+}
+
