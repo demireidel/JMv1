@@ -139,8 +139,9 @@ body {
   max-width: 950px;
 }
 .hero-subtitle {
-  font-size: 0.7rem; letter-spacing: 12px; text-transform: uppercase;
-  color: var(--sol); margin-bottom: 1.5rem; font-weight: 600;
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem); letter-spacing: 8px; text-transform: uppercase;
+  color: var(--sol); margin-bottom: 1.2rem; font-weight: 400;
   animation: heroReveal 1s var(--ease-out-expo) 0.5s both;
 }
 .hero-name {
@@ -160,20 +161,21 @@ body {
 }
 .hero-title {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-size: clamp(1.3rem, 3.2vw, 2.2rem); color: var(--sol);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem); color: var(--sol);
   margin-top: 2rem; font-weight: 400; font-style: italic;
   animation: heroReveal 1s var(--ease-out-expo) 1s both;
   text-shadow: 0 0 50px rgba(246,180,14,0.25);
 }
 .hero-line {
-  width: 80px; height: 2px;
-  background: linear-gradient(90deg, transparent, var(--sol), var(--celeste), var(--sol), transparent);
+  width: 60px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--sol), transparent);
   margin: 2rem auto;
   animation: heroLineExpand 1.5s var(--ease-out-expo) 1.2s both;
 }
 .hero-quote {
-  font-size: 1.15rem; color: rgba(255,255,255,0.82);
-  max-width: 600px; margin: 0 auto; line-height: 1.7;
+  font-size: 1.05rem; color: rgba(255,255,255,0.72);
+  max-width: 550px; margin: 0 auto; line-height: 1.7;
+  letter-spacing: 0.5px;
   letter-spacing: 0.5px;
   animation: heroReveal 1s var(--ease-out-expo) 1.4s both;
 }
@@ -184,7 +186,8 @@ body {
   to { transform: scale(1.0); }
 }
 @keyframes heroReveal {
-  from { opacity: 0; transform: translateY(25px); filter: blur(3px); }
+  from { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+  50% { filter: blur(0); }
   to { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 @keyframes heroNameReveal {
@@ -193,7 +196,7 @@ body {
 }
 @keyframes heroLineExpand {
   from { opacity: 0; width: 0; }
-  to { opacity: 1; width: 80px; }
+  to { opacity: 1; width: 60px; }
 }
 @keyframes accentShimmer {
   from { opacity: 0.6; }
@@ -3322,12 +3325,12 @@ footer {
 /* ── Hero Subtitle Tracking Animation ──────────────────── */
 
 @keyframes trackingExpand {
-  from { letter-spacing: 4px; opacity: 0; }
-  to { letter-spacing: 10px; opacity: 1; }
+  from { letter-spacing: 2px; opacity: 0; transform: translateY(-10px); }
+  to { letter-spacing: 8px; opacity: 1; transform: translateY(0); }
 }
 
 .hero-subtitle {
-  animation: trackingExpand 1.5s var(--ease-out-expo) 0.3s both;
+  animation: trackingExpand 1.8s var(--ease-out-expo) 0.3s both;
 }
 
 /* ── Premium Scroll Progress Glow ──────────────────────── */
