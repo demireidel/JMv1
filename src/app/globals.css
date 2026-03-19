@@ -3869,7 +3869,40 @@ button:focus-visible {
 }
 .arc-tab--active .arc-tab-count { color: var(--sol); opacity: 0.7; }
 
-/* ── Section Headers ─── */
+/* ── Content Container + Panels ─── */
+.arc-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  min-height: 500px;
+}
+.arc-panel {
+  animation: arcPanelIn 0.4s ease-out;
+}
+@keyframes arcPanelIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.arc-panel-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.arc-panel-title {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.arc-panel-desc {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+/* ── Section Headers (legacy compat) ─── */
 .arc-section {
   padding-top: 2rem;
   margin-bottom: 4rem;
