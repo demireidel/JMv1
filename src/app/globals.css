@@ -3808,6 +3808,442 @@ button:focus-visible {
   .arc-era-header { flex-direction: column; gap: 0.3rem; }
 }
 
+/* ═══════════ ARCHIVO REDESIGN — TABBED NAV + CARDS ═══════════ */
+
+/* ── Tab Navigation Bar ─── */
+.arc-tab-bar-wrapper {
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  background: rgba(10,14,26,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 3rem;
+}
+.arc-tab-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: 1080px;
+  margin: 0 auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.arc-tab-bar::-webkit-scrollbar { display: none; }
+.arc-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 1rem 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+  transition: all 0.3s var(--ease-premium);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  position: relative;
+  font-family: inherit;
+}
+.arc-tab:hover {
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.03);
+}
+.arc-tab--active {
+  color: var(--sol);
+  border-bottom-color: var(--sol);
+}
+.arc-tab-icon { font-size: 1.2rem; }
+.arc-tab-label {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.arc-tab-count {
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.35);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.arc-tab--active .arc-tab-count { color: var(--sol); opacity: 0.7; }
+
+/* ── Section Headers ─── */
+.arc-section {
+  padding-top: 2rem;
+  margin-bottom: 4rem;
+}
+.arc-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.arc-section-icon { font-size: 2rem; margin-top: 0.2rem; }
+.arc-section-title {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.arc-section-desc {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+/* ── Book Cards (Libros) ─── */
+.arc-books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.arc-book-card {
+  display: flex;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-premium);
+}
+.arc-book-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(212,168,67,0.15);
+  transform: translateY(-2px);
+}
+.arc-book-card--hl {
+  border-color: rgba(212,168,67,0.2);
+  background: rgba(212,168,67,0.04);
+}
+.arc-book-spine {
+  width: 6px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--sol), rgba(212,168,67,0.3));
+}
+.arc-book-card--hl .arc-book-spine {
+  background: linear-gradient(180deg, var(--sol), var(--celeste));
+  width: 8px;
+}
+.arc-book-body {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.arc-book-year {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--sol);
+  opacity: 0.8;
+}
+.arc-book-title {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.4;
+  font-weight: 500;
+}
+.arc-book-pub {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.5px;
+}
+
+/* ── Paper Cards (Artículos) ─── */
+.arc-papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.arc-paper-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  transition: all 0.4s var(--ease-premium);
+}
+.arc-paper-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(116,172,223,0.2);
+  transform: translateY(-2px);
+}
+.arc-paper-topic-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(116,172,223,0.12);
+  color: var(--celeste);
+  border-radius: 100px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+.arc-paper-card .arc-paper-title {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.arc-paper-card .arc-paper-meta {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  display: flex;
+  gap: 0.8rem;
+}
+.arc-paper-venue {
+  color: var(--sol);
+  opacity: 0.7;
+}
+
+/* ── Speech Cards (Discursos) ─── */
+.arc-speeches-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.arc-speech-card {
+  display: flex;
+  gap: 1.5rem;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.4s var(--ease-premium);
+}
+.arc-speech-card:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.1);
+  transform: translateX(4px);
+}
+.arc-speech-card--keynote {
+  border-left: 3px solid var(--sol);
+  background: rgba(212,168,67,0.03);
+}
+.arc-speech-card--keynote:hover {
+  border-color: var(--sol);
+  background: rgba(212,168,67,0.06);
+}
+.arc-speech-date-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 70px;
+  flex-shrink: 0;
+}
+.arc-speech-date {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--sol);
+}
+.arc-speech-keynote-badge {
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--dark);
+  background: var(--sol);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.arc-speech-body {
+  flex: 1;
+}
+.arc-speech-title {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.arc-speech-location {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.arc-speech-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+}
+
+/* ── Interview Cards (Entrevistas) ─── */
+.arc-interviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.arc-interview-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.4s var(--ease-premium);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.arc-interview-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+}
+.arc-interview-card--featured {
+  border-color: rgba(212,168,67,0.2);
+  background: rgba(212,168,67,0.03);
+}
+.arc-interview-card--featured:hover {
+  border-color: rgba(212,168,67,0.35);
+}
+.arc-interview-outlet {
+  font-family: var(--font-playfair-display), serif;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+}
+.arc-interview-card--featured .arc-interview-outlet {
+  color: var(--sol);
+}
+.arc-interview-journalist {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+.arc-interview-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+  flex: 1;
+}
+.arc-interview-date {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--sol);
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+/* ── Collaboration Card (Paper con Demian) ─── */
+.arc-collab-card {
+  background: linear-gradient(135deg, rgba(212,168,67,0.06), rgba(116,172,223,0.04));
+  border: 1px solid rgba(212,168,67,0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.arc-collab-card::before {
+  content: '';
+  position: absolute; inset: -1px;
+  background: conic-gradient(
+    from var(--border-angle, 0deg),
+    transparent 40%,
+    rgba(246,180,14,0.3) 50%,
+    rgba(116,172,223,0.2) 60%,
+    transparent 70%
+  );
+  border-radius: inherit;
+  z-index: -1;
+  animation: borderRotate 8s linear infinite;
+}
+.arc-collab-card::after {
+  content: '';
+  position: absolute; inset: 1px;
+  background: linear-gradient(135deg, rgba(10,14,26,0.97), rgba(15,20,35,0.97));
+  border-radius: inherit;
+  z-index: -1;
+}
+.arc-collab-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--sol);
+  color: var(--dark);
+  border-radius: 100px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.arc-collab-title {
+  font-family: var(--font-playfair-display), serif;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+.arc-collab-desc {
+  color: rgba(255,255,255,0.78);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.arc-collab-quote-block {
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid var(--sol);
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.5rem;
+  position: relative;
+}
+.arc-collab-qmark {
+  position: absolute;
+  top: -0.3rem;
+  left: 0.5rem;
+  font-family: var(--font-playfair-display), serif;
+  font-size: 3rem;
+  color: var(--sol);
+  opacity: 0.2;
+  line-height: 1;
+}
+.arc-collab-quote-block blockquote {
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.arc-collab-quote-block cite {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.72rem;
+  color: var(--sol);
+  opacity: 0.7;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── Tab bar mobile ─── */
+@media (max-width: 768px) {
+  .arc-tab-bar {
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+  }
+  .arc-tab {
+    padding: 0.8rem 1rem;
+  }
+  .arc-tab-label { font-size: 0.7rem; }
+  .arc-speech-card {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .arc-speech-date-col {
+    flex-direction: row;
+    min-width: auto;
+  }
+  .arc-books-grid { grid-template-columns: 1fr; }
+  .arc-papers-grid { grid-template-columns: 1fr; }
+  .arc-interviews-grid { grid-template-columns: 1fr; }
+  .arc-collab-card { padding: 1.5rem; }
+  .arc-section-header { flex-direction: column; gap: 0.8rem; }
+}
+
 /* ─── Enhanced Mobile Support ─── */
 @media (max-width: 480px) {
   .hero-name { font-size: 3.5rem; letter-spacing: 1px; }
