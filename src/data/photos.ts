@@ -33,7 +33,7 @@ export const visionPhotos = [
     src: "/images/strip/acuerdo-intl.jpg",
     alt: "Milei en reunión internacional — 2024",
     caption: "Reunión internacional — 2024",
-    objectPosition: "center 20%",
+    objectPosition: "center 10%",
   },
   {
     src: "/images/vision/europa-viva-24.jpg",
