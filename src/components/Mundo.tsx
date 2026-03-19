@@ -178,6 +178,17 @@ export default function Mundo() {
             </div>
           </FadeIn>
 
+          <FadeIn>
+            <div className="mundo-closing" style={{ textAlign: "center", padding: "4rem 2rem 2rem", maxWidth: "800px", margin: "0 auto" }}>
+              <p style={{ fontFamily: "var(--font-playfair-display), serif", fontSize: "1.3rem", fontStyle: "italic", color: "var(--sol)", lineHeight: "1.6", opacity: 0.85 }}>
+                &ldquo;Argentina dejó de ser un país cerrado y aislado. Hoy somos socios estratégicos de las dos economías más grandes del mundo y firmamos más acuerdos comerciales en dos años que en las últimas cuatro décadas.&rdquo;
+              </p>
+              <p style={{ fontSize: "0.75rem", letterSpacing: "2px", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginTop: "1rem", fontFamily: "var(--font-bebas-neue), sans-serif" }}>
+                Milei, Congreso 2026
+              </p>
+            </div>
+          </FadeIn>
+
         </div>
       </section>
     </>

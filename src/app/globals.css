@@ -3423,12 +3423,21 @@ footer {
 }
 
 .mega-stats .ms-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.mega-stats.visible .ms-item,
+.fade-in.visible .ms-item {
   animation: statReveal 0.8s var(--ease-out-expo) both;
 }
-.mega-stats .ms-item:nth-child(2) { animation-delay: 0.1s; }
-.mega-stats .ms-item:nth-child(3) { animation-delay: 0.2s; }
-.mega-stats .ms-item:nth-child(4) { animation-delay: 0.3s; }
-.mega-stats .ms-item:nth-child(5) { animation-delay: 0.4s; }
+.mega-stats.visible .ms-item:nth-child(2),
+.fade-in.visible .ms-item:nth-child(2) { animation-delay: 0.1s; }
+.mega-stats.visible .ms-item:nth-child(3),
+.fade-in.visible .ms-item:nth-child(3) { animation-delay: 0.2s; }
+.mega-stats.visible .ms-item:nth-child(4),
+.fade-in.visible .ms-item:nth-child(4) { animation-delay: 0.3s; }
+.mega-stats.visible .ms-item:nth-child(5),
+.fade-in.visible .ms-item:nth-child(5) { animation-delay: 0.4s; }
 
 /* ── Declaration Glow ──────────────────────────────────── */
 
@@ -4582,5 +4591,88 @@ button:focus-visible {
   .ms-v { font-size: 2rem; }
   .leaders-g { grid-template-columns: repeat(2, 1fr); }
   .sec-num { font-size: 4rem; }
+  .v-chapter-title { font-size: 1.5rem; }
+  .v-data-strip { flex-wrap: nowrap; gap: 0; }
+  .v-data-cell { min-width: 140px; }
+  .reform-title { font-size: 1.5rem; }
+  .reform-divider h3 { font-size: 1.3rem; }
+  .ref-counter-strip { grid-template-columns: repeat(2, 1fr); }
+  .arc-tab { padding: 0.8rem 1rem; }
+  .arc-tab-label { font-size: 0.7rem; }
+  .arc-book-cover { width: 150px; height: 220px; }
+  .arc-speech-card { flex-direction: column; }
+  .arc-speech-date-col { flex-direction: row; gap: 0.5rem; min-width: unset; }
+  .arc-video-embed { margin-top: 0.8rem; }
+}
+
+@media (max-width: 320px) {
+  .hero-name { font-size: 3rem; }
+  .hero-subtitle { font-size: 0.8rem; letter-spacing: 4px; }
+  .hero-quote { font-size: 1.2rem; }
+  .v-opening h2 { font-size: 2rem; }
+  .section-title { font-size: 2.5rem; }
+  .ref-counter-strip { grid-template-columns: 1fr; }
+  .arc-tab { padding: 0.6rem 0.8rem; }
+}
+
+/* ── Futuro Gallery Stagger ──────────────────────────────── */
+.futuro-gallery .fg-item:nth-child(1) { transition-delay: 0s; }
+.futuro-gallery .fg-item:nth-child(2) { transition-delay: 0.1s; }
+.futuro-gallery .fg-item:nth-child(3) { transition-delay: 0.15s; }
+.futuro-gallery .fg-item:nth-child(4) { transition-delay: 0.2s; }
+.futuro-gallery .fg-item:nth-child(5) { transition-delay: 0.25s; }
+.futuro-gallery .fg-item:nth-child(6) { transition-delay: 0.3s; }
+
+/* ── Logro Card Stagger ──────────────────────────────────── */
+.logro-hero:nth-of-type(2) { transition-delay: 0.05s; }
+.logro-hero:nth-of-type(3) { transition-delay: 0.1s; }
+.logro-hero:nth-of-type(4) { transition-delay: 0.15s; }
+
+/* ── Archivo Book Cover Stagger ──────────────────────────── */
+.arc-books-grid .arc-book-cover:nth-child(1) { transition-delay: 0s; }
+.arc-books-grid .arc-book-cover:nth-child(2) { transition-delay: 0.1s; }
+.arc-books-grid .arc-book-cover:nth-child(3) { transition-delay: 0.15s; }
+.arc-books-grid .arc-book-cover:nth-child(4) { transition-delay: 0.2s; }
+
+/* ── Vision Chapter Photo Smooth Reveal ──────────────────── */
+.v-chapter-photo {
+  clip-path: inset(8% 0 8% 0);
+  transition: clip-path 0.8s var(--ease-out-expo);
+}
+.fade-in.visible .v-chapter-photo,
+.v-chapter-photo.visible {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ── Vision Data Strip Mobile Horizontal Scroll ──────────── */
+@media (max-width: 768px) {
+  .v-data-strip {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+  .v-data-strip::-webkit-scrollbar { display: none; }
+  .v-data-cell {
+    scroll-snap-align: center;
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+}
+
+/* ── Reform Counter Strip Mobile Horizontal Scroll ───────── */
+@media (max-width: 480px) {
+  .ref-counter-strip {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .ref-counter-strip::-webkit-scrollbar { display: none; }
+  .ref-counter {
+    scroll-snap-align: center;
+    min-width: 180px;
+  }
 }
 
