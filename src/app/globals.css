@@ -4185,6 +4185,47 @@ button:focus-visible {
   color: rgba(255,255,255,0.72);
   line-height: 1.6;
 }
+.arc-speech-duration {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.3rem;
+}
+.arc-speech-themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.arc-speech-theme {
+  font-size: 0.6rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  background: rgba(212,168,67,0.1);
+  border: 1px solid rgba(212,168,67,0.2);
+  color: var(--sol);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.arc-paper-desc {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.4;
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+.arc-interview-duration {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.5);
+  margin-left: 0.5rem;
+}
+.arc-influence-card-works {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.45);
+  font-style: italic;
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
 .arc-speech-frase {
   font-style: italic;
   font-family: var(--font-playfair-display), serif;

@@ -156,6 +156,7 @@ export default function Archivo() {
                   <div className="arc-paper-card">
                     <div className="arc-paper-topic-badge">{p.topic}</div>
                     <h5 className="arc-paper-title">{p.title}</h5>
+                    {p.desc && <p className="arc-paper-desc">{p.desc}</p>}
                     <div className="arc-paper-meta">
                       {p.coauthors && <span>con {p.coauthors}</span>}
                       {p.venue && <span className="arc-paper-venue">{p.venue}</span>}
@@ -184,11 +185,17 @@ export default function Archivo() {
                     <div className="arc-speech-date-col">
                       <span className="arc-speech-date">{d.date}</span>
                       {d.keynote && <span className="arc-speech-keynote-badge">KEYNOTE</span>}
+                      {d.duration && <span className="arc-speech-duration">{d.duration}</span>}
                     </div>
                     <div className="arc-speech-body">
                       <h4 className="arc-speech-title">{d.title}</h4>
                       <span className="arc-speech-location">{d.location}</span>
                       <p className="arc-speech-desc">{d.desc}</p>
+                      {d.themes && (
+                        <div className="arc-speech-themes">
+                          {d.themes.map((t, ti) => <span key={ti} className="arc-speech-theme">{t}</span>)}
+                        </div>
+                      )}
                       {d.frase && <p className="arc-speech-frase">&ldquo;{d.frase}&rdquo;</p>}
                     </div>
                   </div>
@@ -214,6 +221,7 @@ export default function Archivo() {
                   <div className={`arc-interview-card${e.highlight ? " arc-interview-card--featured" : ""}`}>
                     <div className="arc-interview-outlet">{e.outlet}</div>
                     {e.journalist && <span className="arc-interview-journalist">por {e.journalist}</span>}
+                    {e.duration && <span className="arc-interview-duration">{e.duration}</span>}
                     <p className="arc-interview-desc">{e.desc}</p>
                     {e.impact && <p className="arc-interview-impact">{e.impact}</p>}
                     <span className="arc-interview-date">{e.date}</span>
@@ -271,6 +279,7 @@ export default function Archivo() {
                   <div key={i} className="arc-influence-card">
                     <h5 className="arc-influence-card-school">{inf.school}</h5>
                     <p className="arc-influence-card-names">{inf.names}</p>
+                    {inf.keyWork && <p className="arc-influence-card-works">{inf.keyWork}</p>}
                   </div>
                 ))}
               </div>
