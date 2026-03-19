@@ -48,8 +48,8 @@ export const visionPhotos = [
 
 /** Hero background image */
 export const heroImage = {
-  src: "/images/hero/milei-retrato.jpg",
-  alt: "Milei en el balcón de Casa Rosada",
+  src: "/images/hero/milei-balcon.jpg",
+  alt: "Milei en el balcón de Casa Rosada ante la multitud — Asunción presidencial, diciembre 2023",
 };
 
 /** Mundo hero background image */
