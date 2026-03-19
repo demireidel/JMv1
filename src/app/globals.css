@@ -729,9 +729,9 @@ section { position: relative; overflow: hidden; }
 .reform-divider { text-align: center; padding: 4rem 0; }
 .reform-divider h3 {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
-  font-size: 1.3rem; letter-spacing: 4px; color: var(--sol);
+  font-size: 2rem; letter-spacing: 5px; color: var(--sol);
 }
-.reform-divider p { color: rgba(255,255,255,0.72); font-size: 0.9rem; margin-top: 0.5rem; }
+.reform-divider p { color: rgba(255,255,255,0.72); font-size: 1rem; margin-top: 0.5rem; }
 .reform-divider-line {
   width: 100px; height: 2px; background: var(--sol); margin: 1.5rem auto 0; opacity: 0.3;
 }
@@ -2010,8 +2010,8 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
   padding: 5rem 0 4rem;
 }
 .reform-divider h3 {
-  font-size: 1.5rem;
-  letter-spacing: 5px;
+  font-size: 2.2rem;
+  letter-spacing: 6px;
 }
 .reform-divider-line {
   width: 40px;

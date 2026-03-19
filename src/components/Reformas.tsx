@@ -23,7 +23,6 @@ function ReformaSection({
     <FadeIn>
       <div className="reform-section">
         <div className="reform-header">
-          {icon && <span className="reform-icon">{icon}</span>}
           <div className="reform-number">REFORMA {num}</div>
           <h2 className="reform-title">{title}</h2>
           <p className="reform-subtitle">{subtitle}</p>
