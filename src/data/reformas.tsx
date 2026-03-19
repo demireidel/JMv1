@@ -159,6 +159,10 @@ export const reformas: Reforma[] = [
         equilibrio fiscal garantizado por ley.
       </>
     ),
+    quote: {
+      text: "No hay plata. Y cuando no hay plata, no se puede gastar lo que no se tiene. Es así de simple. El equilibrio fiscal no es una opción — es la ley.",
+      cite: "Milei, cadena nacional, 10 de diciembre de 2023",
+    },
   },
 
   // ── 02 DERROTA DE LA INFLACIÓN ────────────────────────────
