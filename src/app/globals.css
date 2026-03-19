@@ -2068,7 +2068,7 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 /* ═══ CONTAINER — SLIGHTLY WIDER ON LARGE SCREENS ═══ */
 @media (min-width: 1400px) {
   .container { max-width: 1300px; }
-  .v-prose { max-width: 780px; }
+  .v-prose { max-width: 1040px; }
   .reform-desc { max-width: 960px; }
 }
 
