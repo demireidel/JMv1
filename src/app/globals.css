@@ -3485,6 +3485,70 @@ button:focus-visible {
   }
 }
 
+/* ── Reformas Hero Photo ──────────────────────────────── */
+.ref-photo-hero {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  margin-bottom: -2rem;
+}
+.ref-photo-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5) saturate(0.9);
+}
+.ref-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, var(--cream) 100%);
+}
+@media (max-width: 768px) {
+  .ref-photo-hero { height: 220px; }
+}
+
+/* ── Archivo Visual Breaks ────────────────────────────── */
+.arc-hero-photo {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.arc-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) saturate(0.85);
+}
+.arc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--dark) 0%, transparent 30%, transparent 60%, var(--dark) 100%);
+}
+.arc-photo-break {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin: 3rem 0;
+  border-radius: 8px;
+}
+.arc-photo-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) saturate(0.9);
+  transition: transform 0.8s var(--ease-premium);
+}
+.arc-photo-break:hover img {
+  transform: scale(1.03);
+}
+@media (max-width: 768px) {
+  .arc-hero-photo { height: 200px; }
+  .arc-photo-break { height: 140px; margin: 2rem 0; }
+}
+
 /* ─── Enhanced Mobile Support ─── */
 @media (max-width: 480px) {
   .hero-name { font-size: 3.5rem; letter-spacing: 1px; }

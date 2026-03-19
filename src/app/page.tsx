@@ -24,6 +24,7 @@ export default function Home() {
       <PhotoStrip photos={stripPhotos2} reverse />
       <Futuro />
       <Mundo />
+      <PhotoStrip photos={stripPhotos1} reverse />
       <Archivo />
       <Footer />
       <BackToTop />

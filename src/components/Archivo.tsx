@@ -19,6 +19,12 @@ function AnimatedStat({ target, suffix = "" }: { target: number; suffix?: string
 export default function Archivo() {
   return (
     <section id="archivo" className="section-darker" style={{ paddingTop: "6rem", paddingBottom: "6rem" }}>
+      <div className="arc-hero-photo">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/strip/milei-onu.jpg" alt="Milei en la ONU" style={{ objectPosition: "center 30%" }} />
+          <div className="arc-hero-overlay" />
+        </div>
+
       <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 2rem" }}>
 
         {/* Header */}
@@ -100,6 +106,11 @@ export default function Archivo() {
             como <em>De Viena a Madrid</em> (Unión Editorial).
           </div>
         </FadeIn>
+
+        <div className="arc-photo-break">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/strip/milei-asuncion.jpg" alt="Asunción presidencial" />
+        </div>
 
         {/* ─── PAPERS ─── */}
         <FadeIn>
@@ -192,6 +203,11 @@ export default function Archivo() {
               </div>
             </FadeIn>
           ))}
+        </div>
+
+        <div className="arc-photo-break">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/strip/milei-g7.jpg" alt="Milei en cumbre del G7" />
         </div>
 
         {/* ─── ENTREVISTAS — MAGAZINE CARDS + COMPACT ─── */}

@@ -72,6 +72,17 @@ function ReformaSection({
 export default function Reformas() {
   return (
     <section className="section-darker" id="reformas">
+      {/* Hero Photo */}
+      <div className="ref-photo-hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/strip/milei-bilateral.jpg"
+          alt="Firma de reformas estructurales"
+          style={{ objectPosition: "center 40%" }}
+        />
+        <div className="ref-photo-overlay" />
+      </div>
+
       {/* Hero */}
       <div className="ref-hero">
         <div className="ref-hero-accent" />
