@@ -4,22 +4,22 @@ import { visionPhotos } from "@/data/photos";
 /* ── Data ────────────────────────────────────────────────── */
 
 const dataStrip = [
-  { num: "1", sup: "°", label: "PBI per cápita\nmundial, circa 1895" },
-  { num: "35", sup: "", label: "Años bastaron\npara ser potencia" },
+  { num: "1", sup: "°", label: "PBI per cápita\nmundial en 1895" },
+  { num: "35", sup: "", label: "Años bastaron para\nser top 10 mundial" },
   { num: "100", sup: "+", label: "Años de decadencia\ncolectivista" },
-  { num: "140", sup: "°", label: "Puesto al que caímos\nen libertad económica" },
+  { num: "140", sup: "°", label: "Puesto en libertad\neconómica al que caímos" },
 ];
 
 const pyramid = [
   {
     rank: "1°", ordinal: "Primero",
     title: "Ética y moral",
-    desc: "Filosofía griega, derecho romano, rectitud de los estoicos, valores judeocristianos. Cada decisión debe pasar primero el test moral: ¿es justa? Lo que es injusto no puede ser eficiente.",
+    desc: "Filosofía griega, derecho romano, rectitud de los estoicos, valores judeocristianos. Cada decisión de gobierno debe pasar primero el test moral: ¿es justa? Lo que es injusto no puede ser eficiente. Lo que viola derechos individuales no puede ser política pública.",
   },
   {
     rank: "2°", ordinal: "Segundo",
     title: "Eficiencia dinámica",
-    desc: "Cuando el marco institucional es justo, la eficiencia es su consecuencia natural — no su rival. La función empresarial es el principal motor del desarrollo porque descubre oportunidades que ningún planificador puede anticipar.",
+    desc: "Cuando el marco institucional es justo, la eficiencia es su consecuencia natural — no su rival. Como demostró Jesús Huerta de Soto, la función empresarial es el principal motor del desarrollo: descubre oportunidades que ningún planificador central puede anticipar ni replicar.",
   },
   {
     rank: "3°", ordinal: "Tercero",
@@ -47,10 +47,10 @@ const pillars = [
 ];
 
 const thinkers = [
-  { era: "Fundamentos", title: "Filosofía griega", desc: "La razón como instrumento de conocimiento. La búsqueda de la verdad y la virtud como fin del hombre libre." },
-  { era: "Instituciones", title: "Derecho romano", desc: "El imperio de la ley, la propiedad privada y el contrato como pilares de la convivencia civilizada." },
-  { era: "Carácter", title: "Rectitud estoica", desc: "El deber, la disciplina interior y la responsabilidad individual como ejes de una vida digna." },
-  { era: "Valores", title: "Tradición judeocristiana", desc: "La sacralidad de la persona, la libertad de conciencia y la igualdad ante Dios y ante la ley." },
+  { era: "Fundamentos", title: "Filosofía griega", desc: "Desde Sócrates, Platón y Aristóteles: la razón como instrumento de conocimiento, la búsqueda de la verdad y la virtud como fin supremo del hombre libre." },
+  { era: "Instituciones", title: "Derecho romano", desc: "De la Ley de las XII Tablas al Corpus Iuris Civilis: el imperio de la ley, la propiedad privada y el contrato como pilares de la convivencia civilizada." },
+  { era: "Carácter", title: "Rectitud estoica", desc: "Marco Aurelio, Séneca, Epicteto: el deber, la disciplina interior y la responsabilidad individual como ejes de una vida digna y soberana." },
+  { era: "Valores", title: "Tradición judeocristiana", desc: "La sacralidad de la persona, la libertad de conciencia y la igualdad ante Dios y ante la ley — la raíz moral de los derechos individuales." },
 ];
 
 /* ── Helpers ─────────────────────────────────────────────── */
@@ -132,34 +132,44 @@ export default function Vision() {
             </div>
             <div className="v-prose">
               <p className="lead">
-                La Argentina fue alguna vez el país más próspero del planeta. No por
-                azar, sino por diseño institucional: la Constitución de 1853, de fuerte
-                raigambre liberal, inspirada en las ideas de{" "}
-                <strong>Juan Bautista Alberdi</strong>.
+                En 1853, <strong>Juan Bautista Alberdi</strong> escribió las{" "}
+                <em>Bases y puntos de partida para la organización política de la
+                República Argentina</em> — el proyecto institucional más ambicioso
+                del hemisferio sur. La Constitución de 1853, de fuerte raigambre
+                liberal, consagró la propiedad privada, la libertad de comercio, la
+                inmigración abierta y un Estado limitado. El resultado fue la
+                transformación económica más veloz que el mundo haya visto.
               </p>
               <p>
-                Abrazamos la libertad, la propiedad privada, los mercados libres, la
-                división del trabajo y la cooperación social. Lo que vino después fue la
-                expansión económica más impresionante de nuestra historia. En apenas 35
-                años, la renta per cápita argentina superó a la de casi todas las
-                naciones europeas. Para principios del siglo XX, la Argentina era el
-                faro de luz de Occidente — un país que recibía millones de inmigrantes
-                que venían buscando un futuro mejor bajo la promesa de la libertad.
+                En apenas 35 años, la Argentina pasó de ser un territorio despoblado
+                y empobrecido a ubicarse entre las diez economías más grandes del
+                planeta. Para 1895, el PBI per cápita argentino superaba al de
+                Francia, Alemania e Italia. Buenos Aires rivalizaba con París y
+                Nueva York. Entre 1860 y 1930 llegaron más de seis millones de
+                inmigrantes — italianos, españoles, alemanes, polacos — atraídos
+                por la promesa de un país donde el mérito y la libertad determinaban
+                el destino de cada persona. La Argentina era el faro de luz de
+                Occidente.
               </p>
               <p>
-                Después, la dirigencia decidió abandonar el modelo que nos había hecho
-                ricos y abrazó las ideas empobrecedoras del colectivismo. Durante más
-                de cien años los políticos insistieron en defender un modelo que solo
-                genera pobreza, estancamiento y miseria. Décadas de intervención,
-                regulación y gasto público creciente nos llevaron del puesto 1 al
-                puesto 140 en el ranking de libertad económica.
+                Después vino la catástrofe. A partir de la década del 30, la
+                dirigencia abandonó el modelo que nos había hecho ricos y abrazó las
+                ideas empobrecedoras del colectivismo. Cada gobierno agrandó el
+                Estado, creó nuevas regulaciones, aumentó el gasto público. El
+                resultado: más de cien años de decadencia ininterrumpida. Un país
+                que en 1910 tenía el mismo PBI per cápita que Estados Unidos fue
+                cayendo, década tras década, hasta ubicarse en el puesto 140 del
+                ranking mundial de libertad económica — detrás de Angola, Liberia y
+                Chad.
               </p>
               <p>
                 Mi proyecto no es administrar esa decadencia.{" "}
-                <strong>Es revertirla por completo.</strong> Cada decisión de gobierno
-                se mide contra una sola pregunta:{" "}
+                <strong>Es dinamitarla y refundar la Argentina sobre las
+                ideas que la hicieron grande.</strong> Cada decisión de gobierno se
+                mide contra una sola pregunta:{" "}
                 <strong>¿esto nos acerca a ser el país más libre del mundo?</strong>{" "}
-                Si la respuesta es no, esa política no se implementa.
+                Si la respuesta es no, esa política no se implementa. No hay
+                medias tintas. No hay gradualismo. Se hace o no se hace.
               </p>
             </div>
             <Pullquote cite="Discurso de asunción, diciembre 2023">
@@ -200,26 +210,37 @@ export default function Vision() {
               <p className="lead">
                 <strong>
                   El capitalismo de libre empresa no solo es el sistema más productivo
-                  — es el único sistema moralmente deseable.
+                  de la historia de la humanidad — es el único sistema moralmente
+                  deseable.
                 </strong>{" "}
-                El único basado en el intercambio voluntario y el principio de no
-                agresión.
+                El único basado enteramente en el intercambio voluntario y el
+                principio de no agresión. Desde que se adoptó el capitalismo, el
+                mundo pasó de la miseria generalizada a la mayor explosión de
+                prosperidad jamás registrada: el PBI per cápita mundial se
+                multiplicó por 15 en apenas 200 años, y más de 2.000 millones de
+                personas salieron de la pobreza extrema.
               </p>
               <p>
                 Como planteó <strong>Israel Kirzner</strong>, los socialistas ya no
-                niegan que el capitalismo funciona: lo que hacen es acusarlo de inmoral.
-                Entonces la verdadera batalla no es económica — es moral. Hay que
-                defender al capitalismo no solo por sus resultados, sino por su esencia:
-                es el sistema que respeta la dignidad del individuo porque no requiere
-                coerción alguna.
+                niegan que el capitalismo funciona — porque los datos son
+                irrefutables. Lo que hacen es acusarlo de inmoral. Entonces la
+                verdadera batalla de nuestro tiempo no es económica — es moral. El
+                socialismo fracasó en todos los países donde se implementó: la Unión
+                Soviética, Cuba, Venezuela, Corea del Norte. Produjo más de 100
+                millones de muertos en el siglo XX. Y sin embargo sus defensores
+                siguen ocupando las cátedras, los medios y los organismos
+                internacionales. Hay que defender al capitalismo no solo por sus
+                resultados, sino por su esencia: es el sistema que respeta la
+                dignidad del individuo porque no requiere coerción alguna.
               </p>
               <p>
                 El capitalista exitoso no se apropia de la riqueza ajena — contribuye
-                al bienestar general. <strong>Un empresario exitoso es un héroe.</strong>{" "}
-                Un benefactor social que solo puede prosperar sirviendo al prójimo con
-                mejores bienes a mejor precio. Que nadie les diga que su ambición es
-                inmoral: la ambición de servir al prójimo es la forma más noble de
-                cooperación humana.
+                al bienestar general. <strong>Un empresario exitoso es un héroe,
+                un benefactor social</strong> que solo puede prosperar sirviendo al
+                prójimo con mejores bienes a mejor precio. Bill Gates sacó a más
+                gente de la pobreza que todos los organismos internacionales juntos.
+                Que nadie les diga que su ambición es inmoral: la ambición de servir
+                al prójimo es la forma más noble de cooperación humana.
               </p>
             </div>
             <Pullquote cite="Davos, enero 2024">
@@ -301,21 +322,29 @@ export default function Vision() {
             </div>
             <div className="v-prose">
               <p className="lead">
-                <strong>Hayek</strong> lo advirtió en <em>Camino de Servidumbre</em>:
-                cada intervención del Estado genera distorsiones que justifican nuevas
-                intervenciones, hasta que la libertad desaparece por completo.
+                En 1944, <strong>Friedrich Hayek</strong> lo advirtió en{" "}
+                <em>Camino de Servidumbre</em>: cada intervención del Estado genera
+                distorsiones que justifican nuevas intervenciones, en una espiral
+                que no se detiene hasta que la libertad desaparece por completo. Lo
+                que Hayek describió como teoría, la Argentina lo vivió como
+                pesadilla durante más de cien años.
               </p>
               <p>
-                Argentina vivió esa profecía durante cien años. Cada gobierno agrandó
-                el Estado un poco más, reguló un poco más, gastó un poco más — y la
-                decadencia se profundizó un poco más. Es una espiral perversa: la
-                intervención genera un problema, y el político propone más intervención
-                como solución. El resultado siempre es el mismo: más poder para la
-                casta, menos libertad para la gente.
+                Desde la primera presidencia de Perón en 1946 hasta diciembre de
+                2023, el gasto público pasó del 15 % del PBI al 42 %. Se crearon
+                más de 600 organismos estatales. La carga impositiva se multiplicó
+                por tres. Cada gobierno agrandó el Estado un poco más, reguló un
+                poco más, gastó un poco más — y la decadencia se profundizó un poco
+                más. Es la espiral perversa que Hayek predijo: la intervención genera
+                un problema, y el político propone más intervención como solución.
+                El resultado siempre es el mismo: más poder para la casta, menos
+                libertad para la gente.
               </p>
               <p>
                 Los impuestos se cobran de manera coactiva. A mayor carga impositiva,
-                mayor coacción y menor libertad.{" "}
+                mayor coacción y menor libertad. La presión tributaria argentina
+                llegó a superar el 29 % del PBI — niveles nórdicos sin servicios
+                nórdicos.{" "}
                 <strong>No existen las fallas de mercado.</strong> El mercado es un
                 mecanismo de cooperación social donde se intercambian voluntariamente
                 derechos de propiedad. La intromisión del Estado mete ruido en el
@@ -326,14 +355,15 @@ export default function Vision() {
                 Hoy los Estados no necesitan controlar directamente los medios de
                 producción para imponer el socialismo. Lo hacen a través de emisión
                 monetaria, deuda pública, subsidios, controles de precios y
-                regulaciones asfixiantes. El resultado es idéntico: se destruyen los
-                incentivos, se castiga al que produce y se premia al que vive del
-                erario.{" "}
+                regulaciones asfixiantes. La Argentina llegó a tener 67.000
+                regulaciones vigentes — más que Francia y España combinadas. El
+                resultado es idéntico: se destruyen los incentivos, se castiga al
+                que produce y se premia al que vive del erario.{" "}
                 <strong>
                   Las funciones del Estado deben limitarse a la defensa del derecho a
                   la vida, a la libertad y a la propiedad.
                 </strong>{" "}
-                Nada más.
+                Nada más. Todo lo demás es coacción disfrazada de política pública.
               </p>
             </div>
             <Pullquote cite="Davos, enero 2024">
@@ -356,28 +386,34 @@ export default function Vision() {
               <p className="lead">
                 La gran gesta para cambiar la Argentina tiene tres frentes de batalla
                 que, si bien son distintos el uno del otro,{" "}
-                <strong>son igualmente indispensables.</strong>
+                <strong>son igualmente indispensables.</strong> Sin los tres, el
+                cambio no es sostenible. Sin los tres, el colectivismo vuelve.
               </p>
               <p>
-                Los años 90 demostraron que no alcanza con gestionar bien: se pueden
-                implementar reformas económicas profundas, pero si no se gana la
-                batalla de las ideas, el próximo gobierno las revierte todas. El
-                colectivismo no volvió porque las reformas fracasaron — volvió porque
-                la izquierda nunca perdió la hegemonía cultural.
+                La década del 90 es la prueba. Carlos Menem implementó reformas
+                económicas profundas — privatizaciones, apertura comercial,
+                convertibilidad — y sin embargo la izquierda logró revertirlas
+                todas en pocos años. El colectivismo no volvió porque las reformas
+                fracasaron; volvió porque la izquierda nunca perdió la hegemonía
+                cultural. Mantuvieron el control de las universidades, los medios y
+                el relato histórico. Cuando la crisis de 2001 golpeó, el pueblo no
+                culpó al gasto descontrolado ni a la rigidez cambiaria: culpó al
+                liberalismo. Así de poderosa es la batalla cultural.
               </p>
               <p>
-                <strong>Antonio Gramsci</strong> señalaba que para implantar el
-                socialismo era necesario introducirlo desde la educación, la cultura y
-                los medios de comunicación. La izquierda lo hizo al pie de la letra. Se
-                metieron en las universidades, se metieron en los medios, se metieron en
-                la cultura. Capturaron las instituciones que forman el sentido común de
-                una sociedad entera.{" "}
+                <strong>Antonio Gramsci</strong> escribió desde la cárcel en los
+                años 30 que para implantar el socialismo era necesario primero
+                conquistar la cultura — la educación, los medios de comunicación,
+                el arte, el lenguaje cotidiano. La izquierda lo hizo al pie de la
+                letra durante 80 años. Se metieron en las universidades, se
+                metieron en los medios, se metieron en la cultura. Capturaron las
+                instituciones que forman el sentido común de una sociedad entera.{" "}
                 <strong>
                   La batalla cultural fue ganada por la izquierda básicamente porque
                   nosotros no dimos la batalla.
                 </strong>{" "}
-                Avanzaron sobre un terreno virgen, sin rival, y esas ideas se instalaron
-                en la mente de millones como parásitos mentales.
+                Avanzaron sobre un terreno virgen, sin rival, y esas ideas se
+                instalaron en la mente de millones como parásitos mentales.
               </p>
             </div>
             <Pullquote cite="CPAC Argentina, diciembre 2024">
@@ -448,41 +484,49 @@ export default function Vision() {
             <div className="v-prose">
               <p className="lead">
                 <strong>Occidente está en peligro.</strong> Está en peligro porque
-                aquellos que supuestamente deben defender sus valores se encuentran
-                cooptados por una visión del mundo que, inexorablemente, conduce al
-                socialismo y a la pobreza.
+                aquellos que supuestamente deben defender sus valores — los líderes
+                políticos, los académicos, los organismos internacionales — se
+                encuentran cooptados por una visión del mundo que, inexorablemente,
+                conduce al socialismo y a la pobreza.
               </p>
               <p>
                 Los principales líderes del mundo occidental abandonaron el modelo de
-                la libertad por distintas versiones del colectivismo. Se dejaron seducir
-                por la planificación central, las regulaciones crecientes y el
-                asistencialismo que destruye el tejido productivo. El resultado está a
-                la vista: estancamiento, deuda impagable y una ciudadanía cada vez más
+                la libertad por distintas versiones del colectivismo. Europa lleva
+                décadas asfixiando a sus ciudadanos con regulaciones, impuestos
+                confiscatorios y un Estado de bienestar que destruye los incentivos
+                productivos. Estados Unidos acumuló una deuda de más de 36 billones
+                de dólares. América Latina sigue atrapada en el péndulo entre
+                populismo y socialdemocracia. El resultado está a la vista:
+                estancamiento, deuda impagable y una ciudadanía cada vez más
                 dependiente del Estado.
               </p>
               <p>
-                Occidente representa el pico de la civilización humana, la tierra
-                fértil de su herencia grecorromana y sus valores judeocristianos. A
-                partir de cuatro fuentes —{" "}
+                Y sin embargo, Occidente representa el pico de la civilización
+                humana. Durante 2.500 años, a partir de cuatro fuentes —{" "}
                 <strong>
-                  la filosofía griega, el derecho romano, la rectitud de los estoicos y
-                  los valores judeocristianos
+                  la filosofía griega, el derecho romano, la rectitud de los estoicos
+                  y los valores judeocristianos
                 </strong>{" "}
-                — Occidente formó su tradición filosófica y cultural. Esa tradición tuvo
-                su síntesis definitiva en el liberalismo: el sistema que convirtió al
-                individuo en soberano de su propio destino.
+                — Occidente construyó el edificio institucional que hizo posible la
+                ciencia, el arte, la medicina, la tecnología y la libertad
+                individual. Esa tradición tuvo su síntesis definitiva en el
+                liberalismo clásico: el sistema que convirtió al individuo en
+                soberano de su propio destino y produjo la mayor explosión de
+                prosperidad en la historia de la especie humana.
               </p>
               <p>
                 Hoy, el virus mental de la ideología woke ataca esos cimientos desde
-                adentro. Feminismo radical, ecologismo fanático, ideología de género —
-                todas cabezas de una misma criatura cuyo fin es justificar el avance del
-                Estado sobre la vida privada de las personas.{" "}
+                adentro. Feminismo radical, ecologismo fanático, ideología de género,
+                neo-marxismo disfrazado de justicia social — todas cabezas de una
+                misma criatura cuyo fin es justificar el avance del Estado sobre la
+                vida privada de las personas.{" "}
                 <strong>
-                  La paz nos volvió débiles. Fuimos derrotados por nuestra propia
-                  complacencia.
+                  La paz nos volvió débiles. La prosperidad nos hizo complacientes.
                 </strong>{" "}
-                Las generaciones que no conocieron el horror del totalitarismo olvidaron
-                por qué la libertad es un bien que debe defenderse con uñas y dientes.
+                Las generaciones que no conocieron el horror del totalitarismo — que
+                nunca vieron los gulags, los campos de concentración ni las hambrunas
+                planificadas — olvidaron por qué la libertad es un bien que debe
+                defenderse con uñas y dientes, todos los días, sin descanso.
               </p>
             </div>
             <Pullquote cite="Davos, enero 2024">
@@ -491,22 +535,25 @@ export default function Vision() {
             </Pullquote>
             <div className="v-prose v-prose-continued">
               <p>
-                A partir de hoy, la República Argentina abandona la posición de
-                neutralidad histórica y se pone a la vanguardia de la lucha en defensa
-                de la libertad. Estamos construyendo una alianza internacional de
-                naciones libres — porque la única forma de combatir el mal organizado es
-                con el bien organizado. No se trata de una cruzada abstracta: se trata
-                de preservar el legado civilizatorio que hizo posible la prosperidad, la
-                ciencia, el arte y la dignidad del individuo.
+                A partir del 10 de diciembre de 2023, la República Argentina
+                abandonó la posición de neutralidad histórica y se puso a la
+                vanguardia de la lucha en defensa de la libertad. Estamos
+                construyendo una alianza internacional de naciones libres — desde
+                Washington hasta Jerusalén, desde Roma hasta Brasilia — porque la
+                única forma de combatir el mal organizado es con el bien organizado.
+                No se trata de una cruzada abstracta: se trata de preservar el
+                legado civilizatorio que hizo posible la prosperidad, la ciencia, el
+                arte y la dignidad del individuo.
               </p>
               <p>
                 <strong>
                   América será el faro de luz que vuelva a encender a todo Occidente
                 </strong>
                 , y con ello pagará su deuda civilizatoria como muestra de gratitud
-                hacia sus bases en la filosofía griega, el derecho romano y los valores
-                judeocristianos. No vamos a parar hasta convertirnos en el país más
-                libre del mundo.
+                hacia las raíces que la hicieron posible. No vamos a parar hasta
+                convertirnos en el país más libre del mundo. Y cuando lo logremos,
+                el ejemplo argentino será la prueba definitiva de que las ideas de
+                la libertad no son una utopía — son el único camino que funciona.
               </p>
             </div>
           </div>

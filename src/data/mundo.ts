@@ -80,30 +80,30 @@ export const megaStats: MegaStat[] = [
   {
     value: "1er",
     label: "País sudamericano",
-    detail: "en firmar TLC con EE.UU.",
+    detail: "en firmar un TLC bilateral con EE.UU. en la historia",
   },
   {
     value: "1.675",
     label: "Productos argentinos",
-    detail: "con aranceles eliminados",
+    detail: "con aranceles eliminados hacia EE.UU. + 221 posiciones norteamericanas",
     animated: { target: 1675, formatDot: true },
   },
   {
     value: "$1.013M",
     label: "Exportaciones recuperadas",
-    detail: "acceso directo a EE.UU.",
+    detail: "en acceso directo al mercado norteamericano",
     animated: { target: 1013, prefix: "$", suffix: "M" },
   },
   {
     value: "100K tn",
     label: "Carne bovina",
-    detail: "cuota sin arancel a EE.UU.",
+    detail: "cuota libre de arancel — la mayor concesión cárnica bilateral de EE.UU.",
     animated: { target: 100, suffix: "K tn" },
   },
   {
     value: "92%",
     label: "Aranceles eliminados",
-    detail: "por la UE para Mercosur",
+    detail: "por la UE para exportaciones del Mercosur — mercado de 700M de personas",
     animated: { target: 92, suffix: "%" },
   },
 ];
@@ -113,12 +113,12 @@ export const tradeAgreements: TradeAgreement[] = [
     tag: "Acuerdo Bilateral Histórico",
     title: "Acuerdo de Comercio e Inversión Recíproco con Estados Unidos",
     description:
-      "Primer acuerdo de libre comercio entre EE.UU. y un país sudamericano. Eliminación de aranceles recíprocos para 1.675 productos argentinos y 221 posiciones norteamericanas. Cuota de 100.000 toneladas de carne bovina sin arancel. Compromiso de revisión de aranceles al acero y aluminio. Financiamiento vía EXIM Bank y DFC para inversiones en sectores críticos.",
+      "Primer acuerdo de libre comercio entre EE.UU. y un país sudamericano en la historia. Eliminación de aranceles recíprocos para 1.675 productos argentinos y 221 posiciones norteamericanas. Cuota preferencial de 100.000 toneladas de carne bovina sin arancel — la mayor concesión cárnica otorgada por EE.UU. en un tratado bilateral. Compromiso de revisión conjunta de aranceles al acero (sección 232) y aluminio, con cronograma de desgravación progresiva. Financiamiento vía EXIM Bank y DFC (Development Finance Corporation) para inversiones en minerales críticos, energía, infraestructura y data centers. Incluye capítulos de propiedad intelectual, facilitación aduanera digital y mecanismo de solución de controversias inversor-Estado.",
     keyFacts: [
       { text: "USD 1.013M en exportaciones", color: "gold" },
-      { text: "1.675 productos sin arancel", color: "blue" },
-      { text: "Minerales críticos", color: "green" },
-      { text: "Propiedad intelectual", color: "gold" },
+      { text: "1.675 + 221 posiciones sin arancel", color: "blue" },
+      { text: "100K tn carne bovina cuota libre", color: "green" },
+      { text: "EXIM Bank + DFC financiamiento", color: "gold" },
     ],
     image: "/images/strip/milei-bilateral.jpg",
     imageAlt: "Acuerdo Argentina-EE.UU.",
@@ -128,11 +128,11 @@ export const tradeAgreements: TradeAgreement[] = [
     tag: "Acuerdo de Asociación",
     title: "Mercosur — Unión Europea: mercado de 700 millones de personas",
     description:
-      "Tras 25 años de negociación, se firmó en enero 2026 en Asunción. La UE eliminará aranceles para el 92% de las exportaciones del Mercosur. Las exportaciones argentinas a la UE podrían crecer 76% en 5 años y 122% en 10, pasando de USD 8.641M a USD 19.165M. Incluye pilares comercial, político y de cooperación en ciencia, tecnología y medio ambiente.",
+      "Tras 25 años de negociación, el acuerdo más ambicioso entre bloques regionales se firmó en enero 2026 en la Cumbre de Asunción. La UE eliminará aranceles para el 92% de las exportaciones del Mercosur. Según proyecciones oficiales, las exportaciones argentinas a la UE crecerían 76% en 5 años (de USD 8.641M a USD 15.208M) y 122% en 10 años (hasta USD 19.165M). El acuerdo se estructura en tres pilares: comercial (desgravación arancelaria, compras públicas, servicios e inversiones), político (diálogo institucionalizado, derechos humanos, no proliferación) y de cooperación (ciencia, tecnología, medio ambiente, educación y desarrollo sostenible). Crea un mercado integrado de 700 millones de personas que representa el 30% del PBI mundial.",
     keyFacts: [
       { text: "700 millones de consumidores", color: "gold" },
-      { text: "30% del PBI mundial", color: "blue" },
-      { text: "+122% exportaciones en 10 años", color: "green" },
+      { text: "De USD 8.641M a 19.165M", color: "blue" },
+      { text: "+76% en 5 años / +122% en 10", color: "green" },
     ],
     image: "/images/strip/g20-familia.jpg",
     imageAlt: "Mercosur-UE",
@@ -143,7 +143,7 @@ export const tradeAgreements: TradeAgreement[] = [
     tag: "Tratado de Libre Comercio",
     title: "Mercosur — EFTA: Suiza, Noruega, Islandia y Liechtenstein",
     description:
-      "Firmado en Río de Janeiro tras 8 años de negociación. EFTA eliminará 100% de aranceles industriales y pesqueros. Preferencias inmediatas para carne, café, etanol y vino. Zona de 300 millones de personas con PBI combinado de USD 4,3 billones. Argentina fue sede de las tres últimas rondas de negociación en Buenos Aires.",
+      "Firmado en Río de Janeiro en septiembre 2025 tras 8 años de negociación, este tratado otorga acceso preferencial al bloque de mayor renta per cápita del mundo. EFTA eliminará el 100% de los aranceles a productos industriales y pesqueros del Mercosur. Preferencias inmediatas para carne bovina, café, etanol, vino, miel y cítricos. Incluye capítulos de servicios, inversiones, compras públicas, propiedad intelectual y desarrollo sostenible. Crea una zona de libre comercio de 300 millones de personas con un PBI combinado de USD 4,3 billones. Argentina fue sede de las tres últimas rondas de negociación en Buenos Aires, impulsando el cierre del acuerdo más rápido entre los firmados por el Mercosur.",
     keyFacts: [
       { text: "300M de consumidores", color: "gold" },
       { text: "100% arancel cero industrial", color: "blue" },
@@ -159,7 +159,7 @@ export const financialSupport = {
   tag: "Respaldo Financiero",
   title: "Acuerdo FMI por USD 20.000M + Swap del Tesoro de EE.UU. por USD 20.000M",
   description:
-    "En abril 2025, el FMI aprobó un programa de 48 meses por USD 20.000M bajo el Servicio Ampliado, con un primer desembolso de USD 12.000M. En paralelo, el Tesoro de EE.UU. activó un swap de divisas por USD 20.000M, compra de bonos soberanos y crédito stand-by. Primera revisión aprobada en julio 2025 con desembolso adicional de USD 2.000M. Argentina volvió a los mercados internacionales de capital antes de lo previsto.",
+    "En abril 2025, el FMI aprobó un programa de 48 meses por USD 20.000M bajo el Servicio Ampliado (Extended Fund Facility), con un primer desembolso histórico de USD 12.000M — el más grande otorgado por el Fondo en un solo giro. El programa habilitó un nuevo régimen cambiario de banda de flotación, reemplazando el crawling peg. En paralelo, el Tesoro de EE.UU. activó por primera vez para un país latinoamericano un paquete integral: swap de divisas por USD 20.000M a través del Fondo de Estabilización Cambiaria (ESF), compra directa de bonos soberanos argentinos y crédito stand-by del Tesoro. Primera revisión aprobada en julio 2025 con desembolso adicional de USD 2.000M. Argentina retornó a los mercados internacionales de capital antes de lo previsto, colocando deuda soberana con spreads en mínimos históricos desde 2018.",
   keyFacts: [
     { text: "USD 40.000M en respaldo total", color: "gold" as const },
     { text: "Banda cambiaria flexible", color: "blue" as const },
