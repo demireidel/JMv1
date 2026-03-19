@@ -51,7 +51,7 @@ export default function Mundo() {
           <p className="hero-subtitle" style={{ textAlign: "left", letterSpacing: 5, fontSize: "0.7rem" }}>
             Sección 05 — Inserción Internacional
           </p>
-          <h2 className="hero-name" style={{ textAlign: "left" }}>
+          <h2 className="hero-name" style={{ textAlign: "left", fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
             ARGENTINA
             <br />
             EN EL MUNDO
