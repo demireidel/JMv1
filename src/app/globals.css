@@ -707,7 +707,13 @@ section { position: relative; overflow: hidden; }
   max-width: 700px; margin: 0 auto; font-weight: 300;
 }
 .ref-counter-strip {
-  display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .ref-counter-strip { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .ref-counter-strip { grid-template-columns: repeat(1, 1fr); }
 }
 .ref-counter .num {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
@@ -719,13 +725,13 @@ section { position: relative; overflow: hidden; }
   font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
   color: rgba(255,255,255,0.9); margin-top: 0.2rem;
 }
-.reforms-container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+.reforms-container { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
 .reform-divider { text-align: center; padding: 4rem 0; }
 .reform-divider h3 {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
   font-size: 1.3rem; letter-spacing: 4px; color: var(--sol);
 }
-.reform-divider p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 0.5rem; }
+.reform-divider p { color: rgba(255,255,255,0.72); font-size: 0.9rem; margin-top: 0.5rem; }
 .reform-divider-line {
   width: 100px; height: 2px; background: var(--sol); margin: 1.5rem auto 0; opacity: 0.3;
 }
@@ -733,16 +739,17 @@ section { position: relative; overflow: hidden; }
 .reform-header { margin-bottom: 2rem; }
 .reform-number {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
-  font-size: 0.7rem; letter-spacing: 4px; color: var(--sol); opacity: 0.6;
+  font-size: 0.8rem; letter-spacing: 4px; color: var(--sol); opacity: 0.6;
   white-space: nowrap;
+  text-shadow: 0 0 20px rgba(246,180,14,0.2);
 }
 .reform-title {
-  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem); color: white; letter-spacing: 3px; margin-top: 0.3rem;
+  font-family: var(--font-playfair-display), 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem); color: white; letter-spacing: 1px; margin-top: 0.3rem;
 }
 .reform-subtitle {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-size: 1rem; color: rgba(255,255,255,0.75); font-style: italic; margin-top: 0.5rem;
+  font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-top: 0.5rem; margin-bottom: 1.5rem;
 }
 .reform-desc { max-width: 900px; margin-bottom: 2rem; }
 .reform-desc p {
@@ -770,8 +777,9 @@ section { position: relative; overflow: hidden; }
 .ahora .box-label .dot { background: var(--green); }
 .impacto .box-label { color: var(--gold-light); }
 .impacto .box-label .dot { background: var(--gold-light); }
-.box-text { font-size: 0.88rem; color: rgba(255,255,255,0.78); line-height: 1.7; font-weight: 300; }
+.box-text { font-size: 0.9rem; color: rgba(255,255,255,0.78); line-height: 1.75; font-weight: 300; }
 .box-text strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+.impacto .box-text { font-size: 0.88rem; color: rgba(255,255,255,0.78); line-height: 1.7; }
 .impact-stats { display: flex; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
 .impact-stat { text-align: center; }
 .impact-stat .iv {
@@ -1320,11 +1328,12 @@ body::after {
 
 /* Reforma box hover glow */
 .reform-box:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
 }
-.reform-box.antes:hover { box-shadow: 0 8px 30px rgba(255,80,80,0.08); }
-.reform-box.ahora:hover { box-shadow: 0 8px 30px rgba(80,200,120,0.08); }
-.reform-box.impacto:hover { box-shadow: 0 8px 30px rgba(212,168,67,0.08); }
+.reform-box.antes:hover { box-shadow: 0 12px 40px rgba(255,80,80,0.08); }
+.reform-box.ahora:hover { box-shadow: 0 12px 40px rgba(80,200,120,0.08); }
+.reform-box.impacto:hover { box-shadow: 0 12px 40px rgba(212,168,67,0.08); }
 
 /* Responsive gallery */
 @media (max-width: 968px) {
@@ -1359,7 +1368,12 @@ body::after {
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.05);
   transition: all 0.5s var(--ease-out-expo);
+  animation: fadeInUp 0.8s var(--ease-out-expo) backwards;
 }
+.ref-counter-strip .ref-counter:nth-child(1) { animation-delay: 0s; }
+.ref-counter-strip .ref-counter:nth-child(2) { animation-delay: 0.15s; }
+.ref-counter-strip .ref-counter:nth-child(3) { animation-delay: 0.3s; }
+.ref-counter-strip .ref-counter:nth-child(4) { animation-delay: 0.45s; }
 .ref-counter-strip .ref-counter:hover {
   background: rgba(246,180,14,0.05);
   border-color: rgba(246,180,14,0.12);
@@ -1375,8 +1389,9 @@ body::after {
 
 /* Light section atmospheric depth */
 .section-light {
-  background: var(--cream);
+  background: linear-gradient(180deg, var(--cream) 0%, #f0ebe0 50%, var(--cream) 100%);
   background-image:
+    linear-gradient(180deg, var(--cream) 0%, #f0ebe0 50%, var(--cream) 100%),
     radial-gradient(ellipse 50% 40% at 10% 20%, rgba(116,172,223,0.04) 0%, transparent 100%),
     radial-gradient(ellipse 60% 50% at 90% 80%, rgba(246,180,14,0.03) 0%, transparent 100%);
 }
@@ -1504,7 +1519,7 @@ a:focus-visible, button:focus-visible {
   transition: all 0.5s var(--ease-out-expo);
   will-change: transform;
 }
-.reform-box:hover { transform: translateY(-3px); }
+.reform-box:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
 .reform-box.antes:hover { box-shadow: 0 12px 40px rgba(255,80,80,0.1), inset 0 1px 0 rgba(255,80,80,0.1); }
 .reform-box.ahora:hover { box-shadow: 0 12px 40px rgba(80,200,120,0.1), inset 0 1px 0 rgba(80,200,120,0.1); }
 .reform-box.impacto:hover { box-shadow: 0 12px 40px rgba(212,168,67,0.1), inset 0 1px 0 rgba(212,168,67,0.1); }
@@ -1729,7 +1744,7 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 .ms-l { font-size: 0.75rem; }  /* was 0.7rem */
 .ms-d { font-size: 0.85rem; }  /* was 0.82rem */
 .impact-stat .il { font-size: 0.65rem; }  /* was 0.6rem */
-.reform-number { font-size: 0.75rem; }  /* was 0.7rem */
+.reform-number { font-size: 0.8rem; }  /* was 0.7rem */
 .futuro-st .l { font-size: 0.65rem; }  /* was 0.58rem */
 .pill-lbl { font-size: 0.75rem; }  /* was 0.7rem */
 .pq-attr { font-size: 0.75rem; }  /* was 0.7rem */
@@ -1763,7 +1778,7 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 .pc-label { color: rgba(255,255,255,0.65); }
 .pc-sub { color: rgba(255,255,255,0.6); }
 .pill-lbl { color: rgba(255,255,255,0.65); }
-.reform-divider p { color: rgba(255,255,255,0.6); }
+.reform-divider p { color: rgba(255,255,255,0.72); }
 .ba-desc { color: rgba(255,255,255,0.6); }
 .lh-body p { color: rgba(255,255,255,0.82); }
 .agr-body p { color: rgba(255,255,255,0.78); }
@@ -3321,7 +3336,7 @@ footer {
 /* ── Reform Number Glow ────────────────────────────────── */
 
 .reform-number {
-  text-shadow: 0 0 40px rgba(246,180,14,0.12);
+  text-shadow: 0 0 20px rgba(246,180,14,0.2);
 }
 
 /* ── Hero Subtitle Tracking Animation ──────────────────── */
@@ -4506,6 +4521,18 @@ button:focus-visible {
   overflow: hidden;
   margin: 2rem 0 3rem;
   border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.ref-photo-break::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,0.4));
+  pointer-events: none;
+  z-index: 1;
 }
 .ref-photo-break img {
   width: 100%;
@@ -4519,6 +4546,19 @@ button:focus-visible {
 }
 @media (max-width: 768px) {
   .ref-photo-break { height: 180px; }
+}
+
+.reform-icon {
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
+  opacity: 0.7;
+  filter: grayscale(30%);
+  transition: all 0.3s ease;
+}
+.reform-section:hover .reform-icon {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
 
 /* ─── Enhanced Mobile Support ─── */

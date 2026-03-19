@@ -14,6 +14,7 @@ export interface ReformaQuote {
 
 export interface Reforma {
   num: string;
+  icon?: string;
   title: string;
   subtitle: string;
   desc: ReactNode;
@@ -85,6 +86,7 @@ export const reformas: Reforma[] = [
   // ── 01 EQUILIBRIO FISCAL ──────────────────────────────────
   {
     num: "01",
+    icon: "💰",
     title: "EQUILIBRIO FISCAL",
     subtitle:
       "De décadas de déficit crónico al primer superávit financiero en 16 años",
@@ -162,6 +164,7 @@ export const reformas: Reforma[] = [
   // ── 02 DERROTA DE LA INFLACIÓN ────────────────────────────
   {
     num: "02",
+    icon: "📉",
     title: "DERROTA DE LA INFLACIÓN",
     subtitle:
       "De 211% anual — la más alta del mundo tras Venezuela — al nivel más bajo en ocho años",
@@ -234,6 +237,7 @@ export const reformas: Reforma[] = [
   // ── 03 LIBERACIÓN DEL CEPO CAMBIARIO ──────────────────────
   {
     num: "03",
+    icon: "🔓",
     title: "LIBERACIÓN DEL CEPO CAMBIARIO",
     subtitle:
       "Después de más de 6 años de restricciones, los argentinos vuelven a ser libres de comprar y vender dólares",
@@ -300,6 +304,7 @@ export const reformas: Reforma[] = [
   // ── 04 DNU 70/23 ─────────────────────────────────────────
   {
     num: "04",
+    icon: "📜",
     title: "DNU 70/23 — LA PRIMERA OLA",
     subtitle:
       "A diez días de asumir: 366 artículos que desmantelaron décadas de regulaciones asfixiantes",
@@ -372,6 +377,7 @@ export const reformas: Reforma[] = [
   // ── 05 LEY BASES Y EL RIGI ───────────────────────────────
   {
     num: "05",
+    icon: "🏗️",
     title: "LEY BASES Y EL RIGI",
     subtitle:
       "Con solo 7 senadores de 72, aprobamos la ley más importante en décadas — y creamos el RIGI",
@@ -442,6 +448,7 @@ export const reformas: Reforma[] = [
   // ── 06 DESREGULACIÓN MASIVA ───────────────────────────────
   {
     num: "06",
+    icon: "✂️",
     title: "DESREGULACIÓN MASIVA",
     subtitle:
       "14.500 desregulaciones: detrás de cada regulación había un privilegio — o mejor dicho, un curro",
@@ -520,6 +527,7 @@ export const reformas: Reforma[] = [
   // ── 07 REFORMA DEL ESTADO ────────────────────────────────
   {
     num: "07",
+    icon: "🏛️",
     title: "REFORMA DEL ESTADO",
     subtitle:
       "De 18 ministerios a 8. De 340.000 empleados a 277.000. De déficit a superávit en empresas públicas.",
@@ -589,6 +597,7 @@ export const reformas: Reforma[] = [
   // ── 08 REFORMA LABORAL ───────────────────────────────────
   {
     num: "08",
+    icon: "👷",
     title: "REFORMA LABORAL",
     subtitle:
       "La primera reforma laboral en más de 50 años. 218 artículos que modifican 28 leyes y derogan 11.",
@@ -660,6 +669,7 @@ export const reformas: Reforma[] = [
   // ── 09 APERTURA COMERCIAL ────────────────────────────────
   {
     num: "09",
+    icon: "🌍",
     title: "APERTURA COMERCIAL",
     subtitle:
       "138 medidas de apertura. Mercosur-UE tras 26 años. Primer acuerdo bilateral con EE.UU. en la historia.",
@@ -731,6 +741,7 @@ export const reformas: Reforma[] = [
   // ── 10 LEY DE INOCENCIA FISCAL ───────────────────────────
   {
     num: "10",
+    icon: "⚖️",
     title: "LEY DE INOCENCIA FISCAL",
     subtitle:
       "Restaurar la presunción de inocencia en materia tributaria — un principio constitucional básico que la política había vulnerado.",
@@ -803,6 +814,7 @@ export const reformas: Reforma[] = [
   // ── 11 SEGURIDAD Y JUSTICIA ──────────────────────────────
   {
     num: "11",
+    icon: "🛡️",
     title: "SEGURIDAD Y JUSTICIA",
     subtitle:
       "De calles tomadas y Rosario narco al país más seguro de Sudamérica por segundo año consecutivo",
@@ -872,6 +884,7 @@ export const reformas: Reforma[] = [
   // ── 12 REFORMA PENAL JUVENIL ─────────────────────────────
   {
     num: "12",
+    icon: "📋",
     title: "REFORMA PENAL JUVENIL",
     subtitle:
       "Un régimen obsoleto de 45 años de antigüedad, reformado: el que las hace, las paga",
