@@ -7,6 +7,7 @@ export interface Libro {
   publisher?: string;
   highlight?: boolean;
   desc?: string;
+  cover?: string;
 }
 
 export interface Etapa {
@@ -70,10 +71,10 @@ export const etapas: Etapa[] = [
     label: "Etapa Política / Presidencial",
     desc: "2021–presente",
     books: [
-      { year: "2022", title: "El Fin de la Inflación", publisher: "Planeta", highlight: true },
+      { year: "2022", title: "El Fin de la Inflación", publisher: "Planeta", highlight: true, cover: "/images/books/fin-inflacion.jpg" },
       { year: "2023", title: "Mi Pensamiento Político", desc: "Selección de textos e intervenciones de su primer año en política." },
-      { year: "2024", title: "El Camino del Libertario", publisher: "Deusto (Planeta)", highlight: true, desc: "Edición española. Bestseller internacional." },
-      { year: "2024", title: "Capitalismo, Socialismo y la Trampa Neoclásica", publisher: "Planeta", highlight: true, desc: "Presentado en el Luna Park con show musical." },
+      { year: "2024", title: "El Camino del Libertario", publisher: "Deusto (Planeta)", highlight: true, desc: "Edición española. Bestseller internacional.", cover: "/images/books/camino-libertario.jpg" },
+      { year: "2024", title: "Capitalismo, Socialismo y la Trampa Neoclásica", publisher: "Planeta", highlight: true, desc: "Presentado en el Luna Park con show musical.", cover: "/images/books/capitalismo-trampa.jpg" },
     ],
   },
 ];

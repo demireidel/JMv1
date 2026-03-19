@@ -108,15 +108,26 @@ export default function Archivo() {
                   </div>
                   <div className="arc-books-grid">
                     {etapa.books.map((b, bi) => (
-                      <div key={bi} className={`arc-book-card${b.highlight ? " arc-book-card--hl" : ""}`}>
-                        <div className="arc-book-spine" />
-                        <div className="arc-book-body">
-                          <span className="arc-book-year">{b.year}</span>
-                          <h5 className="arc-book-title">{b.title}</h5>
-                          {b.desc && <p className="arc-book-desc">{b.desc}</p>}
-                          {b.publisher && <span className="arc-book-pub">{b.publisher}</span>}
+                      b.cover ? (
+                        <div key={bi} className="arc-book-cover">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={b.cover} alt={b.title} />
+                          <div className="arc-book-cover-info">
+                            <span className="arc-book-cover-year">{b.year}</span>
+                            <h5 className="arc-book-cover-title">{b.title}</h5>
+                          </div>
                         </div>
-                      </div>
+                      ) : (
+                        <div key={bi} className={`arc-book-card${b.highlight ? " arc-book-card--hl" : ""}`}>
+                          <div className="arc-book-spine" />
+                          <div className="arc-book-body">
+                            <span className="arc-book-year">{b.year}</span>
+                            <h5 className="arc-book-title">{b.title}</h5>
+                            {b.desc && <p className="arc-book-desc">{b.desc}</p>}
+                            {b.publisher && <span className="arc-book-pub">{b.publisher}</span>}
+                          </div>
+                        </div>
+                      )
                     ))}
                   </div>
                 </div>
