@@ -256,10 +256,19 @@ export const archivoHeader = {
 } as const;
 
 export const collabProject = {
-  badge: "EN PROGRESO",
-  title: "Trabajo Teórico con Demian Reidel",
-    desc: "Reescribir gran parte de la teoría económica para derivar optimalidad de Pareto \u2014 tanto estática como intertemporal \u2014 con funciones de producción no convexas. Este trabajo abordaría un problema irresuelto desde 1776: la tensión fundamental entre la \u201Cfábrica de alfileres\u201D de Adam Smith (que demuestra que la especialización genera rendimientos crecientes a escala) y la \u201Cmano invisible\u201D (que requiere rendimientos decrecientes para alcanzar un equilibrio competitivo). Durante 248 años, la teoría económica no logró conciliar estos dos pilares fundacionales de La Riqueza de las Naciones. La economía neoclásica resolvió el problema ignorándolo: asumió rendimientos decrecientes para garantizar la existencia de equilibrio, sacrificando la realidad de los rendimientos crecientes que explican el crecimiento y la innovación. De completarse, este trabajo unificaría ambas ideas en un marco matemático riguroso, demostrando que los mercados libres alcanzan resultados óptimos incluso con rendimientos crecientes — sin necesidad de intervención estatal.",
-  quote: "Con mi jefe de asesores, el doctor Demian Reidel, estamos reescribiendo gran parte de la teoría económica, para poder derivar optimalidad de Pareto, tanto estática como intertemporal, teniendo funciones de producción no convexas.",
+  badge: "MILEI-REIDEL PAPER",
+  title: "When Regulation Kills Growth",
+  subtitle: "Summary for Davos \u2014 January 21, 2026",
+  authors: "Javier Milei & Demian Reidel",
+  abstract: "Los debates de pol\u00EDtica tratan los rendimientos crecientes a escala (IRS) como justificaci\u00F3n autom\u00E1tica para la intervenci\u00F3n estatal: costos medios decrecientes se leen como monopolio natural, y monopolio natural se lee como regulaci\u00F3n por defecto. Esa conclusi\u00F3n proviene de modelos parciales de juguete que asumen oferta laboral fija, sin acumulaci\u00F3n de capital ni factibilidad intertemporal. Este paper restaura esos m\u00E1rgenes en un modelo Ramsey\u2013CES con un par\u00E1metro expl\u00EDcito de rendimientos a escala.",
+  desc: "El paper demuestra que los rendimientos crecientes a escala no son un teorema de monopolio. La implicancia central es directa: IRS generan una escala m\u00EDnima viable y potencial multiplicidad de estados estacionarios, incluyendo din\u00E1micas de trampa de pobreza impulsadas por la viabilidad de escala \u2014 no por precios de monopolio. Las pol\u00EDticas que fragmentan escala o aumentan cu\u00F1as fiscales pueden empujar a la econom\u00EDa hacia (o por debajo de) ese l\u00EDmite de viabilidad m\u00EDnima. En una econom\u00EDa con IRS, la intervenci\u00F3n estatal por defecto no es inocua: puede manufacturar exactamente el estancamiento que dice prevenir.",
+  keyResults: [
+    "Escala m\u00EDnima viable: la econom\u00EDa tiene un L_min end\u00F3geno requerido para satisfacer optimalidad intertemporal",
+    "Multiplicidad y trampas de pobreza: el locus iso-costo-usuario tiene dos ramas, generando m\u00FAltiples estados estacionarios",
+    "La falacia antimonopolio: IRS no son un teorema de monopolio. La regulaci\u00F3n que fragmenta escala puede destruir el equilibrio de alta productividad",
+  ],
+  keywords: "rendimientos crecientes a escala; oferta laboral end\u00F3gena; crecimiento no c\u00F3ncavo; equilibrios m\u00FAltiples; trampas de pobreza; antimonopolio",
+  quote: "Con mi jefe de asesores, el doctor Demian Reidel, estamos reescribiendo gran parte de la teor\u00EDa econ\u00F3mica, para poder derivar optimalidad de Pareto, tanto est\u00E1tica como intertemporal, teniendo funciones de producci\u00F3n no convexas.",
   quoteCite: "Javier Milei \u2014 Instituto Liberal de Praga, 24 de junio de 2024",
 } as const;
 

@@ -256,17 +256,45 @@ export default function Archivo() {
         {activeTab === "paper-demian" && (
           <div className="arc-panel" key="paper-demian">
             <div className="arc-panel-header">
-              <h3 className="arc-panel-title">Paper con Demian Reidel</h3>
+              <h3 className="arc-panel-title">Milei-Reidel Paper</h3>
               <p className="arc-panel-desc">
-                Un trabajo teórico en curso que podría redefinir la economía matemática.
+                El paper que demuestra que los rendimientos crecientes a escala no justifican la intervención estatal — presentado en Davos, enero 2026.
               </p>
             </div>
 
             <FadeIn>
               <div className="arc-collab-card">
                 <div className="arc-collab-badge">{collabProject.badge}</div>
-                <h3 className="arc-collab-title">{collabProject.title}</h3>
+                <h3 className="arc-collab-title">&ldquo;{collabProject.title}&rdquo;</h3>
+                <p className="arc-collab-subtitle" style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)", marginBottom: "0.3rem" }}>
+                  {collabProject.subtitle}
+                </p>
+                <p className="arc-collab-authors" style={{ fontSize: "0.8rem", color: "var(--sol)", letterSpacing: "1px", marginBottom: "1.5rem", fontFamily: "var(--font-bebas-neue), sans-serif", textTransform: "uppercase" }}>
+                  {collabProject.authors}
+                </p>
+
+                <div style={{ marginBottom: "1.5rem" }}>
+                  <h4 style={{ fontSize: "0.7rem", letterSpacing: "3px", textTransform: "uppercase", color: "var(--celeste)", marginBottom: "0.8rem", fontFamily: "var(--font-bebas-neue), sans-serif" }}>ABSTRACT</h4>
+                  <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.78)", lineHeight: "1.7", fontStyle: "italic" }}>{collabProject.abstract}</p>
+                </div>
+
                 <p className="arc-collab-desc">{collabProject.desc}</p>
+
+                <div style={{ marginTop: "1.5rem" }}>
+                  <h4 style={{ fontSize: "0.7rem", letterSpacing: "3px", textTransform: "uppercase", color: "var(--celeste)", marginBottom: "0.8rem", fontFamily: "var(--font-bebas-neue), sans-serif" }}>RESULTADOS CLAVE</h4>
+                  <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.6rem" }}>
+                    {collabProject.keyResults.map((r, i) => (
+                      <li key={i} style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.82)", lineHeight: "1.6", paddingLeft: "1.2rem", borderLeft: "2px solid rgba(246,180,14,0.25)", }}>
+                        {r}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div style={{ marginTop: "1.2rem", fontSize: "0.7rem", color: "rgba(255,255,255,0.45)" }}>
+                  <strong style={{ color: "rgba(255,255,255,0.6)" }}>Keywords:</strong> {collabProject.keywords}
+                </div>
+
                 <div className="arc-collab-quote-block">
                   <span className="arc-collab-qmark">&ldquo;</span>
                   <blockquote>{collabProject.quote}</blockquote>
