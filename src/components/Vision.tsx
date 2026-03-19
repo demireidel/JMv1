@@ -99,9 +99,8 @@ export default function Vision() {
               <em>el país más libre del mundo</em>
             </h2>
             <p className="v-subtitle">
-              No es una promesa de campaña. Es un proyecto de refundación
-              civilizatoria basado en la libertad, la propiedad privada y la
-              cooperación social voluntaria.
+              No vine a administrar decadencia. Vine a refundar la Argentina sobre
+              la libertad, la propiedad privada y la cooperación social voluntaria.
             </p>
           </div>
         </FadeIn>
