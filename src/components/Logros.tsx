@@ -208,7 +208,19 @@ export default function Logros() {
           </div>
         </FadeIn>
 
-        {logros.map((l) => (
+        {logros.slice(0, 4).map((l) => (
+          <LogroCard key={l.num} {...l} />
+        ))}
+
+        {/* Photo break halfway through logros */}
+        <FadeIn>
+          <div className="arc-photo-break" style={{ margin: "4rem 0" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/strip/milei-g7-lideres.jpg" alt="Milei en cumbre del G7" loading="eager" />
+          </div>
+        </FadeIn>
+
+        {logros.slice(4).map((l) => (
           <LogroCard key={l.num} {...l} />
         ))}
       </div>
