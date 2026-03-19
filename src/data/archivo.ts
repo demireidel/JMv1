@@ -74,9 +74,9 @@ export const etapas: Etapa[] = [
     label: "Etapa Política / Presidencial",
     desc: "2021–presente",
     books: [
-      { year: "2022", title: "El Fin de la Inflación", publisher: "Planeta", highlight: true, cover: "/images/books/fin-inflacion.jpg", desc: "Propuesta para cerrar el Banco Central y dolarizar. Escrito durante la campaña presidencial." },
-      { year: "2024", title: "El Camino del Libertario", publisher: "Deusto (Planeta)", highlight: true, desc: "Mi pensamiento político. Bestseller internacional. Ediciones en español, inglés y portugués.", cover: "/images/books/camino-libertario.jpg" },
-      { year: "2024", title: "Capitalismo, Socialismo y la Trampa Neoclásica", publisher: "Planeta", highlight: true, desc: "Presentado en el Luna Park con show musical. El argumento central contra la economía neoclásica.", cover: "/images/books/capitalismo-trampa.jpg" },
+      { year: "2022", title: "El Fin de la Inflación", publisher: "Planeta", highlight: true, cover: "/images/books/fin-inflacion.webp", desc: "Propuesta para cerrar el Banco Central y dolarizar. Escrito durante la campaña presidencial." },
+      { year: "2024", title: "El Camino del Libertario", publisher: "Deusto (Planeta)", highlight: true, desc: "Mi pensamiento político. Bestseller internacional. Ediciones en español, inglés y portugués.", cover: "/images/books/camino-libertario.webp" },
+      { year: "2024", title: "Capitalismo, Socialismo y la Trampa Neoclásica", publisher: "Planeta", highlight: true, desc: "Presentado en el Luna Park con show musical. El argumento central contra la economía neoclásica.", cover: "/images/books/capitalismo-trampa.webp" },
     ],
   },
 ];
