@@ -4577,6 +4577,26 @@ button:focus-visible {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+.arc-download-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, var(--lla-violet), var(--sol));
+  color: white;
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all 0.4s var(--ease-out-expo);
+  box-shadow: 0 4px 20px rgba(116,59,188,0.25);
+}
+.arc-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(116,59,188,0.35);
+  filter: brightness(1.1);
+}
 .arc-collab-quote-block cite {
   display: block;
   margin-top: 0.8rem;

@@ -295,6 +295,14 @@ export default function Archivo() {
                   <strong style={{ color: "rgba(255,255,255,0.6)" }}>Keywords:</strong> {collabProject.keywords}
                 </div>
 
+                <a
+                  href="/milei-reidel-paper.pdf"
+                  download
+                  className="arc-download-btn"
+                >
+                  Descargar Paper (PDF)
+                </a>
+
                 <div className="arc-collab-quote-block">
                   <span className="arc-collab-qmark">&ldquo;</span>
                   <blockquote>{collabProject.quote}</blockquote>
