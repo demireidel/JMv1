@@ -30,10 +30,10 @@ export const visionPhotos = [
     caption: "Asunción presidencial — Casa Rosada, 10 de diciembre de 2023",
   },
   {
-    src: "/images/strip/acuerdo-intl.jpg",
-    alt: "Milei en reunión internacional — 2024",
-    caption: "Reunión internacional — 2024",
-    objectPosition: "center 10%",
+    src: "/images/strip/milei-musk.jpg",
+    alt: "Milei con Elon Musk — 2024",
+    caption: "Milei con Elon Musk — 2024",
+    objectPosition: "center 25%",
   },
   {
     src: "/images/vision/europa-viva-24.jpg",
