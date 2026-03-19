@@ -99,9 +99,9 @@ export const galleryPhotos: GalleryPhoto[] = [
 // ── Dividers ────────────────────────────────────────────────
 
 export const futuroDividers = [
-  "Un año después, la semilla dio fruto",
-  "La energía que lo hace posible",
-  "La otra revolución energética",
+  "STARGATE ARGENTINA — Un año después, la semilla dio fruto",
+  "PLAN NUCLEAR — La energía que lo hace posible",
+  "VACA MUERTA — El gigante despierta",
 ] as const;
 
 // ── 1. Silicon Valley ───────────────────────────────────────
