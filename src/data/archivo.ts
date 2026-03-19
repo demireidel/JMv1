@@ -102,6 +102,7 @@ export const discursos: Discurso[] = [
     desc: "Decadencia argentina de 100 años. Necesidad del ajuste fiscal de 5 puntos del PBI. Shock vs. gradualismo. Herencia económica catastrófica. Liberalismo como camino de reconstrucción. Coincidencia con la fiesta de Hanukkah y la metáfora de la luz sobre la oscuridad.",
     frase: "Hoy comienza una nueva era en Argentina... damos por terminada una larga y triste historia de decadencia y declive.",
     themes: ["Ajuste fiscal", "Shock económico", "Liberalismo"],
+    videoId: "0i2jpFaXbvM",
     keynote: true,
   },
   {
@@ -111,6 +112,7 @@ export const discursos: Discurso[] = [
     desc: "\"Occidente está en peligro.\" Crítica al colectivismo. Defensa del capitalismo de libre mercado. Ataque a la justicia social como concepto violento. La fábrica de alfileres de Adam Smith y rendimientos crecientes a escala. Rechazo a la economía neoclásica como funcional al socialismo.",
     frase: "Occidente está en peligro. Y está en peligro porque quienes deberían defender los valores de Occidente se encuentran cooptados por una visión del mundo que conduce al socialismo.",
     themes: ["Capitalismo", "Anti-colectivismo", "Economía neoclásica"],
+    videoId: "yu2ERAfvroA",
     keynote: true,
   },
   {
@@ -119,6 +121,7 @@ export const discursos: Discurso[] = [
     location: "Conferencia Política de Acción Conservadora, Washington D.C.",
     desc: "Profundización técnica de los argumentos de Davos. Crítica a los fallos de mercado neoclásicos: monopolio, bienes públicos, externalidades, información asimétrica. El monopolio natural como falacia. La competencia como proceso dinámico.",
     themes: ["Fallos de mercado", "Monopolio natural", "Competencia dinámica"],
+    videoId: "20vQQyF-eVs",
   },
   {
     date: "JUN 2024",
@@ -127,6 +130,7 @@ export const discursos: Discurso[] = [
     desc: "\"El mayor ajuste fiscal de la historia de la humanidad.\" Conversión a la Escuela Austríaca. 3.200 reformas pendientes. Aspiración al Nobel de Economía junto a Demian Reidel. Comparación con el modelo irlandés.",
     frase: "Con mi jefe de asesores, el doctor Demian Reidel, estamos reescribiendo gran parte de la teoría económica.",
     themes: ["Ajuste fiscal", "Escuela Austríaca", "Modelo irlandés"],
+    videoId: "-ZjxbIyVPjc",
   },
   {
     date: "SEP 2024",
@@ -135,6 +139,7 @@ export const discursos: Discurso[] = [
     desc: "Alerta sobre el fracaso de la ONU en su misión original. Rechazo a la Agenda 2030. Argentina como ejemplo de transformación. Defensa de la vida, la libertad y la propiedad privada como principios de política exterior.",
     frase: "No soy político, soy un economista liberal libertario que jamás tuvo la ambición de hacer política.",
     themes: ["ONU", "Agenda 2030", "Política exterior"],
+    videoId: "-Hlzgio72lI",
     keynote: true,
   },
   {
@@ -144,6 +149,7 @@ export const discursos: Discurso[] = [
     desc: "\"Maquiavelo ha muerto.\" Eficiencia dinámica de Jesús Huerta de Soto. Ética y moral como criterio superior a la eficiencia. Rothbard y la ética de la libertad. Alianza internacional de naciones libres: Trump, Musk, Meloni, Bukele, Orbán, Netanyahu.",
     frase: "Maquiavelo ha muerto. La eficiencia sin moral es tiranía.",
     themes: ["Eficiencia dinámica", "Ética libertaria", "Alianza internacional"],
+    videoId: "0JKbMW7aMXA",
     keynote: true,
   },
   {
@@ -159,6 +165,7 @@ export const discursos: Discurso[] = [
     location: "Roma, Italia",
     desc: "Su discurso más técnico como presidente — esencialmente una clase magistral de historia del pensamiento económico. Contribución de Friedman: función de consumo permanente, naturaleza monetaria de la inflación, curva de Phillips y expectativas racionales, modelos de crecimiento endógeno de Romer y Lucas Jr.",
     themes: ["Milton Friedman", "Pensamiento económico", "Crecimiento endógeno"],
+    videoId: "2GONqA3nySQ",
     keynote: true,
   },
   {
@@ -176,6 +183,7 @@ export const entrevistas: Entrevista[] = [
     outlet: "Tucker Carlson",
     desc: "Pre-electoral. Carlson viajó a Buenos Aires. Inflación argentina, dolarización, cierre del Banco Central, socialismo y cambio climático. Consejo a Trump.",
     impact: "410M+ impresiones en X. Compartida por Elon Musk. Una de las entrevistas políticas más vistas de la historia digital.",
+    videoId: "0a1NUl75sXU",
     highlight: true,
   },
   {
@@ -192,6 +200,7 @@ export const entrevistas: Entrevista[] = [
     journalist: "Ione Wells",
     duration: "+20 minutos",
     desc: "Ajuste económico y el intercambio viral sobre el precio de la leche. Relaciones con EE.UU., Israel y China. Malvinas: la visita de Cameron no era provocación. Elogio a Thatcher. Proceso de negociación de largo plazo por soberanía.",
+    videoId: "-2tLkvw-1f4",
   },
   {
     date: "NOV 2024",
