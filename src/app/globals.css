@@ -3574,7 +3574,7 @@ button:focus-visible {
 .arc-hero-subtitle {
   font-family: var(--font-source), sans-serif;
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.72);
   line-height: 1.6;
   margin-bottom: 1.8rem;
 }
@@ -3679,6 +3679,8 @@ button:focus-visible {
   display: flex;
   align-items: baseline;
   gap: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   margin-bottom: 1.2rem;
   padding-bottom: 0.6rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -3815,10 +3817,12 @@ button:focus-visible {
   position: sticky;
   top: 60px;
   z-index: 100;
-  background: rgba(10,14,26,0.92);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(10,14,26,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212,168,67,0.12);
+  border-top: 1px solid rgba(255,255,255,0.04);
   margin-bottom: 3rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 .arc-tab-bar {
   display: flex;
@@ -3835,24 +3839,29 @@ button:focus-visible {
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  padding: 1rem 1.8rem;
+  padding: 1.1rem 2rem;
   background: none;
   border: none;
   cursor: pointer;
-  color: rgba(255,255,255,0.5);
-  transition: all 0.3s var(--ease-premium);
-  border-bottom: 2px solid transparent;
+  color: rgba(255,255,255,0.45);
+  transition: all 0.35s var(--ease-premium);
+  border-bottom: 3px solid transparent;
   white-space: nowrap;
   position: relative;
   font-family: inherit;
 }
 .arc-tab:hover {
-  color: rgba(255,255,255,0.8);
-  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.04);
 }
 .arc-tab--active {
   color: var(--sol);
   border-bottom-color: var(--sol);
+  background: rgba(212,168,67,0.04);
+}
+.arc-tab--active .arc-tab-icon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 6px rgba(246,180,14,0.3));
 }
 .arc-tab-icon { font-size: 1.2rem; }
 .arc-tab-label {
@@ -3886,7 +3895,7 @@ button:focus-visible {
 .arc-panel-header {
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(212,168,67,0.15);
 }
 .arc-panel-title {
   font-family: var(--font-bebas-neue), sans-serif;
@@ -4150,11 +4159,13 @@ button:focus-visible {
 }
 .arc-speech-card--keynote {
   border-left: 3px solid var(--sol);
-  background: rgba(212,168,67,0.03);
+  background: rgba(212,168,67,0.04);
+  box-shadow: inset 0 0 30px rgba(212,168,67,0.02);
 }
 .arc-speech-card--keynote:hover {
   border-color: var(--sol);
-  background: rgba(212,168,67,0.06);
+  background: rgba(212,168,67,0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25), inset 0 0 30px rgba(212,168,67,0.03);
 }
 .arc-speech-date-col {
   display: flex;
@@ -4291,11 +4302,14 @@ button:focus-visible {
   transform: translateY(-3px);
 }
 .arc-interview-card--featured {
-  border-color: rgba(212,168,67,0.2);
-  background: rgba(212,168,67,0.03);
+  border-color: rgba(212,168,67,0.25);
+  background: rgba(212,168,67,0.04);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 .arc-interview-card--featured:hover {
-  border-color: rgba(212,168,67,0.35);
+  border-color: rgba(212,168,67,0.4);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transform: translateY(-3px);
 }
 .arc-interview-outlet {
   font-family: var(--font-playfair-display), serif;
