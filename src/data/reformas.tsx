@@ -225,6 +225,10 @@ export const reformas: Reforma[] = [
         <strong>45.000 hipotecas UVA</strong> otorgadas en 2025.
       </>
     ),
+    quote: {
+      text: "La inflación es el impuesto más perverso porque lo pagan los que menos tienen. La terminamos sin controles, sin congelamientos — a puro equilibrio fiscal.",
+      cite: "Milei, Congreso 2026",
+    },
   },
 
   // ── 03 LIBERACIÓN DEL CEPO CAMBIARIO ──────────────────────
@@ -359,6 +363,10 @@ export const reformas: Reforma[] = [
         Starlink donde antes no había cobertura.
       </>
     ),
+    quote: {
+      text: "Firmé el DNU más grande de la historia argentina: 366 artículos que le devuelven la libertad a los argentinos. Cada artículo es una cadena que se rompe.",
+      cite: "Milei, cadena nacional, 20 de diciembre de 2023",
+    },
   },
 
   // ── 05 LEY BASES Y EL RIGI ───────────────────────────────
@@ -425,6 +433,10 @@ export const reformas: Reforma[] = [
         <strong>todos bajo régimen RIGI</strong>.
       </>
     ),
+    quote: {
+      text: "La Ley Bases no es una ley más. Es el acta de refundación económica de la Argentina. Y el RIGI es la garantía de que el capital que venga se quede.",
+      cite: "Milei, Luna Park, mayo 2024",
+    },
   },
 
   // ── 06 DESREGULACIÓN MASIVA ───────────────────────────────
@@ -499,6 +511,10 @@ export const reformas: Reforma[] = [
         <strong>14.392 artículos</strong> de burocracia asfixiante.
       </>
     ),
+    quote: {
+      text: "Detrás de cada regulación hay un curro. Detrás de cada trámite hay un intermediario. Federico Sturzenegger encontró 67.000 regulaciones — y las está eliminando una por una.",
+      cite: "Milei, entrevista Forbes, diciembre 2024",
+    },
   },
 
   // ── 07 REFORMA DEL ESTADO ────────────────────────────────
@@ -778,6 +794,10 @@ export const reformas: Reforma[] = [
         persecución tributaria arbitraria.
       </>
     ),
+    quote: {
+      text: "El Estado no puede presumir culpable al que trabaja y produce. La inocencia fiscal es un derecho constitucional — no una concesión del burócrata de turno.",
+      cite: "Milei, Congreso 2025",
+    },
   },
 
   // ── 11 SEGURIDAD Y JUSTICIA ──────────────────────────────

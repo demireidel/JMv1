@@ -125,6 +125,13 @@ export default function Reformas() {
           </div>
         </FadeIn>
 
+        <FadeIn>
+          <div className="ref-photo-break">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/strip/milei-trump.jpg" alt="Milei con Trump" loading="eager" />
+          </div>
+        </FadeIn>
+
         {reformas.slice(3, 7).map((r) => (
           <ReformaSection key={r.num} {...r} />
         ))}
@@ -137,6 +144,13 @@ export default function Reformas() {
           </div>
         </FadeIn>
 
+        <FadeIn>
+          <div className="ref-photo-break">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/strip/bilateral-casablanca.jpg" alt="Acuerdo bilateral" loading="eager" />
+          </div>
+        </FadeIn>
+
         {reformas.slice(7, 10).map((r) => (
           <ReformaSection key={r.num} {...r} />
         ))}
@@ -146,6 +160,13 @@ export default function Reformas() {
             <h3>{reformBlocks[3].title}</h3>
             <p>{reformBlocks[3].subtitle}</p>
             <div className="reform-divider-line" />
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <div className="ref-photo-break">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/strip/g20-familia.jpg" alt="G20 foto de familia" loading="eager" />
           </div>
         </FadeIn>
 

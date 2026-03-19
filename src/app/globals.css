@@ -713,21 +713,21 @@ section { position: relative; overflow: hidden; }
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
   font-size: 2.5rem; color: var(--sol); line-height: 1;
   filter: brightness(1.1);
-  text-shadow: 0 0 20px rgba(246,180,14,0.25);
+  text-shadow: 0 0 20px rgba(246,180,14,0.35);
 }
 .ref-counter .label {
   font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
   color: rgba(255,255,255,0.9); margin-top: 0.2rem;
 }
 .reforms-container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
-.reform-divider { text-align: center; padding: 3rem 0; }
+.reform-divider { text-align: center; padding: 4rem 0; }
 .reform-divider h3 {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
   font-size: 1.3rem; letter-spacing: 4px; color: var(--sol);
 }
 .reform-divider p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 0.5rem; }
 .reform-divider-line {
-  width: 60px; height: 2px; background: var(--sol); margin: 1.5rem auto 0; opacity: 0.3;
+  width: 100px; height: 2px; background: var(--sol); margin: 1.5rem auto 0; opacity: 0.3;
 }
 .reform-section { margin-bottom: 5rem; }
 .reform-header { margin-bottom: 2rem; }
@@ -756,9 +756,9 @@ section { position: relative; overflow: hidden; }
 .reform-box {
   padding: 2rem; border-radius: 16px; transition: all 0.4s;
 }
-.reform-box.antes { background: rgba(255,80,80,0.06); border: 1px solid rgba(255,80,80,0.12); }
-.reform-box.ahora { background: rgba(80,200,120,0.06); border: 1px solid rgba(80,200,120,0.12); }
-.reform-box.impacto { background: rgba(212,168,67,0.06); border: 1px solid rgba(212,168,67,0.12); border-top: 2px solid rgba(246,180,14,0.3); }
+.reform-box.antes { background: rgba(255,80,80,0.08); border: 1px solid rgba(255,80,80,0.16); }
+.reform-box.ahora { background: rgba(80,200,120,0.09); border: 1px solid rgba(80,200,120,0.16); }
+.reform-box.impacto { background: rgba(212,168,67,0.09); border: 1px solid rgba(212,168,67,0.18); border-top: 2px solid rgba(246,180,14,0.3); }
 .box-label {
   display: flex; align-items: center; gap: 0.5rem; font-size: 0.65rem;
   letter-spacing: 3px; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem;
@@ -777,14 +777,15 @@ section { position: relative; overflow: hidden; }
 .impact-stat .iv {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
   font-size: 2.2rem; color: var(--sol); line-height: 1;
+  text-shadow: 0 2px 8px rgba(246,180,14,0.2);
 }
 .impact-stat .il {
-  font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase;
+  font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase;
   color: rgba(255,255,255,0.55); margin-top: 0.2rem;
 }
 .ref-quote {
   margin-top: 2rem; padding: 2rem 2.5rem; position: relative;
-  background: rgba(246,180,14,0.04); border-left: 3px solid var(--sol);
+  background: linear-gradient(90deg, rgba(246,180,14,0.08) 0%, rgba(246,180,14,0.02) 100%); border-left: 5px solid var(--sol);
   border-radius: 0 16px 16px 0;
 }
 .ref-quote .qmark {
@@ -793,7 +794,7 @@ section { position: relative; overflow: hidden; }
 }
 .ref-quote blockquote {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-style: italic; color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.7;
+  font-style: italic; color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.7; max-width: 600px;
 }
 .ref-quote cite {
   display: block; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
@@ -1257,6 +1258,7 @@ body::after {
 .v-pullquote:hover, .ref-quote:hover, .pobreza-quote:hover {
   border-left-color: var(--sol);
   box-shadow: -4px 0 20px rgba(246,180,14,0.08);
+  transform: translateX(4px);
 }
 
 /* Timeline hover */
@@ -4481,6 +4483,42 @@ button:focus-visible {
   .arc-interviews-grid { grid-template-columns: 1fr; }
   .arc-collab-card { padding: 1.5rem; }
   .arc-section-header { flex-direction: column; gap: 0.8rem; }
+}
+
+/* ─── Impact Stat Cascade Animation ─── */
+.impact-stat {
+  animation: fadeInUp 0.6s var(--ease-out-expo) backwards;
+}
+.impact-stat:nth-child(1) { animation-delay: 0.3s; }
+.impact-stat:nth-child(2) { animation-delay: 0.4s; }
+.impact-stat:nth-child(3) { animation-delay: 0.5s; }
+.impact-stat:nth-child(4) { animation-delay: 0.6s; }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Reformas Photo Breaks ────────────────────────────── */
+.ref-photo-break {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  margin: 2rem 0 3rem;
+  border-radius: 12px;
+}
+.ref-photo-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55) saturate(0.85);
+  transition: transform 0.8s var(--ease-premium);
+}
+.ref-photo-break:hover img {
+  transform: scale(1.03);
+}
+@media (max-width: 768px) {
+  .ref-photo-break { height: 180px; }
 }
 
 /* ─── Enhanced Mobile Support ─── */
