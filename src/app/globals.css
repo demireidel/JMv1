@@ -382,8 +382,8 @@ section { position: relative; overflow: hidden; }
 }
 .v-pullquote p {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-style: italic; color: rgba(255,255,255,0.82) !important;
-  font-size: 1.1rem !important; line-height: 1.7 !important;
+  font-style: italic; color: rgba(255,255,255,0.82);
+  font-size: 1.1rem; line-height: 1.7;
 }
 .v-pullquote cite {
   display: block; font-size: 0.65rem; letter-spacing: 2px;
@@ -554,6 +554,7 @@ section { position: relative; overflow: hidden; }
 .ba-box .ba-val {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
   font-size: 2rem; color: var(--navy); line-height: 1;
+  word-break: break-word;
 }
 .ba-box .ba-desc { font-size: 0.8rem; color: var(--text-light); margin-top: 0.3rem; line-height: 1.4; }
 .lh-callout {
@@ -561,7 +562,7 @@ section { position: relative; overflow: hidden; }
   background: rgba(12,26,46,0.04); border-left: 3px solid var(--sol);
   border-radius: 0 10px 10px 0;
 }
-.lh-callout p { font-size: 0.85rem !important; color: var(--navy) !important; font-weight: 400 !important; font-style: italic; }
+.lh-callout p { font-size: 0.85rem; color: var(--navy); font-weight: 400; font-style: italic; }
 
 /* Pobreza Hero */
 .pobreza-hero {
@@ -726,6 +727,7 @@ section { position: relative; overflow: hidden; }
 .reform-number {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
   font-size: 0.7rem; letter-spacing: 4px; color: var(--sol); opacity: 0.6;
+  white-space: nowrap;
 }
 .reform-title {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
@@ -1069,8 +1071,8 @@ footer .motto {
   .coop-grid { grid-template-columns: 1fr; }
   .tl::before { left: 18px; }
   .tl-i, .tl-i:nth-child(even) { flex-direction: column; padding-left: 46px; }
-  .tl-i .tl-c { width: 100% !important; text-align: left !important; padding: 0 !important; }
-  .tl-dot { left: 18px !important; }
+  .tl-i .tl-c { width: 100%; text-align: left; padding: 0; }
+  .tl-dot { left: 18px; }
 }
 @media (max-width: 600px) {
   .container { padding: 4rem 1.2rem; }
@@ -1137,7 +1139,7 @@ body::after {
 /* ═══════════ IMAGE SWAP — LOGROS ═══════════ */
 .img-swap {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-  transition: opacity 0.7s ease, transform 1s var(--ease-premium);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .img-swap.img-after { opacity: 0; }
 .lh-img:hover .img-swap.img-before,
@@ -1930,8 +1932,8 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
   max-width: 800px;
 }
 .v-pullquote p {
-  font-size: 1.15rem !important;
-  line-height: 1.8 !important;
+  font-size: 1.15rem;
+  line-height: 1.8;
 }
 
 /* Data strip — more spacious */
@@ -1947,7 +1949,7 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
   margin: 3rem 0;
   padding: 2rem 2.5rem;
   border-radius: 16px;
-  border: 1px solid rgba(116,172,223,0.1);
+  border: 1px solid rgba(116,172,223,0.25);
   background: linear-gradient(135deg, rgba(116,172,223,0.05), rgba(116,172,223,0.02));
 }
 
@@ -2131,10 +2133,10 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
   background: var(--navy);
 }
 .photo-strip-reverse::before {
-  background: linear-gradient(90deg, var(--navy) 30%, transparent) !important;
+  background: linear-gradient(90deg, var(--navy) 30%, transparent);
 }
 .photo-strip-reverse::after {
-  background: linear-gradient(-90deg, var(--navy) 30%, transparent) !important;
+  background: linear-gradient(-90deg, var(--navy) 30%, transparent);
 }
 .photo-strip-2 {
   animation-direction: reverse;
@@ -2880,14 +2882,14 @@ footer {
 /* hero glassmorphic + vignette defined in base rules */
 
 .scroll-indicator div {
-  animation: scrollGlow 2.5s ease-in-out infinite, bounce 2s ease-in-out infinite !important;
+  animation: scrollGlow 2.5s ease-in-out infinite, bounce 2s ease-in-out infinite;
 }
 
 /* ── Glassmorphism Expansion ───────────────────────────── */
 
 .v-pullquote {
   backdrop-filter: blur(12px) saturate(1.3);
-  background: rgba(246,180,14,0.03) !important;
+  background: rgba(246,180,14,0.03);
   border: 1px solid rgba(246,180,14,0.08);
 }
 
@@ -2897,7 +2899,7 @@ footer {
 
 .reform-box {
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
 .logro-hero .lh-inner {
@@ -2914,7 +2916,7 @@ footer {
 
 footer {
   backdrop-filter: blur(16px);
-  background: rgba(10,10,15,0.92) !important;
+  background: rgba(10,10,15,0.92);
 }
 
 /* ── Card Hover Premium ────────────────────────────────── */
@@ -3058,11 +3060,11 @@ footer {
 /* ── Divider Enhancement ───────────────────────────────── */
 
 .arc-divider-line {
-  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.35), transparent) !important;
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.35), transparent);
 }
 
 .v-rule {
-  background: linear-gradient(90deg, transparent, rgba(246,180,14,0.15), transparent) !important;
+  background: linear-gradient(90deg, transparent, rgba(246,180,14,0.15), transparent);
 }
 
 /* ── Section Number Glow ───────────────────────────────── */
@@ -3077,19 +3079,19 @@ footer {
 /* ── Scroll Progress Enhancement ───────────────────────── */
 
 .scroll-progress-bar {
-  background: linear-gradient(90deg, var(--celeste), var(--sol)) !important;
+  background: linear-gradient(90deg, var(--celeste), var(--sol));
   box-shadow: 0 0 10px rgba(246,180,14,0.3);
 }
 
 /* ── Back To Top Enhancement ───────────────────────────── */
 
 .back-to-top {
-  box-shadow: 0 4px 20px rgba(246,180,14,0.25) !important;
-  transition: all 0.3s var(--ease-premium) !important;
+  box-shadow: 0 4px 20px rgba(246,180,14,0.25);
+  transition: all 0.3s var(--ease-premium);
 }
 .back-to-top:hover {
-  transform: translateY(-3px) scale(1.08) !important;
-  box-shadow: 0 8px 30px rgba(246,180,14,0.35) !important;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 8px 30px rgba(246,180,14,0.35);
 }
 
 /* ── Footer Enhancement ────────────────────────────────── */
@@ -3139,12 +3141,12 @@ footer {
     135deg,
     #fff 0%, #f0d078 20%, #fff 40%,
     #d4a843 60%, #fff 80%, #f0d078 100%
-  ) !important;
-  background-size: 300% 300% !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-  animation: goldShift 8s ease-in-out infinite !important;
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShift 8s ease-in-out infinite;
 }
 
 /* ── Cinematic Section Transitions ─────────────────────── */
@@ -3289,13 +3291,13 @@ footer {
 /* ── Kicker Animated Dash ──────────────────────────────── */
 
 .kicker::before {
-  transition: width 0.8s var(--ease-out-expo) !important;
-  width: 0 !important;
+  transition: width 0.8s var(--ease-out-expo);
+  width: 0;
 }
 
 .visible .kicker::before,
 .fade-in.visible .kicker::before {
-  width: 28px !important;
+  width: 28px;
 }
 
 /* ── Reform Number Glow ────────────────────────────────── */
@@ -3312,7 +3314,7 @@ footer {
 }
 
 .hero-subtitle {
-  animation: trackingExpand 1.5s var(--ease-out-expo) 0.3s both !important;
+  animation: trackingExpand 1.5s var(--ease-out-expo) 0.3s both;
 }
 
 /* ── Premium Scroll Progress Glow ──────────────────────── */
@@ -3398,11 +3400,11 @@ footer {
 /* ── Declaration Glow ──────────────────────────────────── */
 
 .vd-big {
-  background: linear-gradient(135deg, #fff, #f0d078, #fff) !important;
-  background-size: 200% 200% !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
+  background: linear-gradient(135deg, #fff, #f0d078, #fff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   animation: goldShift 6s ease-in-out infinite;
 }
 
@@ -3433,29 +3435,29 @@ button:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
   }
 
   .hero-name {
-    -webkit-text-fill-color: white !important;
-    background: none !important;
+    -webkit-text-fill-color: white;
+    background: none;
   }
 
   .vd-big {
-    -webkit-text-fill-color: white !important;
-    background: none !important;
+    -webkit-text-fill-color: white;
+    background: none;
   }
 
   .fade-in {
-    opacity: 1 !important;
-    transform: none !important;
+    opacity: 1;
+    transform: none;
   }
 
   .photo-strip {
-    animation: none !important;
+    animation: none;
   }
 }
 
@@ -3463,7 +3465,7 @@ button:focus-visible {
 
 @media (max-width: 768px) {
   .hero-name {
-    background-size: 200% 200% !important;
+    background-size: 200% 200%;
   }
 
   .section-dark::before,
@@ -3482,5 +3484,28 @@ button:focus-visible {
     animation: none;
     background: rgba(246,180,14,0.15);
   }
+}
+
+/* ─── Enhanced Mobile Support ─── */
+@media (max-width: 480px) {
+  .hero-name { font-size: 3.5rem; letter-spacing: 1px; }
+  .hero-subtitle { letter-spacing: 6px; font-size: 0.6rem; }
+  .hero-title { font-size: 1rem; }
+  .hero-content { padding: 1.5rem 1rem; }
+  .v-pullquote { padding: 1.5rem; }
+  .v-declaration { padding: 2rem 1rem; }
+  .pobreza-counters { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+  .ba-compare { gap: 0.5rem; }
+  .reform-box { padding: 1.2rem; }
+  .futuro-gallery { gap: 2px; }
+  .arc-collab { padding: 1.5rem; }
+  .arc-collab-quote { padding: 1rem; }
+  .footer-inner { gap: 1.5rem; }
+  .footer-wordmark { font-size: 1.2rem; }
+  .motto { font-size: 0.8rem; }
+  .mega-inner { grid-template-columns: repeat(2, 1fr); }
+  .ms-v { font-size: 2rem; }
+  .leaders-g { grid-template-columns: repeat(2, 1fr); }
+  .sec-num { font-size: 4rem; }
 }
 
