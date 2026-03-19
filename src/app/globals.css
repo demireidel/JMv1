@@ -160,9 +160,9 @@ body {
   animation: heroNameReveal 1.6s var(--ease-out-expo) 0.7s both, goldShimmer 6s ease-in-out 2.5s infinite;
 }
 .hero-title {
-  font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem); color: var(--sol);
-  margin-top: 2rem; font-weight: 400; font-style: italic;
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem); color: #743BBC;
+  margin-top: 2rem; font-weight: 400; letter-spacing: 6px; text-transform: uppercase;
   animation: heroReveal 1s var(--ease-out-expo) 1s both;
   text-shadow: 0 0 50px rgba(246,180,14,0.25);
 }
