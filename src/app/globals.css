@@ -303,7 +303,7 @@ section { position: relative; overflow: hidden; }
     radial-gradient(ellipse 40% 40% at 80% 80%, rgba(246,180,14,0.02), transparent);
 }
 .v-kicker {
-  font-size: 0.65rem; letter-spacing: 8px; text-transform: uppercase;
+  font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase;
   color: var(--sol); font-weight: 700; margin-bottom: 2.5rem;
   display: inline-flex; align-items: center; gap: 1.5rem;
 }
@@ -326,7 +326,7 @@ section { position: relative; overflow: hidden; }
   max-width: 720px; margin: 0 auto; line-height: 1.75; font-style: italic;
 }
 .v-rule {
-  height: 1px; max-width: 200px; margin: 3.5rem auto;
+  height: 2px; max-width: 200px; margin: 3.5rem auto;
   background: linear-gradient(90deg, transparent, rgba(246,180,14,0.4), transparent);
 }
 .v-mantra-wrap {
@@ -382,15 +382,15 @@ section { position: relative; overflow: hidden; }
 .v-pullquote {
   margin: 2.5rem 0; padding: 2rem 2.5rem; position: relative;
   background: linear-gradient(135deg, rgba(246,180,14,0.04), rgba(116,172,223,0.03));
-  border-left: 4px solid var(--sol); border-radius: 0 16px 16px 0;
+  border-left: 3px solid var(--sol); border-radius: 0 16px 16px 0;
 }
 .v-pullquote p {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
   font-style: italic; color: rgba(255,255,255,0.82);
-  font-size: 1.1rem; line-height: 1.7;
+  font-size: 1.1rem; line-height: 1.75;
 }
 .v-pullquote cite {
-  display: block; font-size: 0.65rem; letter-spacing: 2px;
+  display: block; font-size: 0.7rem; letter-spacing: 2px;
   text-transform: uppercase; color: var(--sol); margin-top: 0.8rem;
   font-style: normal; font-weight: 600;
 }
@@ -400,11 +400,11 @@ section { position: relative; overflow: hidden; }
 }
 .v-thinker {
   padding: 1.8rem; background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05); border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;
   transition: all 0.4s; position: relative;
 }
 .v-thinker:hover {
-  background: rgba(255,255,255,0.05); transform: translateY(-3px);
+  background: rgba(255,255,255,0.05); transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.3); border-color: rgba(246,180,14,0.15);
 }
 .vt-era {
@@ -413,7 +413,7 @@ section { position: relative; overflow: hidden; }
 }
 .v-thinker h4 {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-size: 1.1rem; color: white; margin-bottom: 0.4rem;
+  font-size: 1.1rem; color: white; margin-bottom: 0.4rem; font-weight: 600;
 }
 .v-thinker p { font-size: 0.8rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
 .v-pillars {
@@ -432,13 +432,13 @@ section { position: relative; overflow: hidden; }
 }
 .v-pillar:hover::before { transform: scaleX(1); }
 .v-pillar:hover {
-  background: rgba(255,255,255,0.05); transform: translateY(-3px);
+  background: rgba(255,255,255,0.05); transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
 .vp-icon { font-size: 2rem; margin-bottom: 1rem; }
 .v-pillar h4 {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-size: 1.15rem; color: white; margin-bottom: 0.6rem;
+  font-size: 1.15rem; color: white; margin-bottom: 0.6rem; font-weight: 600;
 }
 .v-pillar p { font-size: 0.88rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
 .v-pyramid { margin: 3rem 0; }
@@ -463,11 +463,11 @@ section { position: relative; overflow: hidden; }
 .v-pyramid-content {
   flex: 1; padding: 1.5rem 2rem;
   background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 12px;
+  border-radius: 16px;
 }
 .v-pyramid-content h4 {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-size: 1.1rem; color: white; margin-bottom: 0.5rem;
+  font-size: 1.1rem; color: white; margin-bottom: 0.5rem; font-weight: 600;
 }
 .v-pyramid-content p { font-size: 0.85rem; color: rgba(255,255,255,0.72); line-height: 1.65; }
 .v-data-strip {
@@ -668,13 +668,13 @@ section { position: relative; overflow: hidden; }
 }
 .pill-lbl { font-size: 0.7rem; color: rgba(255,255,255,0.65); font-weight: 500; }
 .pobreza-quote {
-  position: relative; z-index: 2; margin: 2rem 3rem 0; padding: 1.5rem 2rem;
+  position: relative; z-index: 2; margin: 2rem 3rem 0; padding: 2rem 2.5rem;
   border-left: 3px solid var(--sol); background: rgba(246,180,14,0.04);
   border-radius: 0 16px 16px 0;
 }
 .pobreza-quote p {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.7;
+  font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.75;
 }
 .pq-attr {
   font-style: normal; font-size: 0.7rem; color: rgba(255,255,255,0.55);
@@ -693,7 +693,7 @@ section { position: relative; overflow: hidden; }
 }
 .ref-hero-content { max-width: 900px; position: relative; z-index: 2; }
 .ref-hero-eyebrow {
-  font-size: 0.7rem; letter-spacing: 6px; text-transform: uppercase;
+  font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase;
   color: var(--sol); margin-bottom: 1.5rem; font-weight: 600;
 }
 .ref-hero-title {
@@ -793,7 +793,7 @@ section { position: relative; overflow: hidden; }
 }
 .ref-quote {
   margin-top: 2rem; padding: 2rem 2.5rem; position: relative;
-  background: linear-gradient(90deg, rgba(246,180,14,0.08) 0%, rgba(246,180,14,0.02) 100%); border-left: 5px solid var(--sol);
+  background: linear-gradient(90deg, rgba(246,180,14,0.08) 0%, rgba(246,180,14,0.02) 100%); border-left: 3px solid var(--sol);
   border-radius: 0 16px 16px 0;
 }
 .ref-quote .qmark {
@@ -802,10 +802,10 @@ section { position: relative; overflow: hidden; }
 }
 .ref-quote blockquote {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-style: italic; color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.7; max-width: 600px;
+  font-style: italic; color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.75; max-width: 600px;
 }
 .ref-quote cite {
-  display: block; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
+  display: block; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
   color: var(--sol); margin-top: 0.8rem; font-style: normal; font-weight: 600;
 }
 
@@ -834,7 +834,7 @@ section { position: relative; overflow: hidden; }
   font-style: italic; color: var(--t1); font-weight: 400;
 }
 .kicker {
-  font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase;
+  font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase;
   font-weight: 600; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;
 }
 .kicker::before { content: ''; width: 28px; height: 1px; }
@@ -881,10 +881,10 @@ section { position: relative; overflow: hidden; }
 .blk .bq {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
   font-style: italic; color: var(--t1); font-size: 0.95rem; line-height: 1.75;
-  padding-left: 1.2rem; border-left: 2px solid var(--sol); margin: 1.6rem 0;
+  padding-left: 1.2rem; border-left: 3px solid var(--sol); margin: 1.6rem 0;
 }
 .blk .bq cite {
-  display: block; font-style: normal; font-size: 0.63rem;
+  display: block; font-style: normal; font-size: 0.7rem;
   letter-spacing: 2.5px; text-transform: uppercase; color: var(--sol);
   margin-top: 0.5rem; font-weight: 600;
 }
@@ -926,7 +926,7 @@ section { position: relative; overflow: hidden; }
 .agr-card {
   display: grid; grid-template-columns: 380px 1fr; gap: 0;
   border-radius: 20px; overflow: hidden; background: white;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.06); transition: 0.4s;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.06); transition: all 0.4s var(--ease-out-expo);
 }
 .agr-card:hover { transform: translateY(-4px); box-shadow: 0 16px 50px rgba(0,0,0,0.1); }
 .agr-card.reverse { grid-template-columns: 1fr 380px; }
@@ -960,9 +960,9 @@ section { position: relative; overflow: hidden; }
 .agr-card-dark {
   display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 20px;
   overflow: hidden; background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06); transition: 0.4s;
+  border: 1px solid rgba(255,255,255,0.06); transition: all 0.4s var(--ease-out-expo);
 }
-.agr-card-dark:hover { background: rgba(255,255,255,0.05); border-color: rgba(212,168,67,0.15); transform: translateY(-3px); }
+.agr-card-dark:hover { background: rgba(255,255,255,0.05); border-color: rgba(212,168,67,0.15); transform: translateY(-4px); }
 .agr-card-dark .agr-body h3 { color: white; }
 .agr-card-dark .agr-body p { color: rgba(255,255,255,0.72); }
 .coop-grid {
@@ -970,13 +970,13 @@ section { position: relative; overflow: hidden; }
 }
 .coop-item {
   padding: 2rem; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px;
-  background: rgba(255,255,255,0.02); transition: 0.4s; text-align: center;
+  background: rgba(255,255,255,0.02); transition: all 0.4s var(--ease-out-expo); text-align: center;
 }
-.coop-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(212,168,67,0.15); transform: translateY(-3px); }
+.coop-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(212,168,67,0.15); transform: translateY(-4px); }
 .ci-icon { font-size: 2.4rem; margin-bottom: 1rem; }
 .coop-item h4 {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-size: 1.05rem; color: white; margin-bottom: 0.5rem;
+  font-size: 1.05rem; color: white; margin-bottom: 0.5rem; font-weight: 600;
 }
 .coop-item p { font-size: 0.8rem; color: rgba(255,255,255,0.72); line-height: 1.6; font-weight: 300; }
 .leaders-wrap { padding: 4rem 0 0; }
@@ -988,9 +988,9 @@ section { position: relative; overflow: hidden; }
 .lb {
   display: flex; align-items: center; gap: 0.6rem; background: white;
   padding: 0.5rem 1rem 0.5rem 0.7rem; border-radius: 50px;
-  border: 1px solid rgba(0,0,0,0.06); transition: 0.3s; cursor: default;
+  border: 1px solid rgba(0,0,0,0.06); transition: all 0.4s var(--ease-out-expo); cursor: default;
 }
-.lb:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 6px 25px rgba(0,0,0,0.07); border-color: rgba(212,168,67,0.25); }
+.lb:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 6px 25px rgba(0,0,0,0.07); border-color: rgba(212,168,67,0.25); }
 .lb .fl { font-size: 1.2rem; flex-shrink: 0; }
 .lb h5 { font-size: 0.78rem; color: var(--navy); font-weight: 700; line-height: 1.2; }
 .lb .r { font-size: 0.6rem; color: var(--text-muted); display: block; }
@@ -1281,11 +1281,11 @@ body::after {
 
 /* Leader badges premium hover */
 .lb {
-  transition: all 0.3s var(--ease-premium);
+  transition: all 0.4s var(--ease-out-expo);
   border: 1px solid rgba(0,0,0,0.06);
 }
 .lb:hover {
-  transform: translateY(-3px) scale(1.04);
+  transform: translateY(-4px) scale(1.04);
   box-shadow: 0 8px 30px rgba(0,0,0,0.1), 0 0 0 1px rgba(212,168,67,0.2);
 }
 
@@ -1410,8 +1410,8 @@ body::after {
 .v-pullquote {
   padding: 2.5rem 3rem;
   background: linear-gradient(135deg, rgba(246,180,14,0.03), rgba(116,172,223,0.02), transparent);
-  border-left: 2px solid var(--sol);
-  border-radius: 0 20px 20px 0;
+  border-left: 3px solid var(--sol);
+  border-radius: 0 16px 16px 0;
   position: relative;
 }
 .v-pullquote::before {
@@ -1506,17 +1506,17 @@ a:focus-visible, button:focus-visible {
 
 /* ═══ PREMIUM CARD HOVER SYSTEM ═══ */
 .idea-card, .v-thinker, .v-pillar, .coop-item {
-  transition: all 0.5s var(--ease-out-expo);
+  transition: all 0.4s var(--ease-out-expo);
   will-change: transform;
 }
 .idea-card:hover, .v-thinker:hover, .v-pillar:hover, .coop-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 0 0 1px rgba(246,180,14,0.08);
 }
 
 /* Reform boxes — color-coded glow */
 .reform-box {
-  transition: all 0.5s var(--ease-out-expo);
+  transition: all 0.4s var(--ease-out-expo);
   will-change: transform;
 }
 .reform-box:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
@@ -1541,7 +1541,7 @@ a:focus-visible, button:focus-visible {
 
 /* ═══ QUOTE SYSTEM — REFINED ═══ */
 .ref-quote, .pobreza-quote {
-  transition: all 0.5s var(--ease-out-expo);
+  transition: all 0.4s var(--ease-out-expo);
   position: relative;
 }
 .ref-quote:hover, .pobreza-quote:hover {
@@ -1600,7 +1600,7 @@ a:focus-visible, button:focus-visible {
   box-shadow: 0 4px 30px rgba(0,0,0,0.06);
 }
 .agr-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: 0 25px 70px rgba(0,0,0,0.12), 0 0 0 1px rgba(212,168,67,0.08);
 }
 
@@ -2210,9 +2210,9 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 .arc-books { display: flex; flex-direction: column; gap: 0.6rem; }
 .arc-book {
   display: flex; align-items: flex-start; gap: 1.2rem;
-  padding: 1rem 1.4rem; border-radius: 12px;
+  padding: 1rem 1.4rem; border-radius: 16px;
   background: var(--surface); border: 1px solid var(--border);
-  transition: all 0.3s var(--ease-premium);
+  transition: all 0.4s var(--ease-out-expo);
 }
 .arc-book:hover {
   background: rgba(246,180,14,0.04); border-color: rgba(212,168,67,0.15);
@@ -2296,9 +2296,9 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
   max-width: 640px;
 }
 .arc-collab-quote {
-  margin-top: 1.5rem; padding: 1.5rem 2rem; position: relative;
+  margin-top: 1.5rem; padding: 2rem 2.5rem; position: relative;
   background: rgba(0,0,0,0.2); border-left: 3px solid var(--sol);
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 16px 16px 0;
 }
 .arc-collab-qmark {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
@@ -2306,11 +2306,11 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 }
 .arc-collab-quote blockquote {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-style: italic; color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;
+  font-style: italic; color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.75;
   padding-left: 1rem;
 }
 .arc-collab-quote cite {
-  display: block; font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase;
+  display: block; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
   color: var(--sol); margin-top: 0.6rem; font-style: normal; font-weight: 600;
   padding-left: 1rem;
 }
@@ -2412,11 +2412,11 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 }
 .arc-conversion blockquote {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
-  font-style: italic; color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.7;
+  font-style: italic; color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.75;
 }
 .arc-conversion blockquote em { color: var(--sol); font-style: italic; }
 .arc-conversion cite {
-  display: block; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase;
+  display: block; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
   color: var(--sol); margin-top: 0.8rem; font-style: normal; font-weight: 600;
 }
 
@@ -2569,15 +2569,15 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 }
 .arc-keynote {
   padding: 2rem;
-  border-radius: 14px;
+  border-radius: 16px;
   background: rgba(255,255,255,0.025);
   border: 1px solid rgba(255,255,255,0.06);
-  transition: all 0.4s ease;
+  transition: all 0.4s var(--ease-out-expo);
 }
 .arc-keynote:hover {
   background: rgba(246,180,14,0.04);
   border-color: rgba(212,168,67,0.15);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 .arc-keynote-date {
   font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
@@ -2661,10 +2661,10 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 }
 .arc-interview-lg {
   padding: 2rem;
-  border-radius: 14px;
+  border-radius: 16px;
   background: rgba(255,255,255,0.025);
   border: 1px solid rgba(255,255,255,0.06);
-  transition: all 0.4s ease;
+  transition: all 0.4s var(--ease-out-expo);
   display: flex;
   flex-direction: column;
 }
@@ -2953,7 +2953,7 @@ footer {
 
 .v-thinker:hover,
 .v-pillar:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-4px) scale(1.02);
   box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 0 0 1px rgba(246,180,14,0.1);
 }
 
@@ -3081,10 +3081,10 @@ footer {
 /* ── Leader Badges Enhancement ─────────────────────────── */
 
 .lb {
-  transition: all 0.3s var(--ease-premium);
+  transition: all 0.4s var(--ease-out-expo);
 }
 .lb:hover {
-  transform: translateY(-3px) scale(1.04);
+  transform: translateY(-4px) scale(1.04);
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   background: rgba(246,180,14,0.06);
   border-color: rgba(246,180,14,0.15);
@@ -3799,8 +3799,8 @@ button:focus-visible {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
   border-top: 2px solid rgba(246,180,14,0.15);
-  border-radius: 10px;
-  transition: border-color 0.3s;
+  border-radius: 16px;
+  transition: border-color 0.4s var(--ease-out-expo);
 }
 .arc-influence-card:hover {
   border-color: rgba(212,168,67,0.3);
@@ -4128,16 +4128,16 @@ button:focus-visible {
 .arc-paper-card {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
+  border-radius: 16px;
   border-left: 3px solid var(--celeste);
   padding: 1.2rem 1.4rem;
-  transition: all 0.4s var(--ease-premium);
+  transition: all 0.4s var(--ease-out-expo);
 }
 .arc-paper-card:hover {
   background: rgba(255,255,255,0.06);
   border-color: rgba(116,172,223,0.3);
   border-left-color: var(--sol);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 .arc-paper-topic-badge {
@@ -4192,9 +4192,9 @@ button:focus-visible {
   gap: 1.5rem;
   background: rgba(255,255,255,0.025);
   border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 1.5rem;
-  transition: all 0.4s var(--ease-premium);
+  transition: all 0.4s var(--ease-out-expo);
 }
 .arc-speech-card:hover {
   background: rgba(255,255,255,0.04);
@@ -4337,9 +4337,9 @@ button:focus-visible {
 .arc-interview-card {
   background: rgba(255,255,255,0.025);
   border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 1.5rem;
-  transition: all 0.4s var(--ease-premium);
+  transition: all 0.4s var(--ease-out-expo);
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -4347,7 +4347,7 @@ button:focus-visible {
 .arc-interview-card:hover {
   background: rgba(255,255,255,0.05);
   border-color: rgba(255,255,255,0.1);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 .arc-interview-card--featured {
   border-color: rgba(212,168,67,0.25);
@@ -4357,7 +4357,7 @@ button:focus-visible {
 .arc-interview-card--featured:hover {
   border-color: rgba(212,168,67,0.4);
   box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 .arc-interview-outlet {
   font-family: var(--font-playfair-display), serif;
@@ -4475,7 +4475,7 @@ button:focus-visible {
 .arc-collab-quote-block cite {
   display: block;
   margin-top: 0.8rem;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--sol);
   opacity: 0.7;
   font-style: normal;
