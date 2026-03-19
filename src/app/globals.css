@@ -3549,6 +3549,265 @@ button:focus-visible {
   .arc-photo-break { height: 140px; margin: 2rem 0; }
 }
 
+/* ─── Archivo: Hero Text ─── */
+.arc-hero-text {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.arc-hero-eyebrow {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 6px;
+  color: var(--sol);
+  margin-bottom: 0.5rem;
+}
+.arc-hero-title {
+  font-family: var(--font-playfair), serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 0 0 0.8rem;
+}
+.arc-hero-subtitle {
+  font-family: var(--font-source), sans-serif;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+.arc-hero-stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.arc-hero-stat {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--sol);
+}
+.arc-hero-stat-dot {
+  color: rgba(255,255,255,0.25);
+  font-size: 1.2rem;
+}
+
+/* ─── Archivo: Featured Collaboration ─── */
+.arc-collab-featured {
+  margin-top: 4rem;
+  padding: 2.5rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(212,168,67,0.35);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+.arc-collab-featured::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--sol), transparent);
+}
+.arc-collab-featured-badge {
+  display: inline-block;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--sol);
+  border: 1px solid var(--sol);
+  padding: 0.25rem 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.arc-collab-featured-title {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0 0 1rem;
+}
+.arc-collab-featured-desc {
+  font-family: var(--font-source), sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.arc-collab-featured-quote {
+  background: rgba(255,255,255,0.02);
+  border-left: 3px solid var(--sol);
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+.arc-collab-featured-qmark {
+  position: absolute;
+  top: -0.2rem;
+  left: 0.8rem;
+  font-size: 2.5rem;
+  color: var(--sol);
+  opacity: 0.3;
+  font-family: var(--font-playfair), serif;
+}
+.arc-collab-featured-quote blockquote {
+  font-family: var(--font-source), sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+.arc-collab-featured-quote cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--sol);
+  letter-spacing: 1px;
+  font-style: normal;
+}
+
+/* ─── Archivo: Era Chapters ─── */
+.arc-era {
+  margin-bottom: 3rem;
+}
+.arc-era-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.arc-era-name {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.15rem;
+  color: #fff;
+  margin: 0;
+}
+.arc-era-years {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--sol);
+}
+.arc-era-books {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.arc-era-book {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  transition: border-color 0.3s, background 0.3s;
+}
+.arc-era-book:hover {
+  border-color: rgba(212,168,67,0.3);
+  background: rgba(255,255,255,0.05);
+}
+.arc-era-book--hl {
+  border-color: rgba(212,168,67,0.25);
+  background: rgba(212,168,67,0.04);
+}
+.arc-era-book-year {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--sol);
+  min-width: 3rem;
+  padding-top: 0.15rem;
+}
+.arc-era-book-body { flex: 1; }
+.arc-era-book-title {
+  font-family: var(--font-source), sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+.arc-era-book-meta {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  margin-top: 0.2rem;
+}
+.arc-era-book-pub {
+  color: rgba(255,255,255,0.35);
+}
+
+/* ─── Archivo: Influences Grid ─── */
+.arc-influences-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.arc-influence-card {
+  padding: 1.2rem 1.4rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+.arc-influence-card:hover {
+  border-color: rgba(212,168,67,0.3);
+}
+.arc-influence-card-school {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--sol);
+  margin: 0 0 0.5rem;
+}
+.arc-influence-card-names {
+  font-family: var(--font-source), sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ─── Archivo: Speech / Interview compact desc ─── */
+.arc-speech-sm-desc {
+  font-family: var(--font-source), sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.5;
+  margin-top: 0.3rem;
+}
+
+/* ─── Archivo: Interviews Compact ─── */
+.arc-interviews-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ─── Archivo: New responsive rules ─── */
+@media (max-width: 768px) {
+  .arc-hero-title { font-size: 2.2rem; }
+  .arc-hero-subtitle { font-size: 0.9rem; }
+  .arc-influences-grid { grid-template-columns: 1fr; }
+  .arc-collab-featured { padding: 1.5rem; }
+  .arc-collab-featured-quote { padding: 1rem; }
+  .arc-era-book { flex-direction: column; gap: 0.3rem; }
+}
+@media (max-width: 480px) {
+  .arc-hero-title { font-size: 1.8rem; }
+  .arc-hero-stats-bar { flex-direction: column; gap: 0.3rem; }
+  .arc-hero-stat-dot { display: none; }
+  .arc-collab-featured { padding: 1.2rem; }
+  .arc-era-header { flex-direction: column; gap: 0.3rem; }
+}
+
 /* ─── Enhanced Mobile Support ─── */
 @media (max-width: 480px) {
   .hero-name { font-size: 3.5rem; letter-spacing: 1px; }
