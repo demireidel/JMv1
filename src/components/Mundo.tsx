@@ -3,12 +3,9 @@
 import FadeIn from "./FadeIn";
 import { useAnimatedNumber } from "@/hooks";
 import {
-  leaders,
-  timeline,
   megaStats,
   tradeAgreements,
   financialSupport,
-  cooperationGrid,
 } from "@/data/mundo";
 
 function AnimatedStat({
@@ -181,80 +178,6 @@ export default function Mundo() {
             </div>
           </FadeIn>
 
-          <FadeIn>
-            <div className="coop-grid">
-              {cooperationGrid.map((c) => (
-                <div className="coop-item" key={c.title}>
-                  <div className="ci-icon">{c.icon}</div>
-                  <h4>{c.title}</h4>
-                  <p>{c.desc}</p>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Leaders */}
-      <section className="section-light">
-        <div className="container" style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
-          <FadeIn>
-            <div className="leaders-wrap">
-              <h3>SOCIOS ESTRATÉGICOS Y LÍDERES</h3>
-              <div className="leaders-g">
-                {leaders.map((l) => (
-                  <div className="lb" key={l.name}>
-                    <span className="fl">{l.flag}</span>
-                    <div>
-                      <h5>{l.name}</h5>
-                      <span className="r">{l.role}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="tl-section">
-        <div className="tl-inner">
-          <FadeIn>
-            <div className="tl-hdr">
-              <h3>CRONOLOGÍA DE RESULTADOS</h3>
-              <p>Cada acuerdo, cada firma, cada logro concreto</p>
-            </div>
-          </FadeIn>
-          <FadeIn>
-            <div className="tl">
-              {timeline.map((t, i) => (
-                <div className="tl-i" key={i}>
-                  {i % 2 === 0 ? (
-                    <>
-                      <div className="tl-c">
-                        <div className="tl-d">{t.date}</div>
-                        <h4>{t.title}</h4>
-                        <p>{t.desc}</p>
-                      </div>
-                      <div className="tl-dot" />
-                      <div style={{ width: "calc(50% - 36px)" }} />
-                    </>
-                  ) : (
-                    <>
-                      <div style={{ width: "calc(50% - 36px)" }} />
-                      <div className="tl-dot" />
-                      <div className="tl-c">
-                        <div className="tl-d">{t.date}</div>
-                        <h4>{t.title}</h4>
-                        <p>{t.desc}</p>
-                      </div>
-                    </>
-                  )}
-                </div>
-              ))}
-            </div>
-          </FadeIn>
         </div>
       </section>
     </>
