@@ -3931,67 +3931,87 @@ button:focus-visible {
 }
 
 /* ── Book Cards (Libros) ─── */
+/* ── Book Cover Cards ─── */
 .arc-books-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
 }
 .arc-book-card {
-  display: flex;
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 10px;
+  width: 180px;
+  height: 260px;
+  border-radius: 4px 12px 12px 4px;
   overflow: hidden;
-  transition: all 0.4s var(--ease-premium);
+  transition: all 0.5s var(--ease-premium);
+  cursor: default;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem 1rem 1rem;
+  background: linear-gradient(160deg, #1a2a3a 0%, #0d1820 60%, #0a1218 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 4px 16px rgba(0,0,0,0.4), -1px 0 0 rgba(255,255,255,0.04);
+}
+.arc-book-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 8px;
+  background: linear-gradient(180deg, var(--sol), rgba(212,168,67,0.4));
+  border-radius: 4px 0 0 4px;
 }
 .arc-book-card:hover {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(212,168,67,0.15);
-  transform: translateY(-2px);
+  transform: translateY(-6px) rotateY(-2deg);
+  box-shadow: 8px 12px 30px rgba(0,0,0,0.5), -2px 0 0 rgba(255,255,255,0.06);
 }
 .arc-book-card--hl {
+  background: linear-gradient(160deg, #2a1f10 0%, #1a1408 60%, #120e06 100%);
   border-color: rgba(212,168,67,0.2);
-  background: rgba(212,168,67,0.04);
 }
-.arc-book-spine {
-  width: 6px;
-  flex-shrink: 0;
-  background: linear-gradient(180deg, var(--sol), rgba(212,168,67,0.3));
-}
-.arc-book-card--hl .arc-book-spine {
+.arc-book-card--hl::before {
   background: linear-gradient(180deg, var(--sol), var(--celeste));
-  width: 8px;
+  width: 10px;
 }
+.arc-book-spine { display: none; }
 .arc-book-body {
-  padding: 1rem 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  flex: 1;
+  z-index: 1;
 }
 .arc-book-year {
   font-family: var(--font-bebas-neue), sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
   color: var(--sol);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .arc-book-title {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.9);
-  line-height: 1.4;
-  font-weight: 500;
+  font-family: var(--font-playfair-display), serif;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.95);
+  line-height: 1.35;
+  font-weight: 700;
+  flex: 1;
 }
 .arc-book-desc {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.5;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.4;
   font-style: italic;
 }
 .arc-book-pub {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.45);
-  letter-spacing: 0.5px;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 /* ── Paper Cards (Artículos) ─── */
@@ -4295,7 +4315,8 @@ button:focus-visible {
     flex-direction: row;
     min-width: auto;
   }
-  .arc-books-grid { grid-template-columns: 1fr; }
+  .arc-books-grid { justify-content: center; }
+  .arc-book-card { width: 150px; height: 220px; padding: 0.8rem; }
   .arc-papers-grid { grid-template-columns: 1fr; }
   .arc-interviews-grid { grid-template-columns: 1fr; }
   .arc-collab-card { padding: 1.5rem; }
