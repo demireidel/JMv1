@@ -53,7 +53,6 @@ export const etapas: Etapa[] = [
     label: "Etapa Técnica / Académica",
     desc: "pre-2014",
     books: [
-      { year: "2014", title: "Política Económica Contrarreloj", publisher: "Grupo Unión", desc: "Síntomas, diagnóstico y medidas para salir del cepo y volver a crecer.", cover: "/images/books/contrarreloj.jpg" },
       { year: "2014", title: "Lecturas de Economía en Tiempos del Kirchnerismo", publisher: "Grupo Unión", cover: "/images/books/lecturas-kirchnerismo.webp" },
     ],
   },
@@ -63,7 +62,6 @@ export const etapas: Etapa[] = [
     books: [
       { year: "2015", title: "El Retorno al Sendero de la Decadencia Argentina", publisher: "Grupo Unión", cover: "/images/books/retorno-sendero.webp" },
       { year: "2017", title: "Desenmascarando la Mentira Keynesiana", publisher: "Grupo Unión", cover: "/images/books/mentira-keynesiana.webp" },
-      { year: "2019", title: "Libertad, Libertad, Libertad", publisher: "Galerna", desc: "Para romper las cadenas que no nos dejan crecer.", cover: "/images/books/libertad-libertad.webp" },
       { year: "2020", title: "Pandenomics", desc: "La economía que viene en tiempos de megarrecesión, inflación y crisis global.", cover: "/images/books/pandenomics.webp" },
     ],
   },
