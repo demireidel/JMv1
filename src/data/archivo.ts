@@ -199,7 +199,7 @@ export const entrevistas: Entrevista[] = [
     outlet: "BBC",
     journalist: "Ione Wells",
     duration: "+20 minutos",
-    desc: "Ajuste económico y el intercambio viral sobre el precio de la leche. Relaciones con EE.UU., Israel y China. Malvinas: la visita de Cameron no era provocación. Elogio a Thatcher. Proceso de negociación de largo plazo por soberanía.",
+    desc: "En una entrevista tensa de más de veinte minutos, Milei defendió el ajuste económico y protagonizó un intercambio viral cuando la periodista Ione Wells lo confrontó con el precio de la leche — momento que recorrió las redes globales. Explicó la estrategia geopolítica de Argentina con EE.UU., Israel y China, elogió a Margaret Thatcher como referente, y abordó la cuestión Malvinas con una posición matizada: la visita de David Cameron no constituía provocación, y la recuperación de soberanía sería un proceso diplomático de largo plazo.",
     videoId: "-2tLkvw-1f4",
   },
   {
@@ -214,17 +214,17 @@ export const entrevistas: Entrevista[] = [
   {
     date: "DIC 2024",
     outlet: "Forbes Argentina",
-    desc: "Última entrevista del año. Negación del atraso cambiario. Plan económico 2025: menos inflación, reducción impositiva, tres pasos para salir del cepo, privatizaciones, libre comercio con EE.UU. Rol de Karina Milei. Condiciones al PRO: \"juntos en todo o separados\".",
+    desc: "En la última entrevista del año, Milei rechazó categóricamente la idea de atraso cambiario y desplegó su hoja de ruta para 2025: continuar la desinflación, reducir impuestos, ejecutar los tres pasos necesarios para salir del cepo, avanzar con privatizaciones y cerrar un acuerdo de libre comercio con Estados Unidos. Habló del rol estratégico de su hermana Karina Milei en la organización política y lanzó un ultimátum al PRO de Mauricio Macri: \"juntos en todo o separados\" — sin medias tintas.",
   },
   {
     date: "2024–25",
     outlet: "60 Minutes · The Economist · FT · WSJ",
-    desc: "Cobertura en formato investigativo norteamericano (60 Minutes, CBS). Perfiles editoriales en profundidad (The Economist). Múltiples entrevistas sobre política económica (Financial Times). Cobertura de las reformas fiscales (Wall Street Journal).",
+    desc: "Los medios más influyentes del mundo anglófono dedicaron cobertura sostenida al fenómeno Milei. El programa 60 Minutes de CBS envió un equipo a Buenos Aires para un segmento investigativo sobre las reformas. The Economist publicó perfiles editoriales en profundidad analizando el experimento libertario argentino. El Financial Times cubrió extensamente la política económica y las negociaciones con el FMI, mientras que el Wall Street Journal documentó el ajuste fiscal y la desinflación como caso de estudio para economías emergentes.",
   },
   {
     date: "2025",
     outlet: "Juan Carlos de Pablo & Ezequiel Burgo",
-    desc: "Cuatro entrevistas extensas que dieron origen al libro Tratando de Entender el Fenómeno Milei, centrado en la economía y el proceso decisorio presidencial.",
+    desc: "A lo largo de cuatro sesiones extensas con el legendario economista Juan Carlos de Pablo y el periodista Ezequiel Burgo, Milei abrió las puertas de su proceso decisorio presidencial como nunca antes. Las conversaciones — que dieron origen al libro Tratando de Entender el Fenómeno Milei — recorrieron desde la mecánica interna del ajuste fiscal hasta las discusiones con su equipo económico, revelando cómo se tomaron las decisiones clave de los primeros meses de gobierno.",
   },
 ];
 

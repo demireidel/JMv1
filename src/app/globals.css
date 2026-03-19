@@ -148,6 +148,7 @@ body {
   font-size: clamp(1.1rem, 2.2vw, 1.6rem); letter-spacing: 6px; text-transform: uppercase;
   color: var(--sol); margin-bottom: 1.2rem; font-weight: 400;
   animation: heroReveal 1s var(--ease-out-expo) 0.5s both;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 .hero-name {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
@@ -169,7 +170,7 @@ body {
   font-size: clamp(1.5rem, 3.5vw, 2.5rem); color: var(--sol);
   margin-top: 2rem; font-weight: 400; font-style: italic;
   animation: heroReveal 1s var(--ease-out-expo) 1s both;
-  text-shadow: 0 0 50px rgba(246,180,14,0.25);
+  text-shadow: 0 2px 30px rgba(0,0,0,0.5);
 }
 .hero-line {
   width: 60px; height: 2px;
@@ -183,6 +184,7 @@ body {
   max-width: 700px; margin: 0 auto; line-height: 1.4;
   font-style: italic;
   animation: heroReveal 1s var(--ease-out-expo) 1.4s both;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 
 /* Hero cinematic keyframes */
@@ -388,6 +390,7 @@ section { position: relative; overflow: hidden; }
 .v-prose p + p { margin-top: 1.15rem; }
 .v-prose strong { color: rgba(255,255,255,0.95); font-weight: 600; }
 .v-prose em { font-style: italic; color: rgba(255,255,255,0.78); }
+.v-prose a { color: var(--lla-violet); text-decoration: underline; text-underline-offset: 3px; }
 .v-prose .lead {
   font-family: var(--font-playfair-display), 'Playfair Display', serif;
   font-size: 1.15rem; line-height: 1.75; color: rgba(255,255,255,0.85);
@@ -1687,7 +1690,7 @@ a:focus-visible, button:focus-visible {
 
 /* ═══ SELECTION COLOR ═══ */
 ::selection {
-  background: rgba(246,180,14,0.25);
+  background: rgba(116,59,188,0.3);
   color: white;
 }
 
@@ -1695,10 +1698,10 @@ a:focus-visible, button:focus-visible {
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--dark); }
 ::-webkit-scrollbar-thumb {
-  background: rgba(246,180,14,0.2);
+  background: var(--lla-violet);
   border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(246,180,14,0.35); }
+::-webkit-scrollbar-thumb:hover { background: var(--sol); }
 
 /* ═══ FUTURO LAYOUT CLASSES (replace inline styles) ═══ */
 .futuro-section {
@@ -4776,5 +4779,24 @@ button:focus-visible {
     scroll-snap-align: center;
     min-width: 180px;
   }
+}
+
+/* ═══ IMAGE LOADING SHIMMER ═══ */
+img[loading="eager"]:not([src=""]) {
+  background: linear-gradient(90deg, rgba(255,255,255,0.02) 25%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.02) 75%);
+  background-size: 200% 100%;
+  animation: shimmerLoad 1.5s ease-in-out infinite;
+}
+@keyframes shimmerLoad {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+/* ═══ PRINT STYLES ═══ */
+@media print {
+  .site-nav, .scroll-progress, .back-to-top, .scroll-indicator, .photo-strip-wrapper { display: none; }
+  .hero { min-height: auto; page-break-after: always; }
+  .fade-in { opacity: 1; transform: none; }
+  body { background: white; color: black; }
 }
 

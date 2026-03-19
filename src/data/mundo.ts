@@ -80,18 +80,18 @@ export const megaStats: MegaStat[] = [
   {
     value: "1er",
     label: "País sudamericano",
-    detail: "en firmar un TLC bilateral con EE.UU. en la historia",
+    detail: "en firmar un TLC bilateral con EE.UU. en la historia — lo que ningún gobierno logró en 200 años",
   },
   {
     value: "1.675",
     label: "Productos argentinos",
-    detail: "con aranceles eliminados hacia EE.UU. + 221 posiciones norteamericanas",
+    detail: "con aranceles eliminados hacia EE.UU. + 221 posiciones norteamericanas con arancel cero recíproco",
     animated: { target: 1675, formatDot: true },
   },
   {
     value: "$1.013M",
     label: "Exportaciones recuperadas",
-    detail: "en acceso directo al mercado norteamericano",
+    detail: "en acceso directo al mercado de consumo más grande del mundo — USD 28T de PBI",
     animated: { target: 1013, prefix: "$", suffix: "M" },
   },
   {
@@ -172,7 +172,7 @@ export const financialSupport = {
 export const cooperationGrid: CooperationItem[] = [
   { icon: "🛡️", title: "Escudo de las Américas", desc: "Coalición hemisférica de 12 naciones contra el narcoterrorismo e interferencia extranjera. Co-liderada con EE.UU. Firmada en Miami, marzo 2026." },
   { icon: "⚡", title: "RIGI — Grandes Inversiones", desc: "Régimen de incentivos para inversiones estratégicas en energía, minería, tecnología e infraestructura. Vaca Muerta, GNL, litio y data centers de IA." },
-  { icon: "🤖", title: "Hub de Inteligencia Artificial", desc: "Primera Semana de IA en Argentina. Reuniones con CEOs de Apple, Meta, Tesla, OpenAI y Google. Posicionamiento como polo de IA en América Latina." },
+  { icon: "🤖", title: "Hub de Inteligencia Artificial", desc: "Reuniones con los 7 CEOs más influyentes de Silicon Valley (Apple, Meta, Tesla, OpenAI, Google, Amazon, a16z). Stargate Argentina: primer proyecto fuera de EE.UU. con inversión de hasta USD 25.000M." },
   { icon: "⚛️", title: "Plan Nuclear + SMR", desc: "Reactivación de Nucleoeléctrica Argentina. Plan de reactores modulares pequeños (SMR) para data centers y energía limpia. Cooperación con EE.UU." },
   { icon: "🔗", title: "Minerales Críticos", desc: "Acuerdo bilateral con EE.UU. sobre litio, tierras raras y cadenas de suministro. Reciclaje de baterías y seguridad de inversiones conjuntas." },
   { icon: "🌍", title: "Seguridad Económica", desc: "Alineamiento con EE.UU. en controles de exportación, seguridad de inversiones y protección frente a prácticas no mercantiles de terceros estados." },
