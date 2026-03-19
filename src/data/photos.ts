@@ -4,7 +4,7 @@ export const stripPhotos1 = [
   { src: "/images/strip/milei-trump.jpg", alt: "Milei con Trump en la Casa Blanca 2025" },
   { src: "/images/strip/milei-g7.jpg", alt: "Milei en el G7 Italia" },
   { src: "/images/strip/milei-musk.jpg", alt: "Milei con Elon Musk" },
-  { src: "/images/strip/g20-familia.jpg", alt: "Milei en cumbre internacional" },
+  { src: "/images/strip/milei-karina.jpg", alt: "Javier y Karina Milei" },
   { src: "/images/strip/milei-onu.jpg", alt: "Milei en la ONU" },
   { src: "/images/strip/milei-asuncion.jpg", alt: "Asunción presidencial Milei" },
   { src: "/images/strip/milei-g7-lideres.jpg", alt: "Milei cumbre G7 líderes" },
