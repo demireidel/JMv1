@@ -53,18 +53,18 @@ export const etapas: Etapa[] = [
     label: "Etapa Técnica / Académica",
     desc: "pre-2014",
     books: [
-      { year: "2014", title: "Política Económica Contrarreloj", publisher: "Grupo Unión", desc: "Síntomas, diagnóstico y medidas para salir del cepo y volver a crecer." },
-      { year: "2014", title: "Lecturas de Economía en Tiempos del Kirchnerismo", publisher: "Grupo Unión" },
+      { year: "2014", title: "Política Económica Contrarreloj", publisher: "Grupo Unión", desc: "Síntomas, diagnóstico y medidas para salir del cepo y volver a crecer.", cover: "/images/books/contrarreloj.jpg" },
+      { year: "2014", title: "Lecturas de Economía en Tiempos del Kirchnerismo", publisher: "Grupo Unión", cover: "/images/books/lecturas-kirchnerismo.webp" },
     ],
   },
   {
     label: "Intervención Económica",
     desc: "2015–2020",
     books: [
-      { year: "2015", title: "El Retorno al Sendero de la Decadencia Argentina", publisher: "Grupo Unión" },
-      { year: "2017", title: "Desenmascarando la Mentira Keynesiana", publisher: "Grupo Unión" },
-      { year: "2019", title: "Libertad, Libertad, Libertad", publisher: "Galerna", desc: "Para romper las cadenas que no nos dejan crecer." },
-      { year: "2020", title: "Pandenomics", desc: "La economía que viene en tiempos de megarrecesión, inflación y crisis global." },
+      { year: "2015", title: "El Retorno al Sendero de la Decadencia Argentina", publisher: "Grupo Unión", cover: "/images/books/retorno-sendero.webp" },
+      { year: "2017", title: "Desenmascarando la Mentira Keynesiana", publisher: "Grupo Unión", cover: "/images/books/mentira-keynesiana.webp" },
+      { year: "2019", title: "Libertad, Libertad, Libertad", publisher: "Galerna", desc: "Para romper las cadenas que no nos dejan crecer.", cover: "/images/books/libertad-libertad.webp" },
+      { year: "2020", title: "Pandenomics", desc: "La economía que viene en tiempos de megarrecesión, inflación y crisis global.", cover: "/images/books/pandenomics.webp" },
     ],
   },
   {
@@ -72,8 +72,7 @@ export const etapas: Etapa[] = [
     desc: "2021–presente",
     books: [
       { year: "2022", title: "El Fin de la Inflación", publisher: "Planeta", highlight: true, cover: "/images/books/fin-inflacion.jpg" },
-      { year: "2023", title: "Mi Pensamiento Político", desc: "Selección de textos e intervenciones de su primer año en política." },
-      { year: "2024", title: "El Camino del Libertario", publisher: "Deusto (Planeta)", highlight: true, desc: "Edición española. Bestseller internacional.", cover: "/images/books/camino-libertario.jpg" },
+      { year: "2024", title: "El Camino del Libertario", publisher: "Deusto (Planeta)", highlight: true, desc: "Mi pensamiento político. Bestseller internacional.", cover: "/images/books/camino-libertario.jpg" },
       { year: "2024", title: "Capitalismo, Socialismo y la Trampa Neoclásica", publisher: "Planeta", highlight: true, desc: "Presentado en el Luna Park con show musical.", cover: "/images/books/capitalismo-trampa.jpg" },
     ],
   },
