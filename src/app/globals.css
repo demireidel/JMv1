@@ -2374,6 +2374,321 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 }
 .arc-award-icon { color: var(--sol); font-size: 0.6rem; flex-shrink: 0; }
 
+/* ─── Archivo Stats Bar ─── */
+.arc-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+.arc-stat {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background: var(--navy);
+}
+.arc-stat-val {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--sol);
+  line-height: 1;
+}
+.arc-stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.5rem;
+}
+
+/* ─── Books Timeline ─── */
+.arc-timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+}
+.arc-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--sol), rgba(212,168,67,0.1));
+}
+.arc-tl-era {
+  padding: 1.5rem 0 0.8rem;
+}
+.arc-tl-era-label {
+  font-family: var(--font-playfair-display), 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--t1);
+  font-weight: 600;
+}
+.arc-tl-era-period {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sol);
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+.arc-tl-item {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.8rem 0 0.8rem 0;
+  position: relative;
+  align-items: flex-start;
+}
+.arc-tl-dot {
+  position: absolute;
+  left: -2.35rem;
+  top: 1.2rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dark);
+  border: 2px solid rgba(212,168,67,0.5);
+  flex-shrink: 0;
+  z-index: 1;
+}
+.arc-tl-item--hl .arc-tl-dot {
+  background: var(--sol);
+  border-color: var(--sol);
+  box-shadow: 0 0 12px rgba(246,180,14,0.4);
+}
+.arc-tl-year {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: var(--sol);
+  min-width: 48px;
+  flex-shrink: 0;
+}
+.arc-tl-content { flex: 1; }
+.arc-tl-title {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+}
+.arc-tl-meta {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0.15rem;
+  display: block;
+}
+.arc-tl-pub {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  display: block;
+  margin-top: 0.15rem;
+}
+.arc-tl-item--hl .arc-tl-title {
+  color: var(--t1);
+}
+.arc-tl-item--hl {
+  padding-left: 0.8rem;
+  border-left: 2px solid rgba(246,180,14,0.15);
+  border-radius: 0 8px 8px 0;
+  background: rgba(246,180,14,0.02);
+  margin-left: -0.4rem;
+}
+
+/* ─── Keynote Cards ─── */
+.arc-keynotes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.arc-keynote {
+  padding: 2rem;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.4s ease;
+}
+.arc-keynote:hover {
+  background: rgba(246,180,14,0.04);
+  border-color: rgba(212,168,67,0.15);
+  transform: translateY(-3px);
+}
+.arc-keynote-date {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  color: var(--sol);
+  display: inline-block;
+  padding: 2px 10px;
+  background: rgba(246,180,14,0.1);
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+.arc-keynote-title {
+  font-family: var(--font-playfair-display), 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.arc-keynote-loc {
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.arc-keynote-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ─── Compact Speeches ─── */
+.arc-speeches-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.arc-speech-sm {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.arc-speech-sm:hover {
+  background: rgba(246,180,14,0.03);
+  border-color: rgba(212,168,67,0.1);
+  transform: translateX(4px);
+}
+.arc-speech-sm-date {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-size: 0.8rem;
+  color: var(--sol);
+  min-width: 70px;
+  flex-shrink: 0;
+}
+.arc-speech-sm-title {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+}
+.arc-speech-sm-loc {
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 1px;
+}
+
+/* ─── Featured Interviews ─── */
+.arc-interviews-featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.arc-interview-lg {
+  padding: 2rem;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+.arc-interview-lg:hover {
+  background: rgba(116,172,223,0.04);
+  border-color: rgba(116,172,223,0.15);
+  transform: translateY(-3px);
+}
+.arc-interview-lg-outlet {
+  font-family: var(--font-playfair-display), 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.arc-interview-lg-by {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 300;
+  margin-bottom: 0.8rem;
+}
+.arc-interview-lg-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+  font-weight: 300;
+  flex: 1;
+}
+.arc-interview-lg-date {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--celeste);
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 2px 10px;
+  background: rgba(116,172,223,0.1);
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+/* ─── Awards Badge Strip ─── */
+.arc-awards-strip {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212,168,67,0.3) transparent;
+}
+.arc-awards-strip::-webkit-scrollbar { height: 4px; }
+.arc-awards-strip::-webkit-scrollbar-track { background: transparent; }
+.arc-awards-strip::-webkit-scrollbar-thumb { background: rgba(212,168,67,0.3); border-radius: 4px; }
+.arc-award-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  white-space: nowrap;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.82);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.arc-award-badge:hover {
+  background: rgba(246,180,14,0.04);
+  border-color: rgba(212,168,67,0.15);
+}
+.arc-award-badge-icon {
+  color: var(--sol);
+  font-size: 0.5rem;
+}
+
+/* ─── Archivo Responsive ─── */
+@media (max-width: 768px) {
+  .arc-stats { grid-template-columns: repeat(2, 1fr); }
+  .arc-keynotes { grid-template-columns: 1fr; }
+  .arc-interviews-featured { grid-template-columns: 1fr; }
+  .arc-timeline { padding-left: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .arc-stats { grid-template-columns: 1fr; }
+}
+
 /* Archivo Responsive */
 @media (max-width: 768px) {
   .arc-papers { grid-template-columns: 1fr; }

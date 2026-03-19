@@ -1,3 +1,6 @@
+"use client";
+
+import { useAnimatedNumber } from "@/hooks";
 import FadeIn from "./FadeIn";
 import {
   etapas,
@@ -7,6 +10,11 @@ import {
   influencias,
   reconocimientos,
 } from "@/data/archivo";
+
+function AnimatedStat({ target, suffix = "" }: { target: number; suffix?: string }) {
+  const { ref, value } = useAnimatedNumber({ target, duration: 2000 });
+  return <div ref={ref} style={{ display: "inline" }}>{value}{suffix}</div>;
+}
 
 export default function Archivo() {
   return (
@@ -27,7 +35,27 @@ export default function Archivo() {
           </div>
         </FadeIn>
 
-        {/* ─── LIBROS ─── */}
+        {/* ─── HERO STATS BAR ─── */}
+        <div className="arc-stats">
+          <div className="arc-stat">
+            <div className="arc-stat-val"><AnimatedStat target={14} /></div>
+            <div className="arc-stat-label">Libros publicados</div>
+          </div>
+          <div className="arc-stat">
+            <div className="arc-stat-val"><AnimatedStat target={50} suffix="+" /></div>
+            <div className="arc-stat-label">Artículos académicos</div>
+          </div>
+          <div className="arc-stat">
+            <div className="arc-stat-val"><AnimatedStat target={9} /></div>
+            <div className="arc-stat-label">Discursos internacionales</div>
+          </div>
+          <div className="arc-stat">
+            <div className="arc-stat-val"><AnimatedStat target={6} /></div>
+            <div className="arc-stat-label">Entrevistas globales</div>
+          </div>
+        </div>
+
+        {/* ─── LIBROS — VISUAL TIMELINE ─── */}
         <FadeIn>
           <div className="arc-divider">
             <span className="arc-divider-line" />
@@ -43,28 +71,27 @@ export default function Archivo() {
           </p>
         </FadeIn>
 
-        {etapas.map((etapa, ei) => (
-          <FadeIn key={ei}>
-            <div className="arc-etapa">
-              <div className="arc-etapa-hdr">
-                <h4 className="arc-etapa-title">{etapa.label}</h4>
-                <span className="arc-etapa-period">{etapa.desc}</span>
+        <div className="arc-timeline">
+          {etapas.map((etapa, ei) => (
+            <FadeIn key={ei}>
+              <div className="arc-tl-era">
+                <div className="arc-tl-era-label">{etapa.label}</div>
+                <div className="arc-tl-era-period">{etapa.desc}</div>
               </div>
-              <div className="arc-books">
-                {etapa.books.map((b, bi) => (
-                  <div key={bi} className={`arc-book ${b.highlight ? "arc-book--hl" : ""}`}>
-                    <span className="arc-book-year">{b.year}</span>
-                    <div className="arc-book-body">
-                      <h5 className="arc-book-title">{b.title}</h5>
-                      {b.coauthors && <span className="arc-book-meta">con {b.coauthors}</span>}
-                      {b.publisher && <span className="arc-book-pub">{b.publisher}</span>}
-                    </div>
+              {etapa.books.map((b, bi) => (
+                <div key={bi} className={`arc-tl-item ${b.highlight ? "arc-tl-item--hl" : ""}`}>
+                  <div className="arc-tl-dot" />
+                  <div className="arc-tl-year">{b.year}</div>
+                  <div className="arc-tl-content">
+                    <h5 className="arc-tl-title">{b.title}</h5>
+                    {b.coauthors && <span className="arc-tl-meta">con {b.coauthors}</span>}
+                    {b.publisher && <span className="arc-tl-pub">{b.publisher}</span>}
                   </div>
-                ))}
-              </div>
-            </div>
-          </FadeIn>
-        ))}
+                </div>
+              ))}
+            </FadeIn>
+          ))}
+        </div>
 
         <FadeIn>
           <div className="arc-note">
@@ -125,7 +152,7 @@ export default function Archivo() {
           </div>
         </FadeIn>
 
-        {/* ─── DISCURSOS ─── */}
+        {/* ─── DISCURSOS — KEYNOTE CARDS + COMPACT LIST ─── */}
         <FadeIn>
           <div className="arc-divider" style={{ marginTop: "5rem" }}>
             <span className="arc-divider-line" />
@@ -140,22 +167,34 @@ export default function Archivo() {
           </p>
         </FadeIn>
 
-        <div className="arc-speeches">
-          {discursos.map((d, i) => (
+        <div className="arc-keynotes">
+          {discursos.filter(d => d.keynote).slice(0, 4).map((d, i) => (
             <FadeIn key={i}>
-              <div className={`arc-speech ${d.keynote ? "arc-speech--keynote" : ""}`}>
-                <div className="arc-speech-date">{d.date}</div>
-                <div className="arc-speech-body">
-                  <h5 className="arc-speech-title">{d.title}</h5>
-                  <span className="arc-speech-loc">{d.location}</span>
-                  <p className="arc-speech-desc">{d.desc}</p>
+              <div className="arc-keynote">
+                <span className="arc-keynote-date">{d.date}</span>
+                <h4 className="arc-keynote-title">{d.title}</h4>
+                <span className="arc-keynote-loc">{d.location}</span>
+                <p className="arc-keynote-desc">{d.desc}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <div className="arc-speeches-compact">
+          {discursos.filter(d => !d.keynote).map((d, i) => (
+            <FadeIn key={i}>
+              <div className="arc-speech-sm">
+                <span className="arc-speech-sm-date">{d.date}</span>
+                <div>
+                  <h5 className="arc-speech-sm-title">{d.title}</h5>
+                  <span className="arc-speech-sm-loc">{d.location}</span>
                 </div>
               </div>
             </FadeIn>
           ))}
         </div>
 
-        {/* ─── ENTREVISTAS ─── */}
+        {/* ─── ENTREVISTAS — MAGAZINE CARDS + COMPACT ─── */}
         <FadeIn>
           <div className="arc-divider" style={{ marginTop: "5rem" }}>
             <span className="arc-divider-line" />
@@ -170,15 +209,27 @@ export default function Archivo() {
           </p>
         </FadeIn>
 
-        <div className="arc-interviews">
-          {entrevistas.map((e, i) => (
+        <div className="arc-interviews-featured">
+          {entrevistas.filter(e => e.highlight).map((e, i) => (
             <FadeIn key={i}>
-              <div className={`arc-interview ${e.highlight ? "arc-interview--hl" : ""}`}>
-                <div className="arc-interview-date">{e.date}</div>
-                <div className="arc-interview-body">
-                  <h5 className="arc-interview-outlet">{e.outlet}</h5>
-                  {e.journalist && <span className="arc-interview-by">por {e.journalist}</span>}
-                  <p className="arc-interview-desc">{e.desc}</p>
+              <div className="arc-interview-lg">
+                <h4 className="arc-interview-lg-outlet">{e.outlet}</h4>
+                {e.journalist && <span className="arc-interview-lg-by">por {e.journalist}</span>}
+                <p className="arc-interview-lg-desc">{e.desc}</p>
+                <span className="arc-interview-lg-date">{e.date}</span>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <div className="arc-interviews-compact">
+          {entrevistas.filter(e => !e.highlight).map((e, i) => (
+            <FadeIn key={i}>
+              <div className="arc-speech-sm">
+                <span className="arc-speech-sm-date">{e.date}</span>
+                <div>
+                  <h5 className="arc-speech-sm-title">{e.outlet}</h5>
+                  {e.journalist && <span className="arc-speech-sm-loc">por {e.journalist}</span>}
                 </div>
               </div>
             </FadeIn>
@@ -217,7 +268,7 @@ export default function Archivo() {
           </div>
         </FadeIn>
 
-        {/* ─── RECONOCIMIENTOS ─── */}
+        {/* ─── RECONOCIMIENTOS — HORIZONTAL BADGE STRIP ─── */}
         <FadeIn>
           <div className="arc-divider" style={{ marginTop: "5rem" }}>
             <span className="arc-divider-line" />
@@ -227,10 +278,10 @@ export default function Archivo() {
         </FadeIn>
 
         <FadeIn>
-          <div className="arc-awards">
+          <div className="arc-awards-strip">
             {reconocimientos.map((r, i) => (
-              <div key={i} className="arc-award">
-                <span className="arc-award-icon">◆</span>
+              <div key={i} className="arc-award-badge">
+                <span className="arc-award-badge-icon">◆</span>
                 <span>{r}</span>
               </div>
             ))}
