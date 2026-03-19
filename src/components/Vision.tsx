@@ -62,7 +62,7 @@ function ChapterPhoto({ index }: { index: number }) {
     <FadeIn>
       <div className="v-chapter-photo">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={photo.src} alt={photo.alt} loading="lazy" />
+        <img src={photo.src} alt={photo.alt} loading="eager" />
         <div className="v-photo-caption">{photo.caption}</div>
       </div>
     </FadeIn>

@@ -53,7 +53,7 @@ export default function Futuro() {
             </div>
             <div className="pcard" style={{ aspectRatio: "16/9" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={siliconValley.photo.src} alt={siliconValley.photo.alt} loading="lazy" style={{ objectPosition: siliconValley.photo.objectPosition }} />
+              <img src={siliconValley.photo.src} alt={siliconValley.photo.alt} loading="eager" style={{ objectPosition: siliconValley.photo.objectPosition }} />
               <div className="cap">
                 <strong>{siliconValley.photo.captionStrong}</strong>
                 <span>{siliconValley.photo.captionSpan}</span>
@@ -69,7 +69,7 @@ export default function Futuro() {
               <div className="fg-item" key={p.tag + p.who}>
                 <div className="fg-badge">{p.tag}</div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={p.who} loading="lazy" style={{ objectPosition: p.pos }} />
+                <img src={p.src} alt={p.who} loading="eager" style={{ objectPosition: p.pos }} />
                 <div className="fg-overlay">
                   <div className="fg-who">{p.who}</div>
                   <div className="fg-where">{p.where}</div>
@@ -93,7 +93,7 @@ export default function Futuro() {
           <div className="duo flip">
             <div className="pcard" style={{ aspectRatio: "16/9" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={stargate.photo.src} alt={stargate.photo.alt} loading="lazy" style={{ objectPosition: stargate.photo.objectPosition }} />
+              <img src={stargate.photo.src} alt={stargate.photo.alt} loading="eager" style={{ objectPosition: stargate.photo.objectPosition }} />
               <div className="cap">
                 <strong>{stargate.photo.captionStrong}</strong>
                 <span>{stargate.photo.captionSpan}</span>
@@ -132,7 +132,7 @@ export default function Futuro() {
           <div className="duo">
             <div className="pcard" style={{ aspectRatio: "16/9" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={nuclear.photo.src} alt={nuclear.photo.alt} loading="lazy" style={{ objectPosition: nuclear.photo.objectPosition }} />
+              <img src={nuclear.photo.src} alt={nuclear.photo.alt} loading="eager" style={{ objectPosition: nuclear.photo.objectPosition }} />
               <div className="cap">
                 <strong>{nuclear.photo.captionStrong}</strong>
                 <span>{nuclear.photo.captionSpan}</span>
@@ -173,7 +173,7 @@ export default function Futuro() {
           <div className="duo flip">
             <div className="pcard" style={{ aspectRatio: "16/9" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={vacaMuerta.photo.src} alt={vacaMuerta.photo.alt} loading="lazy" style={{ objectPosition: vacaMuerta.photo.objectPosition }} />
+              <img src={vacaMuerta.photo.src} alt={vacaMuerta.photo.alt} loading="eager" style={{ objectPosition: vacaMuerta.photo.objectPosition }} />
               <div className="cap">
                 <strong>{vacaMuerta.photo.captionStrong}</strong>
                 <span>{vacaMuerta.photo.captionSpan}</span>
