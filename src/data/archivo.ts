@@ -33,6 +33,7 @@ export interface Discurso {
   frase?: string;
   duration?: string;
   themes?: string[];
+  videoId?: string;
 }
 
 export interface Entrevista {
@@ -43,6 +44,7 @@ export interface Entrevista {
   highlight?: boolean;
   impact?: string;
   duration?: string;
+  videoId?: string;
 }
 
 export interface Influencia {
@@ -197,6 +199,7 @@ export const entrevistas: Entrevista[] = [
     duration: "~2 horas",
     desc: "Un día después de la gala de Trump en Mar-a-Lago. Conversión intelectual: lectura de Rothbard como punto de inflexión. La Acción Humana de Mises como revolución personal. Alberto Benegas Lynch. Resultados de gestión: inflación de 17.000% anual heredada reducida a 28%. 50.000 empleados públicos despedidos. Ministerios reducidos a la mitad. Pobreza de 57% a 46%. 3.200 reformas pendientes. Modelo irlandés. Musk como \"héroe en la historia de la humanidad\".",
     impact: "Disponible en español e inglés en X, YouTube y Spotify.",
+    videoId: "8NLzc9kobDk",
     highlight: true,
   },
   {

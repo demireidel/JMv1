@@ -197,6 +197,16 @@ export default function Archivo() {
                         </div>
                       )}
                       {d.frase && <p className="arc-speech-frase">&ldquo;{d.frase}&rdquo;</p>}
+                      {d.videoId && (
+                        <div className="arc-video-embed">
+                          <iframe
+                            src={`https://www.youtube.com/embed/${d.videoId}`}
+                            title={d.title}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </FadeIn>
@@ -224,6 +234,16 @@ export default function Archivo() {
                     {e.duration && <span className="arc-interview-duration">{e.duration}</span>}
                     <p className="arc-interview-desc">{e.desc}</p>
                     {e.impact && <p className="arc-interview-impact">{e.impact}</p>}
+                    {e.videoId && (
+                      <div className="arc-video-embed">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${e.videoId}`}
+                          title={e.outlet}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    )}
                     <span className="arc-interview-date">{e.date}</span>
                   </div>
                 </FadeIn>
