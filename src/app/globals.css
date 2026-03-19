@@ -3982,6 +3982,12 @@ button:focus-visible {
   line-height: 1.4;
   font-weight: 500;
 }
+.arc-book-desc {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+  font-style: italic;
+}
 .arc-book-pub {
   font-size: 0.72rem;
   color: rgba(255,255,255,0.45);
@@ -4107,6 +4113,17 @@ button:focus-visible {
   color: rgba(255,255,255,0.72);
   line-height: 1.6;
 }
+.arc-speech-frase {
+  font-style: italic;
+  font-family: var(--font-playfair-display), serif;
+  font-size: 0.88rem;
+  color: var(--sol);
+  opacity: 0.8;
+  margin-top: 0.6rem;
+  line-height: 1.5;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(212,168,67,0.3);
+}
 
 /* ── Interview Cards (Entrevistas) ─── */
 .arc-interviews-grid {
@@ -4155,6 +4172,14 @@ button:focus-visible {
   color: rgba(255,255,255,0.72);
   line-height: 1.6;
   flex: 1;
+}
+.arc-interview-impact {
+  font-size: 0.75rem;
+  color: var(--sol);
+  opacity: 0.75;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-top: 0.3rem;
 }
 .arc-interview-date {
   font-family: var(--font-bebas-neue), sans-serif;

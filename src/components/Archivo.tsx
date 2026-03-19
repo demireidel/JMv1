@@ -113,6 +113,7 @@ export default function Archivo() {
                         <div className="arc-book-body">
                           <span className="arc-book-year">{b.year}</span>
                           <h5 className="arc-book-title">{b.title}</h5>
+                          {b.desc && <p className="arc-book-desc">{b.desc}</p>}
                           {b.publisher && <span className="arc-book-pub">{b.publisher}</span>}
                         </div>
                       </div>
@@ -177,6 +178,7 @@ export default function Archivo() {
                       <h4 className="arc-speech-title">{d.title}</h4>
                       <span className="arc-speech-location">{d.location}</span>
                       <p className="arc-speech-desc">{d.desc}</p>
+                      {d.frase && <p className="arc-speech-frase">&ldquo;{d.frase}&rdquo;</p>}
                     </div>
                   </div>
                 </FadeIn>
@@ -202,6 +204,7 @@ export default function Archivo() {
                     <div className="arc-interview-outlet">{e.outlet}</div>
                     {e.journalist && <span className="arc-interview-journalist">por {e.journalist}</span>}
                     <p className="arc-interview-desc">{e.desc}</p>
+                    {e.impact && <p className="arc-interview-impact">{e.impact}</p>}
                     <span className="arc-interview-date">{e.date}</span>
                   </div>
                 </FadeIn>
