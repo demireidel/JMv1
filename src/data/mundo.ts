@@ -211,8 +211,8 @@ export const tradeAgreements: TradeAgreement[] = [
       { text: "100K tn carne bovina cuota libre", color: "green" },
       { text: "EXIM Bank + DFC financiamiento", color: "gold" },
     ],
-    image: "/images/strip/milei-bilateral.jpg",
-    imageAlt: "Acuerdo Argentina-EE.UU.",
+    image: "/images/diplomatica/trump-casablanca-oval.jpg",
+    imageAlt: "Milei con Trump en el Salón Oval — Acuerdo bilateral Argentina-EE.UU.",
     badge: "🇺🇸🇦🇷 Firmado Feb 2026",
   },
   {
@@ -225,8 +225,8 @@ export const tradeAgreements: TradeAgreement[] = [
       { text: "De USD 8.641M a 19.165M", color: "blue" },
       { text: "+76% en 5 años / +122% en 10", color: "green" },
     ],
-    image: "/images/vision/europa-viva-24.jpg",
-    imageAlt: "Mercosur-UE",
+    image: "/images/mundo/mercosur-ue-asuncion.jpg",
+    imageAlt: "Ceremonia de firma Mercosur-UE en Asunción, enero 2026",
     badge: "🇪🇺 Firmado Ene 2026",
     reverse: true,
   },
@@ -240,8 +240,8 @@ export const tradeAgreements: TradeAgreement[] = [
       { text: "100% arancel cero industrial", color: "blue" },
       { text: "USD 4,3B PBI combinado", color: "green" },
     ],
-    image: "/images/vision/europa-viva-24.jpg",
-    imageAlt: "Mercosur-EFTA",
+    image: "/images/mundo/milei-pena-efta.jpg",
+    imageAlt: "Milei con Santiago Peña — Cumbre Mercosur-EFTA",
     badge: "🇨🇭🇳🇴 Firmado Sep 2025",
   },
 ];
@@ -256,8 +256,8 @@ export const financialSupport = {
     { text: "1ª vez ESF para Latinoamérica", color: "blue" as const },
     { text: "Riesgo país < 500 (mín. desde 2018)", color: "green" as const },
   ],
-  image: "/images/strip/bilateral-casablanca.jpg",
-  imageAlt: "Acuerdo financiero",
+  image: "/images/diplomatica/davos-2024-fmi.jpg",
+  imageAlt: "Milei con directivos del FMI en Davos — Respaldo financiero internacional",
 };
 
 export const cooperationGrid: CooperationItem[] = [
@@ -303,7 +303,7 @@ export const cooperationGrid: CooperationItem[] = [
 export const mundoHero = {
   imgSrc: "/images/strip/bilateral-casablanca.jpg",
   imgAlt: "Argentina en el mundo",
-  subtitle: "Sección 05 — Inserción Internacional",
+  subtitle: "Inserción Internacional",
   titleLine1: "ARGENTINA",
   titleLine2: "EN EL MUNDO",
 } as const;

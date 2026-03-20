@@ -215,7 +215,7 @@ export default function Logros() {
         <FadeIn>
           <div className="arc-photo-break" style={{ margin: "4rem 0" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/strip/milei-bilateral.jpg" alt="Reunión bilateral Argentina-EE.UU." loading="eager" />
+            <img src="/images/diplomatica/cordoba-25mayo-gabinete.jpg" alt="Milei con su gabinete — 25 de Mayo en Córdoba" loading="eager" />
           </div>
         </FadeIn>
 

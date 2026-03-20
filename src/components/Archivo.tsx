@@ -40,7 +40,7 @@ export default function Archivo() {
       {/* ─── HERO ─── */}
       <div className="arc-hero-photo">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/futuro/stargate-casarosada.jpg" alt="Milei en Casa Rosada — Stargate" style={{ objectPosition: "center 30%" }} />
+        <img src="/images/archivo/milei-congreso.jpg" alt="Milei en el Congreso — Apertura de sesiones" style={{ objectPosition: "center 40%" }} />
         <div className="arc-hero-overlay" />
       </div>
 

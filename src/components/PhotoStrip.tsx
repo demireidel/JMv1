@@ -28,6 +28,7 @@ export default function PhotoStrip({ photos, reverse = false }: PhotoStripProps)
     currentOffset: 0,
     animationPaused: false,
   });
+  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const getTranslateX = useCallback(() => {
     if (!stripRef.current) return 0;
@@ -44,6 +45,12 @@ export default function PhotoStrip({ photos, reverse = false }: PhotoStripProps)
       if (!stripRef.current || !wrapperRef.current) return;
       e.preventDefault();
       setIsDragging(true);
+
+      // Cancel any pending resume
+      if (resumeTimer.current) {
+        clearTimeout(resumeTimer.current);
+        resumeTimer.current = null;
+      }
 
       // Capture current animation position
       const currentX = getTranslateX();
@@ -82,18 +89,29 @@ export default function PhotoStrip({ photos, reverse = false }: PhotoStripProps)
       setIsDragging(false);
       wrapperRef.current.releasePointerCapture(e.pointerId);
 
-      // Resume CSS animation from current position
+      const el = stripRef.current;
       const currentX = getTranslateX();
-      const stripWidth = stripRef.current.scrollWidth / 2;
+      const stripWidth = el.scrollWidth / 2;
 
-      // Calculate what percentage through the animation we are
-      const progress = Math.abs(currentX / stripWidth);
+      // The CSS animation goes 0 → -50% (i.e. 0 → -stripWidth).
+      // For reverse strips, animation-direction: reverse makes it go -stripWidth → 0.
+      // We need to figure out what fraction of the cycle matches currentX.
+      // Normalize currentX into [0, stripWidth) range
+      let normalizedX = ((currentX % stripWidth) + stripWidth) % stripWidth;
+      // progress = how far through the 0→-stripWidth cycle
+      // currentX is negative, so progress = normalizedX / stripWidth gives us
+      // position in the forward animation where 0 = start, 1 = end
+      const progress = 1 - normalizedX / stripWidth;
       const duration = reverse ? 60 : 55;
       const delay = -(progress * duration);
 
-      stripRef.current.style.transform = "";
-      stripRef.current.style.animation = "";
-      stripRef.current.style.animationDelay = `${delay}s`;
+      // Force reflow: remove animation, set it back with correct delay
+      el.style.animation = "none";
+      el.style.transform = "";
+      // Force reflow so browser registers the "none"
+      void el.offsetWidth;
+      el.style.animation = "";
+      el.style.animationDelay = `${delay}s`;
     },
     [isDragging, getTranslateX, reverse]
   );
@@ -102,6 +120,7 @@ export default function PhotoStrip({ photos, reverse = false }: PhotoStripProps)
   useEffect(() => {
     return () => {
       setIsDragging(false);
+      if (resumeTimer.current) clearTimeout(resumeTimer.current);
     };
   }, []);
 

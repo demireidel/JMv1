@@ -77,8 +77,8 @@ export default function Reformas() {
       <div className="ref-photo-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/strip/milei-bilateral.jpg"
-          alt="Firma de reformas estructurales"
+          src="/images/diplomatica/primer-ano-dnu-gabinete.jpg"
+          alt="Milei firma el DNU 70/2023 de desregulación con su gabinete"
           style={{ objectPosition: "center 40%" }}
         />
         <div className="ref-photo-overlay" />
@@ -135,7 +135,7 @@ export default function Reformas() {
         <FadeIn>
           <div className="ref-photo-break">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/strip/bilateral-casablanca.jpg" alt="Milei con Trump en la Casa Blanca" loading="eager" />
+            <img src="/images/diplomatica/pacto-mayo-tucuman.jpg" alt="Pacto de Mayo — Gobernadores firman pacto de reformas estructurales" loading="eager" />
           </div>
         </FadeIn>
 
@@ -157,7 +157,7 @@ export default function Reformas() {
         <FadeIn>
           <div className="ref-photo-break">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/strip/bilateral-casablanca.jpg" alt="Acuerdo bilateral" loading="eager" />
+            <img src="/images/archivo/milei-congreso-2.jpg" alt="Milei en el Congreso — Reformas legislativas" loading="eager" />
           </div>
         </FadeIn>
 
@@ -179,7 +179,7 @@ export default function Reformas() {
         <FadeIn>
           <div className="ref-photo-break">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/futuro/google-delegacion.jpg" alt="Delegación argentina en Google" loading="eager" />
+            <img src="/images/diplomatica/presupuesto-congreso.jpg" alt="Milei presenta el presupuesto en el Congreso" loading="eager" />
           </div>
         </FadeIn>
 
