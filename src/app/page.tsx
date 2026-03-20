@@ -7,7 +7,7 @@ import Logros from "@/components/Logros";
 import Reformas from "@/components/Reformas";
 import Futuro from "@/components/Futuro";
 import Mundo from "@/components/Mundo";
-import Economia from "@/components/Economia";
+
 import Archivo from "@/components/Archivo";
 import Footer from "@/components/Footer";
 import { stripPhotos1, stripPhotos2 } from "@/data/photos";
@@ -25,7 +25,6 @@ export default function Home() {
       <PhotoStrip photos={stripPhotos2} reverse />
       <Futuro />
       <Mundo />
-      <Economia />
       <PhotoStrip photos={stripPhotos1} reverse />
       <Archivo />
       <Footer />

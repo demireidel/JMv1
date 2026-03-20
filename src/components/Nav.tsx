@@ -8,7 +8,7 @@ const links = [
   { href: "#reformas", label: "Reformas" },
   { href: "#futuro", label: "Futuro" },
   { href: "#mundo", label: "Mundo" },
-  { href: "#economia", label: "Economía" },
+
   { href: "#archivo", label: "Archivo" },
 ] as const;
 
