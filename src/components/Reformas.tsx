@@ -167,7 +167,7 @@ export default function Reformas() {
         <FadeIn>
           <div className="ref-photo-break">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/strip/g20-familia.jpg" alt="G20 foto de familia" loading="eager" />
+            <img src="/images/strip/milei-g7-lideres.jpg" alt="Milei con líderes del G7" loading="eager" />
           </div>
         </FadeIn>
 

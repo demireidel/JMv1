@@ -73,7 +73,7 @@ export default function RootLayout({
       lang="es"
       className={`${sourceSans.variable} ${playfair.variable} ${bebas.variable}`}
     >
-      <body>
+      <body className="film-grain">
         <a href="#main-content" className="skip-link">
           Saltar al contenido principal
         </a>

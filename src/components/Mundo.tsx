@@ -6,6 +6,8 @@ import {
   megaStats,
   tradeAgreements,
   financialSupport,
+  cooperationGrid,
+  cooperacionHeader,
 } from "@/data/mundo";
 
 function AnimatedStat({
@@ -35,70 +37,86 @@ function AnimatedStat({
 export default function Mundo() {
   return (
     <>
-      {/* Hero */}
-      <section className="hero" id="mundo" style={{ minHeight: 600, alignItems: "flex-end" }}>
+      {/* ── Hero ────────────────────────────────────────────── */}
+      <section className="hero" id="mundo" style={{ minHeight: 680, alignItems: "flex-end" }}>
         <div className="hero-bg">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/strip/bilateral-casablanca.jpg"
             alt="Argentina en el mundo"
-            style={{ objectPosition: "center 30%", filter: "brightness(0.28) contrast(1.15) saturate(0.85)" }}
+            style={{ objectPosition: "center 30%", filter: "brightness(0.22) contrast(1.2) saturate(0.8)" }}
           />
         </div>
         <div className="hero-overlay" />
         <div className="hero-accent" />
-        <div style={{ position: "relative", zIndex: 10, padding: "0 5vw 7vh", maxWidth: 900 }}>
-          <p className="hero-subtitle" style={{ textAlign: "left", letterSpacing: 5, fontSize: "0.7rem" }}>
-            Sección 05 — Inserción Internacional
-          </p>
-          <h2 className="hero-name" style={{ textAlign: "left", fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-            ARGENTINA
-            <br />
-            EN EL MUNDO
-          </h2>
+        <div style={{ position: "relative", zIndex: 10, padding: "0 5vw 9vh", maxWidth: 960 }}>
+          <FadeIn>
+            <p
+              className="hero-subtitle"
+              style={{ textAlign: "left", letterSpacing: 6, fontSize: "0.65rem", marginBottom: "1.2rem" }}
+            >
+              Sección 05 — Inserción Internacional
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.15}>
+            <h2
+              className="hero-name"
+              style={{
+                textAlign: "left",
+                fontSize: "clamp(2.2rem, 5.5vw, 4rem)",
+                lineHeight: 1.05,
+                letterSpacing: "0.02em",
+              }}
+            >
+              ARGENTINA
+              <br />
+              EN EL MUNDO
+            </h2>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Mega Stats */}
+      {/* ── Mega Stats ──────────────────────────────────────── */}
       <div className="mega-stats">
-        <div className="mega-inner">
-          {megaStats.map((stat) => (
-            <div className="ms-item" key={stat.label}>
-              {stat.animated ? (
-                <AnimatedStat
-                  target={stat.animated.target}
-                  prefix={stat.animated.prefix}
-                  suffix={stat.animated.suffix}
-                  formatDot={stat.animated.formatDot}
-                />
-              ) : (
-                <div className="ms-v">{stat.value}</div>
-              )}
-              <div className="ms-l">{stat.label}</div>
-              <div className="ms-d">{stat.detail}</div>
-            </div>
+        <div className="mega-inner" style={{ gap: "2.5rem 3rem" }}>
+          {megaStats.map((stat, i) => (
+            <FadeIn key={stat.label} delay={i * 0.1}>
+              <div className="ms-item">
+                {stat.animated ? (
+                  <AnimatedStat
+                    target={stat.animated.target}
+                    prefix={stat.animated.prefix}
+                    suffix={stat.animated.suffix}
+                    formatDot={stat.animated.formatDot}
+                  />
+                ) : (
+                  <div className="ms-v">{stat.value}</div>
+                )}
+                <div className="ms-l">{stat.label}</div>
+                <div className="ms-d">{stat.detail}</div>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </div>
 
-      {/* Acuerdos */}
-      <section className="section-light" id="acuerdos">
+      {/* ── Trade Agreements ────────────────────────────────── */}
+      <section style={{ background: "var(--dark)", color: "white", padding: "6rem 0 4rem" }} id="acuerdos">
         <div className="container">
           <FadeIn>
-            <div className="section-header">
-              <div className="section-number">05</div>
-              <h2 className="section-title">ACUERDOS COMERCIALES</h2>
-              <p className="section-intro">
-                En dos años, Argentina firmó tres acuerdos de libre comercio
-                históricos que abren mercados para más de mil millones de
-                consumidores.
-              </p>
+            <div className="mundo-section-divider" style={{ marginBottom: "2rem" }}>
+              <span className="line" />
+              <span className="label">ACUERDOS COMERCIALES</span>
+              <span className="line" />
             </div>
+            <p style={{ textAlign: "center", color: "rgba(255,255,255,0.45)", fontSize: "0.9rem", maxWidth: 650, margin: "0 auto 3.5rem", lineHeight: 1.6 }}>
+              En dos años, Argentina firmó tres acuerdos de libre comercio históricos que abren mercados para más de mil millones de consumidores.
+            </p>
           </FadeIn>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
-            {tradeAgreements.map((agreement) => (
-              <FadeIn key={agreement.title}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "3.5rem" }}>
+            {tradeAgreements.map((agreement, i) => (
+              <FadeIn key={agreement.title} delay={i * 0.12}>
                 <div className={`agr-card${agreement.reverse ? " reverse" : ""}`}>
                   {agreement.reverse ? (
                     <>
@@ -144,23 +162,22 @@ export default function Mundo() {
         </div>
       </section>
 
-      {/* Cooperación */}
-      <section style={{ background: "var(--dark)", color: "white" }}>
+      {/* ── Financial Support ───────────────────────────────── */}
+      <section style={{ background: "var(--dark)", color: "white", padding: "4rem 0" }}>
         <div className="container">
           <FadeIn>
-            <div className="section-header">
-              <div className="section-number" style={{ color: "var(--sol)" }}>05</div>
-              <h2 className="section-title" style={{ color: "white" }}>COOPERACIÓN Y FINANCIAMIENTO</h2>
-              <p className="section-intro" style={{ color: "rgba(255,255,255,0.5)" }}>
-                Argentina aseguró respaldo financiero histórico, cooperación en
-                seguridad hemisférica, y posicionamiento como destino de inversión
-                en energía e inteligencia artificial.
-              </p>
+            <div className="mundo-section-divider" style={{ marginBottom: "2rem" }}>
+              <span className="line" />
+              <span className="label">{cooperacionHeader.sectionTitle}</span>
+              <span className="line" />
             </div>
+            <p style={{ textAlign: "center", color: "rgba(255,255,255,0.45)", fontSize: "0.9rem", maxWidth: 650, margin: "0 auto 3.5rem", lineHeight: 1.6 }}>
+              {cooperacionHeader.sectionIntro}
+            </p>
           </FadeIn>
 
-          <FadeIn>
-            <div className="agr-card-dark" style={{ marginBottom: "2rem" }}>
+          <FadeIn delay={0.1}>
+            <div className="agr-card-dark" style={{ marginBottom: "3rem" }}>
               <div className="agr-body" style={{ padding: "2.5rem" }}>
                 <div className="agr-tag">{financialSupport.tag}</div>
                 <h3>{financialSupport.title}</h3>
@@ -177,18 +194,83 @@ export default function Mundo() {
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
 
-          <FadeIn>
-            <div className="mundo-closing" style={{ textAlign: "center", padding: "4rem 2rem 2rem", maxWidth: "800px", margin: "0 auto" }}>
-              <p style={{ fontFamily: "var(--font-playfair-display), serif", fontSize: "1.3rem", fontStyle: "italic", color: "var(--sol)", lineHeight: "1.6", opacity: 0.85 }}>
+      {/* ── Cooperation Grid ────────────────────────────────── */}
+      <section style={{ background: "var(--dark)", color: "white", padding: "2rem 0 6rem" }}>
+        <div className="container">
+          <div className="mundo-coop-grid">
+            {cooperationGrid.map((item, i) => (
+              <FadeIn key={item.title} delay={i * 0.1}>
+                <div className="mundo-coop-item">
+                  <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{item.icon}</div>
+                  <h4 style={{
+                    fontFamily: "var(--font-bebas-neue), sans-serif",
+                    fontSize: "1.15rem",
+                    letterSpacing: "0.06em",
+                    color: "var(--sol)",
+                    marginBottom: "0.5rem",
+                  }}>
+                    {item.title}
+                  </h4>
+                  <p style={{
+                    fontSize: "0.82rem",
+                    lineHeight: 1.6,
+                    color: "rgba(255,255,255,0.55)",
+                    margin: 0,
+                  }}>
+                    {item.desc}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Closing Quote ───────────────────────────────────── */}
+      <section style={{ background: "var(--dark)", color: "white", padding: "2rem 0 6rem" }}>
+        <div className="container">
+          <FadeIn delay={0.2}>
+            <div style={{
+              textAlign: "center",
+              padding: "4rem 2rem",
+              maxWidth: 820,
+              margin: "0 auto",
+              borderTop: "1px solid rgba(255,255,255,0.06)",
+            }}>
+              <div style={{
+                width: 40,
+                height: 2,
+                background: "var(--sol)",
+                margin: "0 auto 2.5rem",
+                opacity: 0.6,
+              }} />
+              <p style={{
+                fontFamily: "var(--font-playfair-display), serif",
+                fontSize: "clamp(1.1rem, 2.2vw, 1.45rem)",
+                fontStyle: "italic",
+                color: "var(--sol)",
+                lineHeight: 1.7,
+                opacity: 0.9,
+                maxWidth: 700,
+                margin: "0 auto",
+              }}>
                 &ldquo;Argentina dejó de ser un país cerrado y aislado. Hoy somos socios estratégicos de las dos economías más grandes del mundo y firmamos más acuerdos comerciales en dos años que en las últimas cuatro décadas.&rdquo;
               </p>
-              <p style={{ fontSize: "0.75rem", letterSpacing: "2px", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginTop: "1rem", fontFamily: "var(--font-bebas-neue), sans-serif" }}>
+              <p style={{
+                fontSize: "0.72rem",
+                letterSpacing: "3px",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.4)",
+                marginTop: "1.5rem",
+                fontFamily: "var(--font-bebas-neue), sans-serif",
+              }}>
                 Milei, Congreso 2026
               </p>
             </div>
           </FadeIn>
-
         </div>
       </section>
     </>

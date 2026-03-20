@@ -4801,6 +4801,215 @@ button:focus-visible {
   }
 }
 
+/* ═══ FILM GRAIN OVERLAY ═══ */
+.film-grain::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background: repeating-conic-gradient(rgba(255,255,255,0.04) 0% 25%, transparent 0% 50%) 0 0 / 3px 3px;
+  animation: grain 0.5s steps(4) infinite;
+}
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -1px); }
+  75% { transform: translate(-1px, -2px); }
+}
+
+/* ═══ DARK CONTEXT AGREEMENT CARDS ═══ */
+#acuerdos .agr-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+}
+#acuerdos .agr-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(246, 180, 14, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+#acuerdos .agr-body h3 {
+  color: #fff;
+}
+#acuerdos .agr-body p {
+  color: rgba(255, 255, 255, 0.72);
+}
+#acuerdos .agr-tag {
+  color: var(--sol);
+  border-color: rgba(246, 180, 14, 0.3);
+}
+#acuerdos .agr-badge {
+  background: rgba(10, 10, 15, 0.85);
+  color: var(--sol);
+}
+
+/* ═══ CINEMATIC MUNDO TIMELINE ═══ */
+.mundo-timeline {
+  position: relative;
+  padding: 3rem 0 3rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.mundo-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(246,180,14,0.3), rgba(246,180,14,0.3), transparent);
+}
+.mundo-tl-event {
+  position: relative;
+  padding-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+.mundo-tl-event::before {
+  content: '';
+  position: absolute;
+  left: -3rem;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--sol);
+  box-shadow: 0 0 0 3px rgba(246,180,14,0.15), 0 0 15px rgba(246,180,14,0.2);
+  transform: translateX(-4px);
+}
+.mundo-tl-date {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: var(--sol);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.mundo-tl-title {
+  font-family: var(--font-playfair), serif;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.mundo-tl-desc {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+
+/* ═══ MUNDO COOPERATION GRID ═══ */
+.mundo-coop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.mundo-coop-item {
+  padding: 1.8rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.mundo-coop-item:hover {
+  border-color: rgba(246,180,14,0.2);
+  transform: translateY(-2px);
+}
+.mundo-coop-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.mundo-coop-title {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--sol);
+  margin-bottom: 0.5rem;
+}
+.mundo-coop-desc {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .mundo-coop-grid {
+    grid-template-columns: 1fr;
+  }
+  .mundo-timeline {
+    padding-left: 2rem;
+  }
+  .mundo-tl-event {
+    padding-left: 1.5rem;
+  }
+  .mundo-tl-event::before {
+    left: -2rem;
+  }
+}
+
+/* ═══ CINEMATIC HERO VIGNETTE ═══ */
+.hero-vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ═══ KEN BURNS HERO ANIMATION ═══ */
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.06) translate(-1%, -0.5%); }
+}
+.hero-bg img.ken-burns {
+  animation: kenBurns 25s ease-in-out infinite alternate;
+}
+
+/* ═══ CINEMATIC SECTION DIVIDER ═══ */
+.mundo-section-divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 4rem auto;
+  max-width: 600px;
+  padding: 0 2rem;
+}
+.mundo-section-divider .line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(246,180,14,0.2), transparent);
+}
+.mundo-section-divider .label {
+  font-family: var(--font-bebas-neue), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  color: var(--sol);
+  white-space: nowrap;
+}
+
+/* ═══ DARK AGREEMENT CARD ═══ */
+.agr-card-dark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+.agr-card-dark:hover {
+  border-color: rgba(246,180,14,0.15);
+}
+@media (max-width: 768px) {
+  .agr-card-dark {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ═══ IMAGE LOADING SHIMMER ═══ */
 img[loading="eager"]:not([src=""]) {
   background: linear-gradient(90deg, rgba(255,255,255,0.02) 25%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.02) 75%);

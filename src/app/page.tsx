@@ -10,7 +10,7 @@ import Mundo from "@/components/Mundo";
 
 import Archivo from "@/components/Archivo";
 import Footer from "@/components/Footer";
-import { stripPhotos1, stripPhotos2 } from "@/data/photos";
+import { stripPhotos1, stripPhotos2, stripPhotos3 } from "@/data/photos";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
       <PhotoStrip photos={stripPhotos2} reverse />
       <Futuro />
       <Mundo />
-      <PhotoStrip photos={stripPhotos1} reverse />
+      <PhotoStrip photos={stripPhotos3} reverse />
       <Archivo />
       <Footer />
       <BackToTop />
