@@ -10,7 +10,7 @@ import {
   vacaMuerta,
   futuroHeader,
   futuroDividers,
-  futuroClosing,
+
 } from "@/data/futuro";
 
 export default function Futuro() {
@@ -153,12 +153,14 @@ export default function Futuro() {
           </div>
         </FadeIn>
 
-        {/* Closing */}
+        {/* Closing Quote */}
         <FadeIn>
           <div className="futuro-closing">
             <div className="futuro-closing-line" />
-            <p className="futuro-closing-text">{futuroClosing.text}</p>
-            <p className="futuro-closing-attr">{futuroClosing.attr}</p>
+            <p className="futuro-closing-text">
+              &laquo;Tenemos energía de sobra, tierras frías e inhóspitas de sobra, y recurso humano de calidad. Que nadie se sorprenda si la Argentina se convierte en el próximo hub de inteligencia artificial del mundo.&raquo;
+            </p>
+            <p className="futuro-closing-attr">Javier Milei — Cadena Nacional, diciembre 2024</p>
           </div>
         </FadeIn>
       </div>
