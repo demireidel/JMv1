@@ -5,6 +5,7 @@ export const stripPhotos1 = [
   { src: "/images/diplomatica/g7-italia.jpg", alt: "Milei en la Cumbre del G7, Italia" },
   { src: "/images/diplomatica/israel-netanyahu-bilateral.jpg", alt: "Milei con Netanyahu en Jerusalén" },
   { src: "/images/diplomatica/meloni-casarosada-pose.jpg", alt: "Milei con Giorgia Meloni en Casa Rosada" },
+  { src: "/images/diplomatica/inauguracion-convertible-karina.jpg", alt: "Milei y Karina en la caravana inaugural — 10 de diciembre de 2023" },
   { src: "/images/vision/europa-viva-24.jpg", alt: "Milei en Europa Viva 24" },
   { src: "/images/diplomatica/davos-2026-discurso.jpg", alt: "Milei en Davos 2026" },
 ];
