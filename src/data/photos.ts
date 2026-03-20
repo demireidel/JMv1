@@ -6,7 +6,6 @@ export const stripPhotos1 = [
   { src: "/images/strip/milei-musk.jpg", alt: "Milei con Elon Musk" },
   { src: "/images/strip/milei-karina.jpg", alt: "Javier y Karina Milei" },
   { src: "/images/strip/milei-onu.jpg", alt: "Milei en la ONU" },
-  { src: "/images/strip/milei-asuncion.jpg", alt: "Asunción presidencial Milei" },
   { src: "/images/strip/milei-g7-lideres.jpg", alt: "Milei cumbre G7 líderes" },
 ];
 
