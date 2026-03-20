@@ -238,7 +238,7 @@ body {
 .photo-strip-wrapper::before { left: 0; background: linear-gradient(90deg, var(--dark), transparent); }
 .photo-strip-wrapper::after { right: 0; background: linear-gradient(-90deg, var(--dark), transparent); }
 .photo-strip {
-  display: flex; gap: 4px; animation: scrollStrip 55s linear infinite;
+  display: flex; gap: 4px;
 }
 .photo-strip img {
   height: 280px; width: auto; min-width: 220px; object-fit: cover;
@@ -250,7 +250,7 @@ body {
   transform: scale(1.06); z-index: 1;
   box-shadow: 0 15px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(246,180,14,0.1);
 }
-.photo-strip-wrapper:hover .photo-strip { animation-play-state: paused; }
+/* hover pause handled by JS */
 @keyframes scrollStrip { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* ═══════════ SECTIONS ═══════════ */
@@ -1362,7 +1362,6 @@ body::after {
 .hero-bg img { transition: transform 0.1s linear; }
 
 /* Premium photo strip */
-.photo-strip { animation: scrollStrip 50s linear infinite; }
 .photo-strip img {
   transition: all 0.5s var(--ease-premium);
   border-radius: 6px;
@@ -1683,8 +1682,6 @@ a:focus-visible, button:focus-visible {
 }
 
 /* ═══ PREMIUM PHOTO STRIP OVERRIDE ═══ */
-.photo-strip { animation: scrollStrip 55s linear infinite; }
-.photo-strip.dragging { animation: none !important; }
 .photo-strip img {
   transition: all 0.6s var(--ease-out-expo);
   border-radius: 4px;
@@ -2226,10 +2223,7 @@ img[loading="lazy"].loaded, img[loading="lazy"][complete] {
 .photo-strip-reverse::after {
   background: linear-gradient(-90deg, var(--navy) 30%, transparent);
 }
-.photo-strip-2 {
-  animation-direction: reverse;
-  animation-duration: 60s;
-}
+/* reverse direction handled by JS speed */
 
 /* ═══════════ ARCHIVO INTELECTUAL ═══════════ */
 

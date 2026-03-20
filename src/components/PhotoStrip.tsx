@@ -15,113 +15,112 @@ interface PhotoStripProps {
 
 /**
  * Infinite-scroll photo strip with drag-to-scroll.
- * Auto-scrolls via CSS animation, pauses on hover or drag.
+ * Uses requestAnimationFrame for seamless drag→release transitions.
  */
 export default function PhotoStrip({ photos, reverse = false }: PhotoStripProps) {
   const doubled = [...photos, ...photos];
   const wrapperRef = useRef<HTMLDivElement>(null);
   const stripRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
-  const dragState = useRef({
-    startX: 0,
-    scrollLeft: 0,
-    currentOffset: 0,
-    animationPaused: false,
-  });
-  const resumeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const getTranslateX = useCallback(() => {
-    if (!stripRef.current) return 0;
-    const style = window.getComputedStyle(stripRef.current);
-    const matrix = style.transform;
-    if (matrix === "none") return 0;
-    const values = matrix.match(/matrix\(([^)]+)\)/);
-    if (!values) return 0;
-    return parseFloat(values[1].split(",")[4].trim());
+  // Animation state lives in a ref so it persists across renders
+  // without causing re-renders
+  const anim = useRef({
+    offset: 0,           // current translateX in px
+    speed: reverse ? 1.2 : -1,  // px per frame (~60fps → ~60px/s)
+    dragging: false,
+    dragStartX: 0,
+    dragStartOffset: 0,
+    rafId: 0,
+    hovering: false,
+  });
+
+  // Get half the strip width (one full set of photos)
+  const getHalfWidth = useCallback(() => {
+    if (!stripRef.current) return 1;
+    return stripRef.current.scrollWidth / 2;
   }, []);
+
+  // Wrap offset into [-halfWidth, 0) range for seamless looping
+  const wrapOffset = useCallback(
+    (x: number) => {
+      const hw = getHalfWidth();
+      let wrapped = x % hw;
+      if (wrapped > 0) wrapped -= hw;
+      if (wrapped <= -hw) wrapped += hw;
+      return wrapped;
+    },
+    [getHalfWidth]
+  );
+
+  // Apply transform
+  const applyTransform = useCallback((x: number) => {
+    if (stripRef.current) {
+      stripRef.current.style.transform = `translateX(${x}px)`;
+    }
+  }, []);
+
+  // Animation loop
+  const tick = useCallback(() => {
+    const a = anim.current;
+    if (!a.dragging && !a.hovering) {
+      a.offset = wrapOffset(a.offset + a.speed);
+      applyTransform(a.offset);
+    }
+    a.rafId = requestAnimationFrame(tick);
+  }, [wrapOffset, applyTransform]);
+
+  // Start the animation loop on mount
+  useEffect(() => {
+    anim.current.rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(anim.current.rafId);
+  }, [tick]);
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent) => {
-      if (!stripRef.current || !wrapperRef.current) return;
+      if (!wrapperRef.current) return;
       e.preventDefault();
+      const a = anim.current;
+      a.dragging = true;
+      a.dragStartX = e.clientX;
+      a.dragStartOffset = a.offset;
       setIsDragging(true);
-
-      // Cancel any pending resume
-      if (resumeTimer.current) {
-        clearTimeout(resumeTimer.current);
-        resumeTimer.current = null;
-      }
-
-      // Capture current animation position
-      const currentX = getTranslateX();
-      dragState.current.startX = e.clientX;
-      dragState.current.currentOffset = currentX;
-
-      // Freeze animation at current position
-      stripRef.current.style.animation = "none";
-      stripRef.current.style.transform = `translateX(${currentX}px)`;
-
       wrapperRef.current.setPointerCapture(e.pointerId);
     },
-    [getTranslateX]
+    []
   );
 
   const handlePointerMove = useCallback(
     (e: React.PointerEvent) => {
-      if (!isDragging || !stripRef.current) return;
+      const a = anim.current;
+      if (!a.dragging) return;
       e.preventDefault();
-      const dx = e.clientX - dragState.current.startX;
-      const newX = dragState.current.currentOffset + dx;
-
-      // Wrap around to keep infinite feel
-      const stripWidth = stripRef.current.scrollWidth / 2;
-      let wrappedX = newX % stripWidth;
-      if (wrappedX > 0) wrappedX -= stripWidth;
-
-      stripRef.current.style.transform = `translateX(${wrappedX}px)`;
+      const dx = e.clientX - a.dragStartX;
+      a.offset = wrapOffset(a.dragStartOffset + dx);
+      applyTransform(a.offset);
     },
-    [isDragging]
+    [wrapOffset, applyTransform]
   );
 
   const handlePointerUp = useCallback(
     (e: React.PointerEvent) => {
-      if (!isDragging || !stripRef.current || !wrapperRef.current) return;
+      const a = anim.current;
+      if (!a.dragging) return;
+      a.dragging = false;
       setIsDragging(false);
-      wrapperRef.current.releasePointerCapture(e.pointerId);
-
-      const el = stripRef.current;
-      const currentX = getTranslateX();
-      const stripWidth = el.scrollWidth / 2;
-
-      // The CSS animation goes 0 → -50% (i.e. 0 → -stripWidth).
-      // For reverse strips, animation-direction: reverse makes it go -stripWidth → 0.
-      // We need to figure out what fraction of the cycle matches currentX.
-      // Normalize currentX into [0, stripWidth) range
-      let normalizedX = ((currentX % stripWidth) + stripWidth) % stripWidth;
-      // progress = how far through the 0→-stripWidth cycle
-      // currentX is negative, so progress = normalizedX / stripWidth gives us
-      // position in the forward animation where 0 = start, 1 = end
-      const progress = 1 - normalizedX / stripWidth;
-      const duration = reverse ? 60 : 55;
-      const delay = -(progress * duration);
-
-      // Force reflow: remove animation, set it back with correct delay
-      el.style.animation = "none";
-      el.style.transform = "";
-      // Force reflow so browser registers the "none"
-      void el.offsetWidth;
-      el.style.animation = "";
-      el.style.animationDelay = `${delay}s`;
+      wrapperRef.current?.releasePointerCapture(e.pointerId);
+      // Animation loop is still running — it just resumes moving
+      // from a.offset, which is exactly where the user released.
     },
-    [isDragging, getTranslateX, reverse]
+    []
   );
 
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      setIsDragging(false);
-      if (resumeTimer.current) clearTimeout(resumeTimer.current);
-    };
+  // Pause on hover (non-drag)
+  const handleMouseEnter = useCallback(() => {
+    anim.current.hovering = true;
+  }, []);
+  const handleMouseLeave = useCallback(() => {
+    anim.current.hovering = false;
   }, []);
 
   return (
@@ -132,11 +131,14 @@ export default function PhotoStrip({ photos, reverse = false }: PhotoStripProps)
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerUp}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       style={{ cursor: isDragging ? "grabbing" : "grab", touchAction: "pan-y" }}
     >
       <div
         ref={stripRef}
-        className={`photo-strip${reverse ? " photo-strip-2" : ""}${isDragging ? " dragging" : ""}`}
+        className={`photo-strip${reverse ? " photo-strip-2" : ""}`}
+        style={{ animation: "none" }}
       >
         {doubled.map((p, i) => (
           // eslint-disable-next-line @next/next/no-img-element
