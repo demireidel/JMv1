@@ -108,7 +108,7 @@ export default function Logros() {
   const hdr = logrosSectionHeader;
 
   return (
-    <section className="section-light" id="logros">
+    <section className="section-dark" id="logros">
       <div className="container">
         <FadeIn>
           <div className="section-header">
