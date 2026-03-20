@@ -21,7 +21,6 @@ export default function Futuro() {
       <div className="container futuro-container">
         <FadeIn>
           <div className="sec-head">
-            <div className="sec-num">{futuroHeader.sectionNumber}</div>
             <h2 className="sec-title-f">{futuroHeader.sectionTitle}</h2>
             <div className="sec-accent" />
             <p className="sec-intro-f">
@@ -81,10 +80,10 @@ export default function Futuro() {
         </FadeIn>
 
         <FadeIn>
-          <div className="dv">
-            <div className="ln" /><div className="dt" />
-            <div className="lb">{futuroDividers[0]}</div>
-            <div className="dt" /><div className="ln" />
+          <div className="mundo-section-divider" style={{ margin: "4rem 0" }}>
+            <span className="line" />
+            <span className="label">{futuroDividers[0]}</span>
+            <span className="line" />
           </div>
         </FadeIn>
 
@@ -120,10 +119,10 @@ export default function Futuro() {
         </FadeIn>
 
         <FadeIn>
-          <div className="dv">
-            <div className="ln" /><div className="dt" />
-            <div className="lb">{futuroDividers[1]}</div>
-            <div className="dt" /><div className="ln" />
+          <div className="mundo-section-divider" style={{ margin: "4rem 0" }}>
+            <span className="line" />
+            <span className="label">{futuroDividers[1]}</span>
+            <span className="line" />
           </div>
         </FadeIn>
 

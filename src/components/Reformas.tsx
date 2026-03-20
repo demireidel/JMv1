@@ -107,11 +107,14 @@ export default function Reformas() {
 
       <div className="reforms-container">
         <FadeIn>
-          <div className="reform-divider">
-            <h3>{reformBlocks[0].title}</h3>
-            <p>{reformBlocks[0].subtitle}</p>
-            <div className="reform-divider-line" />
+          <div className="mundo-section-divider" style={{ marginBottom: "1.5rem" }}>
+            <span className="line" />
+            <span className="label">{reformBlocks[0].title}</span>
+            <span className="line" />
           </div>
+          <p style={{ textAlign: "center", color: "rgba(255,255,255,0.45)", fontSize: "0.85rem", maxWidth: 650, margin: "0 auto 3rem", lineHeight: 1.6 }}>
+            {reformBlocks[0].subtitle}
+          </p>
         </FadeIn>
 
         {reformas.slice(0, 3).map((r) => (
@@ -119,17 +122,20 @@ export default function Reformas() {
         ))}
 
         <FadeIn>
-          <div className="reform-divider">
-            <h3>{reformBlocks[1].title}</h3>
-            <p>{reformBlocks[1].subtitle}</p>
-            <div className="reform-divider-line" />
+          <div className="mundo-section-divider" style={{ marginBottom: "1.5rem" }}>
+            <span className="line" />
+            <span className="label">{reformBlocks[1].title}</span>
+            <span className="line" />
           </div>
+          <p style={{ textAlign: "center", color: "rgba(255,255,255,0.45)", fontSize: "0.85rem", maxWidth: 650, margin: "0 auto 3rem", lineHeight: 1.6 }}>
+            {reformBlocks[1].subtitle}
+          </p>
         </FadeIn>
 
         <FadeIn>
           <div className="ref-photo-break">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/strip/milei-trump.jpg" alt="Milei con Trump" loading="eager" />
+            <img src="/images/strip/bilateral-casablanca.jpg" alt="Milei con Trump en la Casa Blanca" loading="eager" />
           </div>
         </FadeIn>
 
@@ -138,11 +144,14 @@ export default function Reformas() {
         ))}
 
         <FadeIn>
-          <div className="reform-divider">
-            <h3>{reformBlocks[2].title}</h3>
-            <p>{reformBlocks[2].subtitle}</p>
-            <div className="reform-divider-line" />
+          <div className="mundo-section-divider" style={{ marginBottom: "1.5rem" }}>
+            <span className="line" />
+            <span className="label">{reformBlocks[2].title}</span>
+            <span className="line" />
           </div>
+          <p style={{ textAlign: "center", color: "rgba(255,255,255,0.45)", fontSize: "0.85rem", maxWidth: 650, margin: "0 auto 3rem", lineHeight: 1.6 }}>
+            {reformBlocks[2].subtitle}
+          </p>
         </FadeIn>
 
         <FadeIn>
@@ -157,17 +166,20 @@ export default function Reformas() {
         ))}
 
         <FadeIn>
-          <div className="reform-divider">
-            <h3>{reformBlocks[3].title}</h3>
-            <p>{reformBlocks[3].subtitle}</p>
-            <div className="reform-divider-line" />
+          <div className="mundo-section-divider" style={{ marginBottom: "1.5rem" }}>
+            <span className="line" />
+            <span className="label">{reformBlocks[3].title}</span>
+            <span className="line" />
           </div>
+          <p style={{ textAlign: "center", color: "rgba(255,255,255,0.45)", fontSize: "0.85rem", maxWidth: 650, margin: "0 auto 3rem", lineHeight: 1.6 }}>
+            {reformBlocks[3].subtitle}
+          </p>
         </FadeIn>
 
         <FadeIn>
           <div className="ref-photo-break">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/strip/milei-g7-lideres.jpg" alt="Milei con líderes del G7" loading="eager" />
+            <img src="/images/futuro/google-delegacion.jpg" alt="Delegación argentina en Google" loading="eager" />
           </div>
         </FadeIn>
 

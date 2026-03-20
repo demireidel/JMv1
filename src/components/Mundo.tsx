@@ -55,7 +55,7 @@ export default function Mundo() {
               className="hero-subtitle"
               style={{ textAlign: "left", letterSpacing: 6, fontSize: "0.65rem", marginBottom: "1.2rem" }}
             >
-              Sección 05 — Inserción Internacional
+              Inserción Internacional
             </p>
           </FadeIn>
           <FadeIn delay={0.15}>

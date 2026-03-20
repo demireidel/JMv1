@@ -225,7 +225,7 @@ export const tradeAgreements: TradeAgreement[] = [
       { text: "De USD 8.641M a 19.165M", color: "blue" },
       { text: "+76% en 5 años / +122% en 10", color: "green" },
     ],
-    image: "/images/strip/milei-g7.jpg",
+    image: "/images/vision/europa-viva-24.jpg",
     imageAlt: "Mercosur-UE",
     badge: "🇪🇺 Firmado Ene 2026",
     reverse: true,
@@ -309,13 +309,11 @@ export const mundoHero = {
 } as const;
 
 export const acuerdosHeader = {
-  sectionNumber: "05",
   sectionTitle: "ACUERDOS COMERCIALES",
   sectionIntro: "En dos años, Argentina firmó tres acuerdos de libre comercio históricos que abren mercados para más de mil millones de consumidores — y reescribió las reglas del comercio hemisférico.",
 } as const;
 
 export const cooperacionHeader = {
-  sectionNumber: "05",
   sectionTitle: "COOPERACIÓN Y FINANCIAMIENTO",
   sectionIntro: "Argentina aseguró USD 40.000M en respaldo financiero, lideró una coalición de seguridad de 17 naciones, y se posicionó como el destino de inversión en energía e inteligencia artificial del hemisferio sur.",
 } as const;

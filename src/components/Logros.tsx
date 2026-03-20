@@ -112,7 +112,6 @@ export default function Logros() {
       <div className="container">
         <FadeIn>
           <div className="section-header">
-            <div className="section-number">{hdr.sectionNumber}</div>
             <h2 className="section-title">{hdr.sectionTitle}</h2>
             <p className="section-intro">
               Hace dos años, Argentina estaba en crisis terminal. La inflación
@@ -216,7 +215,7 @@ export default function Logros() {
         <FadeIn>
           <div className="arc-photo-break" style={{ margin: "4rem 0" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/strip/milei-g7-lideres.jpg" alt="Milei en cumbre del G7" loading="eager" />
+            <img src="/images/strip/milei-bilateral.jpg" alt="Reunión bilateral Argentina-EE.UU." loading="eager" />
           </div>
         </FadeIn>
 

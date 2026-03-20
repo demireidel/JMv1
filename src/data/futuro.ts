@@ -79,7 +79,6 @@ export interface ClosingData {
 // ── Section header ──────────────────────────────────────────
 
 export const futuroHeader = {
-  sectionNumber: "04",
   sectionTitle: "ARGENTINA DEL FUTURO",
   introQuote: "Solo reencontrándonos con las verdades de nuestro pasado profundo podemos dar un salto hacia el futuro.",
   introText: "Tres pilares transforman a la Argentina en protagonista de la revolución tecnológica global: Silicon Valley, Stargate e hidrocarburos.",

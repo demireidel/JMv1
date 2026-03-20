@@ -250,7 +250,6 @@ export const reconocimientos: string[] = [
 // ── Section metadata ────────────────────────────────────
 
 export const archivoHeader = {
-  sectionNumber: "06",
   sectionTitle: "ARCHIVO INTELECTUAL",
   sectionIntro: "Más de 50 artículos académicos, 7 libros, discursos que redefinieron el debate global y entrevistas con audiencias de cientos de millones. La producción intelectual completa de un presidente-economista sin precedentes.",
 } as const;

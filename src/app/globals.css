@@ -1683,9 +1683,12 @@ a:focus-visible, button:focus-visible {
 
 /* ═══ PREMIUM PHOTO STRIP OVERRIDE ═══ */
 .photo-strip { animation: scrollStrip 55s linear infinite; }
+.photo-strip.dragging { animation: none !important; }
 .photo-strip img {
   transition: all 0.6s var(--ease-out-expo);
   border-radius: 4px;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 /* ═══ SELECTION COLOR ═══ */

@@ -40,13 +40,13 @@ export default function Archivo() {
       {/* ─── HERO ─── */}
       <div className="arc-hero-photo">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/strip/milei-onu.jpg" alt="Milei en la ONU" style={{ objectPosition: "center 30%" }} />
+        <img src="/images/futuro/stargate-casarosada.jpg" alt="Milei en Casa Rosada — Stargate" style={{ objectPosition: "center 30%" }} />
         <div className="arc-hero-overlay" />
       </div>
 
       <div className="arc-hero-text">
         <FadeIn>
-          <p className="arc-hero-eyebrow">SECCIÓN 07</p>
+          <p className="arc-hero-eyebrow">Archivo</p>
           <h2 className="arc-hero-title">ARCHIVO INTELECTUAL</h2>
           <p className="arc-hero-subtitle">
             Producción intelectual completa — Libros, Artículos, Discursos y Entrevistas
