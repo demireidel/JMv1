@@ -82,7 +82,7 @@ export const futuroHeader = {
   sectionNumber: "04",
   sectionTitle: "ARGENTINA DEL FUTURO",
   introQuote: "Solo reencontrándonos con las verdades de nuestro pasado profundo podemos dar un salto hacia el futuro.",
-  introText: "Cuatro pilares transforman a la Argentina en protagonista de la revolución tecnológica global: Silicon Valley, Stargate, energía nuclear e hidrocarburos.",
+  introText: "Tres pilares transforman a la Argentina en protagonista de la revolución tecnológica global: Silicon Valley, Stargate e hidrocarburos.",
 } as const;
 
 // ── Gallery photos ──────────────────────────────────────────
@@ -91,7 +91,7 @@ export const galleryPhotos: GalleryPhoto[] = [
   { src: "/images/futuro/altman.jpg", who: "Milei con Sam Altman", where: "CEO de OpenAI — Silicon Valley, Mayo 2024", tag: "OpenAI", pos: "center 20%" },
   { src: "/images/futuro/meta-delegacion.jpg", who: "La delegación argentina con Mark Zuckerberg", where: "Sede de Meta, Menlo Park", tag: "Meta", pos: "center 18%" },
   { src: "/images/futuro/cook.jpg", who: "Milei con Tim Cook", where: "Apple Park, Cupertino", tag: "Apple", pos: "center 40%" },
-  { src: "/images/futuro/andreessen.jpg", who: "Reidel y Travizano con Marc Andreessen", where: "Andreessen Horowitz (a16z)", tag: "a16z", pos: "center 12%" },
+
   { src: "/images/futuro/pichai.jpg", who: "Milei con Sundar Pichai", where: "Google HQ, Mountain View", tag: "Google", pos: "center 12%" },
   { src: "/images/futuro/google-delegacion.jpg", who: "Delegación argentina recibida en Google HQ", where: "Mountain View", tag: "Google", pos: "center 22%" },
 ];
@@ -100,7 +100,6 @@ export const galleryPhotos: GalleryPhoto[] = [
 
 export const futuroDividers = [
   "STARGATE ARGENTINA — Un año después, la semilla dio fruto",
-  "PLAN NUCLEAR — La energía que lo hace posible",
   "VACA MUERTA — El gigante despierta",
 ] as const;
 
@@ -111,10 +110,10 @@ export const siliconValley: SiliconValleyData = {
   titleLine1: "ARGENTINA COMO",
   titleLine2Em: "HUB GLOBAL DE IA",
   paragraphs: [
-    "En mayo de 2024, el Presidente Milei realizó una gira histórica por Silicon Valley — la cuarta visita a Estados Unidos en cinco meses de gestión y la primera dedicada exclusivamente a tecnología. Acompañado por Demian Reidel y Matías Travizano, la semana incluyó reuniones cara a cara con los seis líderes más influyentes del sector tech mundial: Sam Altman (CEO de OpenAI, valuada en USD 80.000M), Sundar Pichai (CEO de Google/Alphabet, USD 2T de capitalización), Tim Cook (CEO de Apple, la empresa más valiosa del mundo con USD 3T), Mark Zuckerberg (CEO de Meta, USD 1,3T), Elon Musk (CEO de Tesla y SpaceX, el hombre más rico del mundo) y Marc Andreessen (cofundador de a16z, el fondo de venture capital más influyente de Silicon Valley con USD 42.000M bajo gestión).",
-    "El pitch de Milei usó el modelo irlandés: así como Irlanda multiplicó su PBI per cápita 6 veces atrayendo inversión tech, la Argentina ofrece algo que nadie más tiene — Patagonia con tierras vastas, clima frío ideal para refrigeración de servidores, acceso al agua dulce y energía limpia abundante (nuclear, eólica e hidroeléctrica). Reidel complementó con su tesis geopolítica: Europa reguló con el AI Act, China es impredecible, y EEUU debate restricciones. Argentina, alineada con Washington y sin regulación hostil, es la alternativa creíble para instalar la infraestructura de IA del futuro.",
+    "En mayo de 2024, el Presidente Milei realizó una gira histórica por Silicon Valley — la cuarta visita a Estados Unidos en cinco meses de gestión y la primera dedicada exclusivamente a tecnología. La semana incluyó reuniones cara a cara con los líderes más influyentes del sector tech mundial: Sam Altman (CEO de OpenAI, valuada en USD 80.000M), Sundar Pichai (CEO de Google/Alphabet, USD 2T de capitalización), Tim Cook (CEO de Apple, la empresa más valiosa del mundo con USD 3T), Mark Zuckerberg (CEO de Meta, USD 1,3T), Elon Musk (CEO de Tesla y SpaceX, el hombre más rico del mundo) y Marc Andreessen (cofundador de a16z, el fondo de venture capital más influyente de Silicon Valley con USD 42.000M bajo gestión).",
+    "El pitch de Milei usó el modelo irlandés: así como Irlanda multiplicó su PBI per cápita 6 veces atrayendo inversión tech, la Argentina ofrece algo que nadie más tiene — Patagonia con tierras vastas, clima frío ideal para refrigeración de servidores, acceso al agua dulce y energía limpia abundante (nuclear, eólica e hidroeléctrica). La tesis geopolítica es clara: Europa reguló con el AI Act, China es impredecible, y EEUU debate restricciones. Argentina, alineada con Washington y sin regulación hostil, es la alternativa creíble para instalar la infraestructura de IA del futuro.",
     "La agenda fue implacable. El martes, reunión de una hora con Sam Altman en las oficinas de OpenAI en Mission District, donde el equipo de Altman preparó una demostración exclusiva de GPT-4o y sus capacidades multimodales. El miércoles, disertación en la Hoover Institution de Stanford junto a Condoleezza Rice y el rector Richard Saller ante 400 asistentes, seguida de reuniones con Tim Cook en Apple Park (Cupertino) — donde Cook mostró interés en expandir la manufactura de componentes en Argentina — y con Sundar Pichai en Google HQ (Mountain View), donde un cartel decía «Bienvenido Javier Milei, Presidente de la República Argentina» y se discutió la instalación de un Google Cloud Region en Buenos Aires. El jueves, reunión con Zuckerberg en la sede de Meta en Menlo Park, donde se exploró la instalación de un cable submarino de fibra óptica, presentación ante 500 inversores en el Pacific Summit del Bay Area Council, y encuentros con empresas emergentes de IA.",
-    "Meses después, Reidel lo resumió en la SAIAConf: «Para el sector tecnológico mundial, Milei es como un héroe. Estos tipos no se juntan a sacarse fotos — se juntan porque piensan que hay algo importante para discutir.» Y añadió una anécdota reveladora: al terminar la reunión con Jeff Bezos de Amazon (la séptima reunión con un CEO tech), fue Bezos quien le pidió una selfie al Presidente. La visita sembró la semilla de lo que un año después se convertiría en Stargate Argentina — la mayor inversión en infraestructura tecnológica de la historia del país.",
+    "Una anécdota reveladora: al terminar la reunión con Jeff Bezos de Amazon (la séptima reunión con un CEO tech), fue Bezos quien le pidió una selfie al Presidente. Para el sector tecnológico mundial, Milei es como un héroe — no se juntan a sacarse fotos, se juntan porque piensan que hay algo importante para discutir. La visita sembró la semilla de lo que un año después se convertiría en Stargate Argentina — la mayor inversión en infraestructura tecnológica de la historia del país.",
   ],
   stats: [
     { val: "7", label: "CEOs tech reunidos" },
@@ -232,6 +231,6 @@ export const vacaMuerta: VacaMuertaData = {
 // ── Closing ─────────────────────────────────────────────────
 
 export const futuroClosing: ClosingData = {
-  text: "Silicon Valley abrió la puerta. Stargate trae la infraestructura. La energía nuclear y Vaca Muerta la alimentan. Argentina no será una observadora pasiva — está llamada a ser la arquitecta del futuro.",
-  attr: "Demian Reidel",
+  text: "Silicon Valley abrió la puerta. Stargate trae la infraestructura. Vaca Muerta la alimenta. Argentina no será una observadora pasiva — está llamada a ser la arquitecta del futuro.",
+  attr: "Javier Milei",
 };

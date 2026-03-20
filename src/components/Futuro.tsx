@@ -6,7 +6,7 @@ import {
   galleryPhotos,
   siliconValley,
   stargate,
-  nuclear,
+
   vacaMuerta,
   futuroHeader,
   futuroDividers,
@@ -29,9 +29,9 @@ export default function Futuro() {
                 «Solo reencontrándonos con las verdades de nuestro pasado
                 profundo podemos dar un salto hacia el futuro.»
               </em>{" "}
-              — Cuatro pilares transforman a la Argentina en protagonista de la
-              revolución tecnológica global: Silicon Valley, Stargate, energía
-              nuclear e hidrocarburos.
+              — Tres pilares transforman a la Argentina en protagonista de la
+              revolución tecnológica global: Silicon Valley, Stargate
+              e hidrocarburos.
             </p>
           </div>
         </FadeIn>
@@ -123,47 +123,6 @@ export default function Futuro() {
           <div className="dv">
             <div className="ln" /><div className="dt" />
             <div className="lb">{futuroDividers[1]}</div>
-            <div className="dt" /><div className="ln" />
-          </div>
-        </FadeIn>
-
-        {/* 3. Nuclear */}
-        <FadeIn>
-          <div className="duo">
-            <div className="pcard" style={{ aspectRatio: "16/9" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={nuclear.photo.src} alt={nuclear.photo.alt} loading="eager" style={{ objectPosition: nuclear.photo.objectPosition }} />
-              <div className="cap">
-                <strong>{nuclear.photo.captionStrong}</strong>
-                <span>{nuclear.photo.captionSpan}</span>
-              </div>
-            </div>
-            <div className="blk">
-              <div className="kicker k-amber">{nuclear.kicker}</div>
-              <h3>{nuclear.titleLine1}<br />{nuclear.titleLine2}</h3>
-              {nuclear.phases.map((phase, i) => (
-                <p key={i}>
-                  <strong>{phase.label}</strong>{" "}{phase.text}
-                </p>
-              ))}
-              <div className="bq">
-                {nuclear.quote.text}
-                <cite>{nuclear.quote.cite}</cite>
-              </div>
-              <p>{nuclear.closingParagraph}</p>
-              <div className="futuro-stats">
-                {nuclear.stats.map((s, i) => (
-                  <div className="futuro-st" key={i}><div className="v">{s.val}</div><div className="l">{s.label}</div></div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </FadeIn>
-
-        <FadeIn>
-          <div className="dv">
-            <div className="ln" /><div className="dt" />
-            <div className="lb">{futuroDividers[2]}</div>
             <div className="dt" /><div className="ln" />
           </div>
         </FadeIn>
