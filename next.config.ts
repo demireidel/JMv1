@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      { hostname: "english.news.cn" },
-      { hostname: "assets.weforum.org" },
-      { hostname: "www.argentina.gob.ar" },
-    ],
-    formats: ["image/webp", "image/avif"],
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
   },
 };
 

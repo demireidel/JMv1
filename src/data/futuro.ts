@@ -87,12 +87,12 @@ export const futuroHeader = {
 // ── Gallery photos ──────────────────────────────────────────
 
 export const galleryPhotos: GalleryPhoto[] = [
-  { src: "/images/futuro/altman.jpg", who: "Milei con Sam Altman", where: "CEO de OpenAI — Silicon Valley, Mayo 2024", tag: "OpenAI", pos: "center 20%" },
-  { src: "/images/futuro/meta-delegacion.jpg", who: "La delegación argentina con Mark Zuckerberg", where: "Sede de Meta, Menlo Park", tag: "Meta", pos: "center 18%" },
-  { src: "/images/futuro/cook.jpg", who: "Milei con Tim Cook", where: "Apple Park, Cupertino", tag: "Apple", pos: "center 40%" },
+  { src: "/images/banco/silicon-valley-sam-altman.jpg", who: "Milei con Sam Altman", where: "CEO de OpenAI — Silicon Valley, Mayo 2024", tag: "OpenAI", pos: "center 20%" },
+  { src: "/images/banco/silicon-valley-investors.jpg", who: "La delegación argentina con inversores", where: "Silicon Valley, California", tag: "Meta", pos: "center 18%" },
+  { src: "/images/banco/silicon-valley-tim-cook.jpg", who: "Milei con Tim Cook", where: "Apple Park, Cupertino", tag: "Apple", pos: "center 40%" },
 
-  { src: "/images/futuro/pichai.jpg", who: "Milei con Sundar Pichai", where: "Google HQ, Mountain View", tag: "Google", pos: "center 12%" },
-  { src: "/images/futuro/google-delegacion.jpg", who: "Delegación argentina recibida en Google HQ", where: "Mountain View", tag: "Google", pos: "center 22%" },
+  { src: "/images/banco/silicon-valley-sundar-pichai.jpg", who: "Milei con Sundar Pichai", where: "Google HQ, Mountain View", tag: "Google", pos: "center 12%" },
+  { src: "/images/banco/silicon-valley-tech-leaders.jpg", who: "Delegación argentina en Silicon Valley", where: "California", tag: "Google", pos: "center 22%" },
 ];
 
 // ── Dividers ────────────────────────────────────────────────
@@ -120,7 +120,7 @@ export const siliconValley: SiliconValleyData = {
     { val: "4°", label: "Hub IA global" },
   ],
   photo: {
-    src: "/images/futuro/zuckerberg.jpg",
+    src: "/images/banco/silicon-valley-investors.jpg",
     alt: "Milei con Mark Zuckerberg",
     objectPosition: "center 25%",
     captionStrong: "Milei con Mark Zuckerberg",
@@ -151,7 +151,7 @@ export const stargate: StargateData = {
     { val: "2027", label: "Fase 1 · 100 MW" },
   ],
   photo: {
-    src: "/images/futuro/stargate-casarosada.jpg",
+    src: "/images/banco/stargate-anuncio.jpg",
     alt: "Milei y Reidel con delegación de OpenAI en Casa Rosada",
     objectPosition: "center 25%",
     captionStrong: "Milei y Demian Reidel reciben a delegación de OpenAI",
@@ -192,7 +192,7 @@ export const nuclear: NuclearData = {
     { val: "85-90", label: "GW demanda global 2030" },
   ],
   photo: {
-    src: "/images/futuro/plan-nuclear.jpg",
+    src: "/images/banco/plan-nuclear-atucha.jpg",
     alt: "Reidel, Milei y Grossi anuncian el Plan Nuclear Argentino",
     objectPosition: "center 35%",
     captionStrong: "Reidel, Milei y Grossi anuncian el Plan Nuclear Argentino",
@@ -218,7 +218,7 @@ export const vacaMuerta: VacaMuertaData = {
     { val: "$6.9B", label: "Superávit energético" },
   ],
   photo: {
-    src: "/images/futuro/vaca-muerta.jpg",
+    src: "/images/banco/vaca-muerta-recorrida.jpg",
     alt: "Torre de perforación en Vaca Muerta, Neuquén",
     objectPosition: "center 30%",
     captionStrong: "Vaca Muerta — Neuquén, Patagonia",

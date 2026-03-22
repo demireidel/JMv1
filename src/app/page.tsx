@@ -1,15 +1,14 @@
-import Nav from "@/components/Nav";
-import Hero from "@/components/Hero";
-import { ScrollProgress, BackToTop } from "@/components/ScrollProgress";
-import PhotoStrip from "@/components/PhotoStrip";
-import Vision from "@/components/Vision";
-import Logros from "@/components/Logros";
-import Reformas from "@/components/Reformas";
-import Futuro from "@/components/Futuro";
-import Mundo from "@/components/Mundo";
-
-import Archivo from "@/components/Archivo";
-import Footer from "@/components/Footer";
+import Nav from "@/components/layout/Nav";
+import Hero from "@/components/sections/Hero";
+import { ScrollProgress, BackToTop } from "@/components/layout/ScrollProgress";
+import PhotoStrip from "@/components/sections/PhotoStrip";
+import Vision from "@/components/sections/Vision";
+import Logros from "@/components/sections/Logros";
+import Reformas from "@/components/sections/Reformas";
+import Futuro from "@/components/sections/Futuro";
+import Mundo from "@/components/sections/Mundo";
+import Archivo from "@/components/sections/Archivo";
+import Footer from "@/components/layout/Footer";
 import { stripPhotos1, stripPhotos2, stripPhotos3 } from "@/data/photos";
 
 export default function Home() {

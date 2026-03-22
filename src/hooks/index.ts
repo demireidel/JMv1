@@ -1,3 +1,2 @@
-export { useInView } from "./useInView";
-export { useAnimatedNumber } from "./useAnimatedNumber";
-export { useParallax } from "./useParallax";
+export { useInView } from "./use-in-view";
+export { useAnimatedNumber } from "./use-animated-number";
