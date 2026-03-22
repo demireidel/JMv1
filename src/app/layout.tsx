@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Source_Sans_3, Playfair_Display, Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/layout/Nav";
+import Footer from "@/components/layout/Footer";
 
 /* ── Fonts ─────────────────────────────────────────────── */
 
@@ -77,7 +79,9 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Saltar al contenido principal
         </a>
-        <div id="main-content">{children}</div>
+        <Nav />
+        <main id="main-content">{children}</main>
+        <Footer />
       </body>
     </html>
   );

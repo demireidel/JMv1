@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * Footer — Server Component (no interactivity needed).
  */
@@ -13,12 +15,12 @@ export default function Footer() {
         </div>
 
         <nav className="footer-nav" aria-label="Navegación del pie">
-          <a href="#ideas">Visión</a>
-          <a href="#logros">Logros</a>
-          <a href="#reformas">Reformas</a>
-          <a href="#futuro">Futuro</a>
-          <a href="#mundo">Mundo</a>
-          <a href="#archivo">Archivo</a>
+          <Link href="/vision">Visión</Link>
+          <Link href="/logros">Logros</Link>
+          <Link href="/reformas">Reformas</Link>
+          <Link href="/futuro">Futuro</Link>
+          <Link href="/mundo">Mundo</Link>
+          <Link href="/archivo">Archivo</Link>
         </nav>
 
         <div className="footer-contact">

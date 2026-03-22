@@ -1,81 +1,82 @@
 "use client";
 
-import { useEffect, useState, useCallback, useRef } from "react";
-
-const links = [
-  { href: "#ideas", label: "Visión" },
-  { href: "#logros", label: "Logros" },
-  { href: "#reformas", label: "Reformas" },
-  { href: "#futuro", label: "Futuro" },
-  { href: "#mundo", label: "Mundo" },
-  { href: "#archivo", label: "Archivo" },
-] as const;
+import { useState, useEffect, useCallback, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { navLinks } from "@/data/nav";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-  const navRef = useRef<HTMLElement>(null);
-
-  const updateActive = useCallback(() => {
-    let current = "";
-    for (const { href } of links) {
-      const el = document.getElementById(href.slice(1));
-      if (el && el.getBoundingClientRect().top <= 200) current = href.slice(1);
-    }
-    setActiveSection(current);
-  }, []);
+  const pathname = usePathname();
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 60);
-      updateActive();
-    };
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [updateActive]);
+  }, []);
 
+  // Close menu on route change
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && mobileOpen) setMobileOpen(false);
+    setMobileOpen(false);
+  }, [pathname]);
+
+  // Lock body scroll when menu is open + escape key
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    if (mobileOpen) {
+      const onKey = (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+          setMobileOpen(false);
+          hamburgerRef.current?.focus();
+        }
+      };
+      window.addEventListener("keydown", onKey);
+      return () => {
+        document.body.style.overflow = "";
+        window.removeEventListener("keydown", onKey);
+      };
+    }
+    return () => {
+      document.body.style.overflow = "";
     };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
   }, [mobileOpen]);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setMobileOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const toggleMenu = useCallback(() => setMobileOpen((v) => !v), []);
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
   };
 
   return (
     <nav
-      ref={navRef}
       className={`site-nav${scrolled ? " scrolled" : ""}`}
       role="navigation"
       aria-label="Navegación principal"
     >
-      <a href="#hero" className="nav-logo" onClick={(e) => handleClick(e, "#hero")}>
+      <Link href="/" className="nav-logo">
         JAVIER <span>MILEI</span>
-      </a>
+      </Link>
       <ul className={`nav-links${mobileOpen ? " mobile-open" : ""}`} role="menubar">
-        {links.map((l) => (
+        {navLinks.map((l) => (
           <li key={l.href} role="none">
-            <a
+            <Link
               href={l.href}
               role="menuitem"
-              className={activeSection === l.href.slice(1) ? "active" : ""}
-              onClick={(e) => handleClick(e, l.href)}
+              className={isActive(l.href) ? "active" : ""}
             >
               {l.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
       <button
+        ref={hamburgerRef}
         className="menu-toggle"
-        onClick={() => setMobileOpen(!mobileOpen)}
+        onClick={toggleMenu}
         aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={mobileOpen}
       >
